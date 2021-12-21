@@ -1,0 +1,12 @@
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\bin\Debug\CRM.exe.config
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\bin\Debug\CRM.exe
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\bin\Debug\CRM.pdb
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.csproj.AssemblyReference.cache
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Müşteriler.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Properties.Resources.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.cache
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.csproj.CoreCompileInputs.cache
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.exe
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.pdb
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Form1.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Form2.resources

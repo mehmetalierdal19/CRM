@@ -16,5 +16,11 @@ namespace CRM
         {
             InitializeComponent();
         }
+
+        private void MÜŞTERİLER_Click(object sender, EventArgs e)
+        {
+            Müşteriler mstr = new Müşteriler();
+            mstr.ShowDialog();
+        }
     }
 }
