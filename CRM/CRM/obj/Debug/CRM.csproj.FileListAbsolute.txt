@@ -9,4 +9,5 @@ C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.csproj.CoreCompileInputs.cac
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.pdb
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.AnaSayfa.resources
-C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.MusteriEkle.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Ürünler.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.ÜrünKategori.resources

@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace CRM
 {
@@ -26,8 +28,25 @@ namespace CRM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MusteriEkle mstrekle = new MusteriEkle();
-            mstrekle.ShowDialog();
+            SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-7EGS3RS\SQLEXPRESS; Initial Catalog=dbCRM; Integrated Security=True");
+            SqlCommand komut = new SqlCommand("Insert INTO TBLMUSTERILER (MUSTERIAD, MUSTERISOYAD, SEHIR, ILETISIMNO) VALUES (@AD, @SOYAD, @SEHIR, @ILETISIMNO)", baglan);
+            baglan.Open();
+            komut.Parameters.AddWithValue("@AD", SqlDbType.NVarChar).Value = txtAd.Text;
+            komut.Parameters.AddWithValue("@SOYAD", SqlDbType.NVarChar).Value = txtSoyad.Text;
+            komut.Parameters.AddWithValue("@SEHIR", SqlDbType.NVarChar).Value = txtSehir.Text;
+            komut.Parameters.AddWithValue("@ILETISIMNO", SqlDbType.NVarChar).Value = txtTel.Text;
+            komut.ExecuteNonQuery();
+            this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

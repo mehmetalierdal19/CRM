@@ -27,5 +27,17 @@ namespace CRM
         {
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Ürünler urunler = new Ürünler();
+            urunler.ShowDialog();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ÜrünKategori urnktgr = new ÜrünKategori();
+            urnktgr.ShowDialog();
+        }
     }
 }
