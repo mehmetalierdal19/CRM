@@ -31,7 +31,7 @@ namespace CRM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form2 mstrekle = new Form2();
+            MusteriEkle mstrekle = new MusteriEkle();
             mstrekle.ShowDialog();
         }
     }

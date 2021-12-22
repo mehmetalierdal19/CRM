@@ -1,7 +1,7 @@
 ﻿
 namespace CRM
 {
-    partial class Form2
+    partial class MusteriEkle
     {
         /// <summary>
         /// Required designer variable.

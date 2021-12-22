@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace CRM
 {
-    public partial class Form1 : Form
+    public partial class AnaSayfa : Form
     {
-        public Form1()
+        public AnaSayfa()
         {
             InitializeComponent();
         }
@@ -21,6 +21,11 @@ namespace CRM
         {
             Müşteriler mstr = new Müşteriler();
             mstr.ShowDialog();
+        }
+
+        private void AnaSayfa_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

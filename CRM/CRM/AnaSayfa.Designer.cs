@@ -1,7 +1,7 @@
 ﻿
 namespace CRM
 {
-    partial class Form1
+    partial class AnaSayfa
     {
         /// <summary>
         /// Required designer variable.
@@ -54,15 +54,16 @@ namespace CRM
             this.MÜŞTERİLER.UseVisualStyleBackColor = true;
             this.MÜŞTERİLER.Click += new System.EventHandler(this.MÜŞTERİLER_Click);
             // 
-            // Form1
+            // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.MÜŞTERİLER);
             this.Controls.Add(this.label1);
-            this.Name = "Form1";
+            this.Name = "AnaSayfa";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.AnaSayfa_Load);
             this.ResumeLayout(false);
 
         }

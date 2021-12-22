@@ -12,9 +12,9 @@ using System.Data.SqlClient;
 
 namespace CRM
 {
-    public partial class Form2 : Form
+    public partial class MusteriEkle : Form
     {
-        public Form2()
+        public MusteriEkle()
         {
             InitializeComponent();
         }
