@@ -201,7 +201,7 @@ namespace CRM {
         private void InitClass() {
             this.DataSetName = "dbCRMDataSet";
             this.Prefix = "";
-            this.Namespace = "http://tempuri.org/dbCRMDataSet2.xsd";
+            this.Namespace = "http://tempuri.org/dbCRMDataSet1.xsd";
             this.EnforceConstraints = true;
             this.SchemaSerializationMode = global::System.Data.SchemaSerializationMode.IncludeSchema;
             this.tableTBLMUSTERILER = new TBLMUSTERILERDataTable();

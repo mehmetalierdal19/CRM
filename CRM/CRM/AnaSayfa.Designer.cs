@@ -48,7 +48,7 @@ namespace CRM
             // 
             this.MÜŞTERİLER.Location = new System.Drawing.Point(274, 164);
             this.MÜŞTERİLER.Name = "MÜŞTERİLER";
-            this.MÜŞTERİLER.Size = new System.Drawing.Size(75, 23);
+            this.MÜŞTERİLER.Size = new System.Drawing.Size(102, 23);
             this.MÜŞTERİLER.TabIndex = 1;
             this.MÜŞTERİLER.Text = "Müşteriler";
             this.MÜŞTERİLER.UseVisualStyleBackColor = true;
@@ -62,7 +62,7 @@ namespace CRM
             this.Controls.Add(this.MÜŞTERİLER);
             this.Controls.Add(this.label1);
             this.Name = "AnaSayfa";
-            this.Text = "Form1";
+            this.Text = "Ana Sayfa";
             this.Load += new System.EventHandler(this.AnaSayfa_Load);
             this.ResumeLayout(false);
 

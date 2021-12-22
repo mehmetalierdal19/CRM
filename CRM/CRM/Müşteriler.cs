@@ -19,13 +19,8 @@ namespace CRM
 
         private void Müşteriler_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'dbCRMDataSet2.TBLMUSTERILER' table. You can move, or remove it, as needed.
-            this.tBLMUSTERILERTableAdapter2.Fill(this.dbCRMDataSet2.TBLMUSTERILER);
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
+            // TODO: This line of code loads data into the 'dbCRMDataSet.TBLMUSTERILER' table. You can move, or remove it, as needed.
+            this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
 
         }
 

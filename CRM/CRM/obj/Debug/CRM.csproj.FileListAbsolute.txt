@@ -8,7 +8,5 @@ C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.csproj.GenerateResource.cach
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.csproj.CoreCompileInputs.cache
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.exe
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.pdb
-C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Form1.resources
-C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Form2.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.AnaSayfa.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.MusteriEkle.resources

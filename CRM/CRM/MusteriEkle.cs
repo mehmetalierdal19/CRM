@@ -39,9 +39,9 @@ namespace CRM
             SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-7EGS3RS\SQLEXPRESS; Initial Catalog=dbCRM; Integrated Security=True");
             SqlCommand komut = new SqlCommand("Insert INTO TBLMUSTERILER (MUSTERIAD, MUSTERISOYAD, SEHIR, ILETISIMNO) VALUES (@AD, @SOYAD, @SEHIR, @ILETISIMNO)" ,baglan);
             baglan.Open();
-            komut.Parameters.AddWithValue("@AD", SqlDbType.NVarChar).Value = txtMUSTERIAD.Text;
+            komut.Parameters.AddWithValue("@AD", SqlDbType.NVarChar).Value = txtAD.Text;
             komut.Parameters.AddWithValue("@SOYAD", SqlDbType.NVarChar).Value = txtSOYAD.Text;
-            komut.Parameters.AddWithValue("@SEHIR", SqlDbType.NVarChar).Value = txtSEHIR.Text;
+            komut.Parameters.AddWithValue("@SEHIR", SqlDbType.NVarChar).Value = txtSEHİR.Text;
             komut.Parameters.AddWithValue("@ILETISIMNO", SqlDbType.NVarChar).Value = txtILETISIM.Text;
             komut.ExecuteNonQuery();
         }
