@@ -120,7 +120,7 @@ namespace CRM
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(12, 480);
+            this.button1.Location = new System.Drawing.Point(12, 506);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 38);
             this.button1.TabIndex = 1;
@@ -132,7 +132,7 @@ namespace CRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(935, 530);
+            this.ClientSize = new System.Drawing.Size(935, 574);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dataGridView1);
             this.Name = "Müşteriler";
