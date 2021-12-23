@@ -14,6 +14,7 @@ namespace CRM
 {
     public partial class Markalar : Form
     {
+        baglanti bgl = new baglanti();
         public Markalar()
         {
             InitializeComponent();
@@ -38,9 +39,7 @@ namespace CRM
 
         private void btnMarkaEkle_Click(object sender, EventArgs e)
         {
-            SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-7EGS3RS\SQLEXPRESS; Initial Catalog=dbCRM; Integrated Security=True");
-            SqlCommand komut = new SqlCommand("Insert INTO TBLMARKALAR (MarkaAd) VALUES (@MARKAAD)", baglan);
-            baglan.Open();
+            SqlCommand komut = new SqlCommand("Insert INTO TBLMARKALAR (MarkaAd) VALUES (@MARKAAD)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@MARKAAD", SqlDbType.NVarChar).Value = txtMarkaAd.Text;
             komut.ExecuteNonQuery();
             this.tBLMARKALARTableAdapter.Fill(this.dbCRMDataSet3.TBLMARKALAR);

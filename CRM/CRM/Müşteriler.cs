@@ -14,6 +14,7 @@ namespace CRM
 {
     public partial class Müşteriler : Form
     {
+        baglanti bgl = new baglanti();
         public Müşteriler()
         {
             InitializeComponent();
@@ -28,9 +29,7 @@ namespace CRM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            SqlConnection baglan = new SqlConnection(@"Data Source =DESKTOP-7EGS3RS\SQLEXPRESS; Initial Catalog=dbCRM; Integrated Security=True");
-            SqlCommand komut = new SqlCommand("Insert INTO TBLMUSTERILER (MUSTERIAD, MUSTERISOYAD, SEHIR, ILETISIMNO) VALUES (@AD, @SOYAD, @SEHIR, @ILETISIMNO)", baglan);
-            baglan.Open();
+            SqlCommand komut = new SqlCommand("Insert INTO TBLMUSTERILER (MUSTERIAD, MUSTERISOYAD, SEHIR, ILETISIMNO) VALUES (@AD, @SOYAD, @SEHIR, @ILETISIMNO)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@AD", SqlDbType.NVarChar).Value = txtAd.Text;
             komut.Parameters.AddWithValue("@SOYAD", SqlDbType.NVarChar).Value = txtSoyad.Text;
             komut.Parameters.AddWithValue("@SEHIR", SqlDbType.NVarChar).Value = txtSehir.Text;
