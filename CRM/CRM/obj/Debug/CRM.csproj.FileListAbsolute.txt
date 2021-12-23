@@ -11,3 +11,4 @@ C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.pdb
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.AnaSayfa.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Ürünler.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.ÜrünKategori.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Markalar.resources
