@@ -53,9 +53,29 @@ namespace CRM
             this.txtSatisFiyat = new System.Windows.Forms.TextBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.dbCRMDataSet5 = new CRM.dbCRMDataSet5();
+            this.tBLURUNLERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLURUNLERTableAdapter1 = new CRM.dbCRMDataSet5TableAdapters.TBLURUNLERTableAdapter();
+            this.dbCRMDataSet6 = new CRM.dbCRMDataSet6();
+            this.tBLKATEGORILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLKATEGORILERTableAdapter = new CRM.dbCRMDataSet6TableAdapters.TBLKATEGORILERTableAdapter();
+            this.dbCRMDataSet7 = new CRM.dbCRMDataSet7();
+            this.tBLMARKALARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMARKALARTableAdapter = new CRM.dbCRMDataSet7TableAdapters.TBLMARKALARTableAdapter();
+            this.dbCRMDataSet8 = new CRM.dbCRMDataSet8();
+            this.tBLDEPOLARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLDEPOLARTableAdapter = new CRM.dbCRMDataSet8TableAdapters.TBLDEPOLARTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLDEPOLARBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -71,7 +91,7 @@ namespace CRM
             this.markaDataGridViewTextBoxColumn,
             this.satisFiyatiDataGridViewTextBoxColumn,
             this.depoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tBLURUNLERBindingSource;
+            this.dataGridView1.DataSource = this.tBLURUNLERBindingSource1;
             this.dataGridView1.Location = new System.Drawing.Point(12, 169);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -206,30 +226,42 @@ namespace CRM
             // 
             // cbKategori
             // 
+            this.cbKategori.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLKATEGORILERBindingSource, "KategoriID", true));
+            this.cbKategori.DataSource = this.tBLKATEGORILERBindingSource;
+            this.cbKategori.DisplayMember = "KategoriAd";
             this.cbKategori.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbKategori.FormattingEnabled = true;
             this.cbKategori.Location = new System.Drawing.Point(1118, 169);
             this.cbKategori.Name = "cbKategori";
             this.cbKategori.Size = new System.Drawing.Size(345, 28);
             this.cbKategori.TabIndex = 7;
+            this.cbKategori.ValueMember = "KategoriID";
             // 
             // cbMarka
             // 
+            this.cbMarka.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLMARKALARBindingSource, "MarkaID", true));
+            this.cbMarka.DataSource = this.tBLMARKALARBindingSource;
+            this.cbMarka.DisplayMember = "MarkaAd";
             this.cbMarka.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMarka.FormattingEnabled = true;
             this.cbMarka.Location = new System.Drawing.Point(1118, 342);
             this.cbMarka.Name = "cbMarka";
             this.cbMarka.Size = new System.Drawing.Size(345, 28);
             this.cbMarka.TabIndex = 8;
+            this.cbMarka.ValueMember = "MarkaID";
             // 
             // cbDepo
             // 
+            this.cbDepo.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLDEPOLARBindingSource, "DepoID", true));
+            this.cbDepo.DataSource = this.tBLDEPOLARBindingSource;
+            this.cbDepo.DisplayMember = "DepoAd";
             this.cbDepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbDepo.FormattingEnabled = true;
             this.cbDepo.Location = new System.Drawing.Point(1118, 530);
             this.cbDepo.Name = "cbDepo";
             this.cbDepo.Size = new System.Drawing.Size(345, 28);
             this.cbDepo.TabIndex = 9;
+            this.cbDepo.ValueMember = "DepoID";
             // 
             // txtUrunAd
             // 
@@ -267,6 +299,62 @@ namespace CRM
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
+            // dbCRMDataSet5
+            // 
+            this.dbCRMDataSet5.DataSetName = "dbCRMDataSet5";
+            this.dbCRMDataSet5.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLURUNLERBindingSource1
+            // 
+            this.tBLURUNLERBindingSource1.DataMember = "TBLURUNLER";
+            this.tBLURUNLERBindingSource1.DataSource = this.dbCRMDataSet5;
+            // 
+            // tBLURUNLERTableAdapter1
+            // 
+            this.tBLURUNLERTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dbCRMDataSet6
+            // 
+            this.dbCRMDataSet6.DataSetName = "dbCRMDataSet6";
+            this.dbCRMDataSet6.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLKATEGORILERBindingSource
+            // 
+            this.tBLKATEGORILERBindingSource.DataMember = "TBLKATEGORILER";
+            this.tBLKATEGORILERBindingSource.DataSource = this.dbCRMDataSet6;
+            // 
+            // tBLKATEGORILERTableAdapter
+            // 
+            this.tBLKATEGORILERTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbCRMDataSet7
+            // 
+            this.dbCRMDataSet7.DataSetName = "dbCRMDataSet7";
+            this.dbCRMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLMARKALARBindingSource
+            // 
+            this.tBLMARKALARBindingSource.DataMember = "TBLMARKALAR";
+            this.tBLMARKALARBindingSource.DataSource = this.dbCRMDataSet7;
+            // 
+            // tBLMARKALARTableAdapter
+            // 
+            this.tBLMARKALARTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbCRMDataSet8
+            // 
+            this.dbCRMDataSet8.DataSetName = "dbCRMDataSet8";
+            this.dbCRMDataSet8.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLDEPOLARBindingSource
+            // 
+            this.tBLDEPOLARBindingSource.DataMember = "TBLDEPOLAR";
+            this.tBLDEPOLARBindingSource.DataSource = this.dbCRMDataSet8;
+            // 
+            // tBLDEPOLARTableAdapter
+            // 
+            this.tBLDEPOLARTableAdapter.ClearBeforeFill = true;
+            // 
             // Ürünler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -294,6 +382,14 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLDEPOLARBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -324,5 +420,17 @@ namespace CRM
         private System.Windows.Forms.TextBox txtSatisFiyat;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
+        private dbCRMDataSet5 dbCRMDataSet5;
+        private System.Windows.Forms.BindingSource tBLURUNLERBindingSource1;
+        private dbCRMDataSet5TableAdapters.TBLURUNLERTableAdapter tBLURUNLERTableAdapter1;
+        private dbCRMDataSet6 dbCRMDataSet6;
+        private System.Windows.Forms.BindingSource tBLKATEGORILERBindingSource;
+        private dbCRMDataSet6TableAdapters.TBLKATEGORILERTableAdapter tBLKATEGORILERTableAdapter;
+        private dbCRMDataSet7 dbCRMDataSet7;
+        private System.Windows.Forms.BindingSource tBLMARKALARBindingSource;
+        private dbCRMDataSet7TableAdapters.TBLMARKALARTableAdapter tBLMARKALARTableAdapter;
+        private dbCRMDataSet8 dbCRMDataSet8;
+        private System.Windows.Forms.BindingSource tBLDEPOLARBindingSource;
+        private dbCRMDataSet8TableAdapters.TBLDEPOLARTableAdapter tBLDEPOLARTableAdapter;
     }
 }

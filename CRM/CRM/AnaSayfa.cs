@@ -45,5 +45,11 @@ namespace CRM
             Markalar mrklr = new Markalar();
             mrklr.ShowDialog();
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            Depolar dplr = new Depolar();
+            dplr.ShowDialog();
+        }
     }
 }
