@@ -76,31 +76,25 @@ namespace CRM
 
         private void btnAlis_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("Insert Into TBLISLEMLER (URUNID, MIKTAR, ALISFIYATI, SATISFIYATI, ISLEM) Values (@URUNID, @MIKTAR, @ALISFIYATI, @SATISFIYATI, @ISLEM)", bgl.sqlbaglanti());
-            komut.Parameters.AddWithValue("@URUNID", SqlDbType.NVarChar).Value = secilen;
-            komut.Parameters.AddWithValue("@MIKTAR", SqlDbType.Float).Value = Convert.ToSingle(txtMiktar2.Text);
-            komut.Parameters.AddWithValue("@ALISFIYATI", SqlDbType.Float).Value = Convert.ToSingle(txtAlisFiyat2.Text);
-            komut.Parameters.AddWithValue("@SATISFIYATI", SqlDbType.Float).Value = Convert.ToSingle(txtSatisFiyati2.Text);
-            komut.Parameters.AddWithValue("@ISLEM", SqlDbType.NVarChar).Value = "Alış";
-            komut.ExecuteNonQuery();
-            bgl.sqlbaglanti().Close();
-            this.tBLISLEMLERTableAdapter.Fill(this.dbCRMDataSet11.TBLISLEMLER);
+            
         }
 
         private void cbÜrünAd2_SelectedIndexChanged(object sender, EventArgs e)
         {
-            secilen = cbÜrünAd2.SelectedValue.ToString();
-            SqlCommand komut = new SqlCommand("Select * From TBLURUNLER Where id=@ID", bgl.sqlbaglanti());
-            komut.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = Convert.ToInt32(secilen);
-            SqlDataAdapter da = new SqlDataAdapter(komut);
-            DataTable dt = new DataTable();
-            da.Fill(dt);
+            
+        }
 
-            foreach (DataRow satir in dt.Rows)
-            {
-                txtAlisFiyat2.Text = satir["AlisFiyati"].ToString();
-                txtSatisFiyati2.Text = satir["SatisFiyati"].ToString();
-            }
+        private void btnalis_Click_1(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Insert Into TBLISLEMLER (URUNID, MIKTAR, ALISFIYATI, SATISFIYATI, ISLEM) Values (@URUNID, @MIKTAR, @ALISFIYATI, @SATISFIYATI, @ISLEM)", bgl.sqlbaglanti());
+            komut.Parameters.AddWithValue("@URUNID", SqlDbType.NVarChar).Value = secilen;
+            komut.Parameters.AddWithValue("@MIKTAR", SqlDbType.Float).Value = Convert.ToSingle(txtMiktar.Text);
+            komut.Parameters.AddWithValue("@ALISFIYATI", SqlDbType.Float).Value = Convert.ToSingle(txtAlisFiyati.Text);
+            komut.Parameters.AddWithValue("@SATISFIYATI", SqlDbType.Float).Value = Convert.ToSingle(txtSatisFiyati.Text);
+            komut.Parameters.AddWithValue("@ISLEM", SqlDbType.NVarChar).Value = "Alış";
+            komut.ExecuteNonQuery();
+            bgl.sqlbaglanti().Close();
+            this.tBLISLEMLERTableAdapter.Fill(this.dbCRMDataSet11.TBLISLEMLER);
         }
     }
 }
