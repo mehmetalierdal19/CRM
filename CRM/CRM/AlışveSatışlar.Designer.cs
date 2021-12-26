@@ -77,6 +77,7 @@ namespace CRM
             // 
             // tabPage1
             // 
+            this.tabPage1.BackColor = System.Drawing.Color.SteelBlue;
             this.tabPage1.Controls.Add(this.btnalis);
             this.tabPage1.Controls.Add(this.txtSatisFiyati);
             this.tabPage1.Controls.Add(this.txtAlisFiyati);
@@ -94,7 +95,6 @@ namespace CRM
             this.tabPage1.Size = new System.Drawing.Size(1272, 613);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Satış İşlemi";
-            this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // txtSatisFiyati
             // 
@@ -188,6 +188,8 @@ namespace CRM
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ıDDataGridViewTextBoxColumn,
