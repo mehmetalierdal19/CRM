@@ -46,6 +46,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AlışveSatışlar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AlışveSatışlar.Designer.cs">
+      <DependentUpon>AlışveSatışlar.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -53,10 +59,25 @@
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </Compile>
     <Compile Include="baglanti.cs" />
+    <Compile Include="dbCRMDataSet10.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRMDataSet10.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbCRMDataSet11.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbCRMDataSet11.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbCRMDataSet111.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRMDataSet111.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbCRMDataSet12.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRMDataSet12.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbCRMDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -98,6 +119,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbCRMDataSet8.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbCRMDataSet9.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRMDataSet9.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Depolar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +156,9 @@
     <Compile Include="Ürünler.Designer.cs">
       <DependentUpon>Ürünler.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AlışveSatışlar.resx">
+      <DependentUpon>AlışveSatışlar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +186,17 @@
     <EmbeddedResource Include="Ürünler.resx">
       <DependentUpon>Ürünler.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="dbCRMDataSet10.xsc">
+      <DependentUpon>dbCRMDataSet10.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet10.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRMDataSet10.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRMDataSet10.xss">
+      <DependentUpon>dbCRMDataSet10.xsd</DependentUpon>
+    </None>
     <None Include="dbCRMDataSet11.xsc">
       <DependentUpon>dbCRMDataSet11.xsd</DependentUpon>
     </None>
@@ -167,6 +207,28 @@
     </None>
     <None Include="dbCRMDataSet11.xss">
       <DependentUpon>dbCRMDataSet11.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet111.xsc">
+      <DependentUpon>dbCRMDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet111.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRMDataSet111.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRMDataSet111.xss">
+      <DependentUpon>dbCRMDataSet111.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet12.xsc">
+      <DependentUpon>dbCRMDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet12.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRMDataSet12.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRMDataSet12.xss">
+      <DependentUpon>dbCRMDataSet12.xsd</DependentUpon>
     </None>
     <None Include="dbCRMDataSet2.xsc">
       <DependentUpon>dbCRMDataSet2.xsd</DependentUpon>
@@ -255,6 +317,17 @@
     </None>
     <None Include="dbCRMDataSet8.xss">
       <DependentUpon>dbCRMDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet9.xsc">
+      <DependentUpon>dbCRMDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRMDataSet9.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRMDataSet9.xss">
+      <DependentUpon>dbCRMDataSet9.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

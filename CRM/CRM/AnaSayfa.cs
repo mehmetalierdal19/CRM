@@ -51,5 +51,11 @@ namespace CRM
             Depolar dplr = new Depolar();
             dplr.ShowDialog();
         }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            AlışveSatışlar avs = new AlışveSatışlar();
+            avs.ShowDialog();
+        }
     }
 }

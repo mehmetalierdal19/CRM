@@ -35,6 +35,7 @@ namespace CRM
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +43,7 @@ namespace CRM
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(324, 21);
+            this.label1.Location = new System.Drawing.Point(359, 53);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 55);
             this.label1.TabIndex = 0;
@@ -51,10 +52,10 @@ namespace CRM
             // 
             // MÜŞTERİLER
             // 
-            this.MÜŞTERİLER.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.MÜŞTERİLER.Location = new System.Drawing.Point(398, 204);
+            this.MÜŞTERİLER.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.MÜŞTERİLER.Location = new System.Drawing.Point(170, 403);
             this.MÜŞTERİLER.Name = "MÜŞTERİLER";
-            this.MÜŞTERİLER.Size = new System.Drawing.Size(158, 35);
+            this.MÜŞTERİLER.Size = new System.Drawing.Size(256, 50);
             this.MÜŞTERİLER.TabIndex = 1;
             this.MÜŞTERİLER.Text = "Müşteriler";
             this.MÜŞTERİLER.UseVisualStyleBackColor = true;
@@ -62,10 +63,10 @@ namespace CRM
             // 
             // button1
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(398, 294);
+            this.button1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button1.Location = new System.Drawing.Point(170, 256);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(158, 35);
+            this.button1.Size = new System.Drawing.Size(256, 50);
             this.button1.TabIndex = 2;
             this.button1.Text = "Ürünler";
             this.button1.UseVisualStyleBackColor = true;
@@ -73,10 +74,10 @@ namespace CRM
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(398, 383);
+            this.button2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button2.Location = new System.Drawing.Point(600, 256);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(158, 35);
+            this.button2.Size = new System.Drawing.Size(256, 50);
             this.button2.TabIndex = 3;
             this.button2.Text = "Ürün Kategori";
             this.button2.UseVisualStyleBackColor = true;
@@ -84,10 +85,10 @@ namespace CRM
             // 
             // button3
             // 
-            this.button3.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(398, 474);
+            this.button3.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button3.Location = new System.Drawing.Point(600, 403);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(158, 35);
+            this.button3.Size = new System.Drawing.Size(256, 50);
             this.button3.TabIndex = 4;
             this.button3.Text = "Markalar";
             this.button3.UseVisualStyleBackColor = true;
@@ -95,21 +96,33 @@ namespace CRM
             // 
             // button4
             // 
-            this.button4.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button4.Location = new System.Drawing.Point(398, 556);
+            this.button4.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button4.Location = new System.Drawing.Point(170, 569);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(158, 35);
+            this.button4.Size = new System.Drawing.Size(256, 50);
             this.button4.TabIndex = 5;
             this.button4.Text = "Depolar";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.button5.Location = new System.Drawing.Point(600, 569);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(256, 50);
+            this.button5.TabIndex = 6;
+            this.button5.Text = "İşlemler";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1056, 630);
+            this.ClientSize = new System.Drawing.Size(1085, 725);
+            this.Controls.Add(this.button5);
             this.Controls.Add(this.button4);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
@@ -132,5 +145,6 @@ namespace CRM
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
