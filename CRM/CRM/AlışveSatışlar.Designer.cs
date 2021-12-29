@@ -32,6 +32,7 @@ namespace CRM
             this.components = new System.ComponentModel.Container();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.btnalis = new System.Windows.Forms.Button();
             this.txtSatisFiyati = new System.Windows.Forms.TextBox();
             this.txtAlisFiyati = new System.Windows.Forms.TextBox();
             this.txtMiktar = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@ namespace CRM
             this.dbCRMDataSet1 = new CRM.dbCRMDataSet();
             this.tBLISLEMLERTableAdapter = new CRM.dbCRMDataSet11TableAdapters.TBLISLEMLERTableAdapter();
             this.tBLURUNLERTableAdapter = new CRM.dbCRMDataSet12TableAdapters.TBLURUNLERTableAdapter();
-            this.btnalis = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
@@ -95,6 +95,17 @@ namespace CRM
             this.tabPage1.Size = new System.Drawing.Size(1272, 613);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Satış İşlemi";
+            // 
+            // btnalis
+            // 
+            this.btnalis.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnalis.Location = new System.Drawing.Point(317, 471);
+            this.btnalis.Name = "btnalis";
+            this.btnalis.Size = new System.Drawing.Size(115, 37);
+            this.btnalis.TabIndex = 11;
+            this.btnalis.Text = "Alış Yap";
+            this.btnalis.UseVisualStyleBackColor = true;
+            this.btnalis.Click += new System.EventHandler(this.btnalis_Click_1);
             // 
             // txtSatisFiyati
             // 
@@ -199,7 +210,7 @@ namespace CRM
             this.sATISFIYATIDataGridViewTextBoxColumn,
             this.ıSLEMDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tBLISLEMLERBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(556, 120);
+            this.dataGridView1.Location = new System.Drawing.Point(551, 118);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
@@ -270,7 +281,7 @@ namespace CRM
             this.btnSatis.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.btnSatis.Location = new System.Drawing.Point(47, 468);
             this.btnSatis.Name = "btnSatis";
-            this.btnSatis.Size = new System.Drawing.Size(117, 42);
+            this.btnSatis.Size = new System.Drawing.Size(140, 42);
             this.btnSatis.TabIndex = 1;
             this.btnSatis.Text = "Satış Yap";
             this.btnSatis.UseVisualStyleBackColor = true;
@@ -288,17 +299,6 @@ namespace CRM
             // tBLURUNLERTableAdapter
             // 
             this.tBLURUNLERTableAdapter.ClearBeforeFill = true;
-            // 
-            // btnalis
-            // 
-            this.btnalis.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnalis.Location = new System.Drawing.Point(317, 471);
-            this.btnalis.Name = "btnalis";
-            this.btnalis.Size = new System.Drawing.Size(115, 37);
-            this.btnalis.TabIndex = 11;
-            this.btnalis.Text = "Alış Yap";
-            this.btnalis.UseVisualStyleBackColor = true;
-            this.btnalis.Click += new System.EventHandler(this.btnalis_Click_1);
             // 
             // AlışveSatışlar
             // 
