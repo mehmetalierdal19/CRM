@@ -40,6 +40,7 @@ namespace CRM
 
         private void btnMusteriEkle_Click(object sender, EventArgs e)
         {
+            //Müşteri Ekleme
             SqlCommand komut = new SqlCommand("Insert INTO TBLURUNLER (UrunKategori, UrunAd, Marka, SatisFiyati, AlisFiyati, Depo) VALUES (@URUNKATEGORI, @URUNAD, @MARKA, @SATISFIYATI, @ALISFIYATI, @DEPO)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@URUNKATEGORI", SqlDbType.NVarChar).Value =cbKategori.Text;
             komut.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
@@ -49,6 +50,11 @@ namespace CRM
             komut.Parameters.AddWithValue("@DEPO", SqlDbType.NVarChar).Value = cbDepo.Text;
             komut.ExecuteNonQuery();
             this.tBLURUNLERTableAdapter3.Fill(this.dbCRMDataSet10.TBLURUNLER);
+
+            // Kategori Sayısı Arttırma
+            SqlCommand komut2 = new SqlCommand("Update TBLKATEGORILER set UrunSayisi=UrunSayisi+1 where KategoriID=@p1", bgl.sqlbaglanti());
+            komut2.Parameters.AddWithValue("@p1", cbKategori.SelectedValue);
+            komut2.ExecuteNonQuery();
         }
     }
 }
