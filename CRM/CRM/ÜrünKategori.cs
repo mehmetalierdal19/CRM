@@ -13,6 +13,7 @@ namespace CRM
 {
     public partial class ÜrünKategori : Form
     {
+        // sql bağlantısı
         baglanti bgl = new baglanti();
         public ÜrünKategori()
         {
@@ -28,10 +29,38 @@ namespace CRM
 
         private void btnKategoriEkle_Click(object sender, EventArgs e)
         {
-            
+            // kategori ekleme
             SqlCommand komut = new SqlCommand("Insert INTO TBLKATEGORILER (KategoriAD, UrunSayisi) VALUES (@KATEGORIAD, @URUNSAYISI)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@KATEGORIAD", SqlDbType.NVarChar).Value = txtKategoriAd.Text;
             komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = Convert.ToInt32(txtUrunSayisi.Text);
+            komut.ExecuteNonQuery();
+            this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+        }
+
+        private void btnKategoriGuncelle_Click(object sender, EventArgs e)
+        {
+            // kategori güncelleme
+            SqlCommand komut = new SqlCommand("Update TBLKATEGORILER set KategoriAd=@KATEGORIAD, UrunSayisi=@URUNSAYISI where KategoriID=@KATEGORIID", bgl.sqlbaglanti());
+            komut.Parameters.AddWithValue("@KATEGORIAD", SqlDbType.NVarChar).Value = txtKategoriAd.Text;
+            komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = Convert.ToInt32(txtUrunSayisi.Text);
+            komut.Parameters.AddWithValue("@KATEGORIID", SqlDbType.Int).Value = Convert.ToInt32(txtKategoriid.Text);
+            komut.ExecuteNonQuery();
+            this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // kayıt seçme
+            txtKategoriid.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            txtKategoriAd.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtUrunSayisi.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+        }
+
+        private void btnKategoriSil_Click(object sender, EventArgs e)
+        {
+            // kategori silme
+            SqlCommand komut = new SqlCommand("Delete from TBLKATEGORILER where KategoriID=@KATEGORIID", bgl.sqlbaglanti());
+            komut.Parameters.AddWithValue("@KATEGORIID", SqlDbType.Int).Value = Convert.ToInt32(txtKategoriid.Text);
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
         }

@@ -43,6 +43,9 @@ namespace CRM
             this.txtUrunSayisi = new System.Windows.Forms.TextBox();
             this.btnKategoriEkle = new System.Windows.Forms.Button();
             this.btnKategoriSil = new System.Windows.Forms.Button();
+            this.btnKategoriGuncelle = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtKategoriid = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet2)).BeginInit();
@@ -65,6 +68,7 @@ namespace CRM
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(636, 380);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // kategoriIDDataGridViewTextBoxColumn
             // 
@@ -109,7 +113,7 @@ namespace CRM
             // 
             this.lblKategoriAd.AutoSize = true;
             this.lblKategoriAd.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblKategoriAd.Location = new System.Drawing.Point(759, 245);
+            this.lblKategoriAd.Location = new System.Drawing.Point(761, 264);
             this.lblKategoriAd.Name = "lblKategoriAd";
             this.lblKategoriAd.Size = new System.Drawing.Size(168, 29);
             this.lblKategoriAd.TabIndex = 1;
@@ -128,7 +132,7 @@ namespace CRM
             // txtKategoriAd
             // 
             this.txtKategoriAd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtKategoriAd.Location = new System.Drawing.Point(989, 248);
+            this.txtKategoriAd.Location = new System.Drawing.Point(989, 267);
             this.txtKategoriAd.Name = "txtKategoriAd";
             this.txtKategoriAd.Size = new System.Drawing.Size(255, 28);
             this.txtKategoriAd.TabIndex = 3;
@@ -155,12 +159,43 @@ namespace CRM
             // btnKategoriSil
             // 
             this.btnKategoriSil.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnKategoriSil.Location = new System.Drawing.Point(1111, 463);
+            this.btnKategoriSil.Location = new System.Drawing.Point(936, 463);
             this.btnKategoriSil.Name = "btnKategoriSil";
             this.btnKategoriSil.Size = new System.Drawing.Size(133, 43);
             this.btnKategoriSil.TabIndex = 6;
             this.btnKategoriSil.Text = "Sil";
             this.btnKategoriSil.UseVisualStyleBackColor = true;
+            this.btnKategoriSil.Click += new System.EventHandler(this.btnKategoriSil_Click);
+            // 
+            // btnKategoriGuncelle
+            // 
+            this.btnKategoriGuncelle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnKategoriGuncelle.Location = new System.Drawing.Point(1111, 463);
+            this.btnKategoriGuncelle.Name = "btnKategoriGuncelle";
+            this.btnKategoriGuncelle.Size = new System.Drawing.Size(133, 43);
+            this.btnKategoriGuncelle.TabIndex = 7;
+            this.btnKategoriGuncelle.Text = "Güncelle";
+            this.btnKategoriGuncelle.UseVisualStyleBackColor = true;
+            this.btnKategoriGuncelle.Click += new System.EventHandler(this.btnKategoriGuncelle_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(761, 166);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 29);
+            this.label1.TabIndex = 8;
+            this.label1.Text = "Kategori ID:";
+            // 
+            // txtKategoriid
+            // 
+            this.txtKategoriid.Enabled = false;
+            this.txtKategoriid.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKategoriid.Location = new System.Drawing.Point(989, 169);
+            this.txtKategoriid.Name = "txtKategoriid";
+            this.txtKategoriid.Size = new System.Drawing.Size(255, 28);
+            this.txtKategoriid.TabIndex = 9;
             // 
             // ÜrünKategori
             // 
@@ -168,6 +203,9 @@ namespace CRM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1497, 745);
+            this.Controls.Add(this.txtKategoriid);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.btnKategoriGuncelle);
             this.Controls.Add(this.btnKategoriSil);
             this.Controls.Add(this.btnKategoriEkle);
             this.Controls.Add(this.txtUrunSayisi);
@@ -202,5 +240,8 @@ namespace CRM
         private System.Windows.Forms.TextBox txtUrunSayisi;
         private System.Windows.Forms.Button btnKategoriEkle;
         private System.Windows.Forms.Button btnKategoriSil;
+        private System.Windows.Forms.Button btnKategoriGuncelle;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtKategoriid;
     }
 }

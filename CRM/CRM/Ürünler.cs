@@ -13,6 +13,7 @@ namespace CRM
 {
     public partial class Ürünler : Form
     {
+        // sql bağlantısı
         baglanti bgl = new baglanti();
         public Ürünler()
         {
@@ -38,9 +39,9 @@ namespace CRM
 
         }
 
-        private void btnMusteriEkle_Click(object sender, EventArgs e)
+        private void btnUrunEkle_Click(object sender, EventArgs e)
         {
-            //Müşteri Ekleme
+            //Ürün Ekleme
             SqlCommand komut = new SqlCommand("Insert INTO TBLURUNLER (UrunKategori, UrunAd, Marka, SatisFiyati, AlisFiyati, Depo) VALUES (@URUNKATEGORI, @URUNAD, @MARKA, @SATISFIYATI, @ALISFIYATI, @DEPO)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@URUNKATEGORI", SqlDbType.NVarChar).Value =cbKategori.Text;
             komut.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
@@ -55,6 +56,47 @@ namespace CRM
             SqlCommand komut2 = new SqlCommand("Update TBLKATEGORILER set UrunSayisi=UrunSayisi+1 where KategoriID=@p1", bgl.sqlbaglanti());
             komut2.Parameters.AddWithValue("@p1", cbKategori.SelectedValue);
             komut2.ExecuteNonQuery();
+        }
+
+        private void btnSil_Click(object sender, EventArgs e)
+        {
+            // Ürün Silme
+            SqlCommand komut = new SqlCommand("Delete From TBLURUNLER Where id=@ID", bgl.sqlbaglanti());
+            komut.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = txtUrunId.Text;
+            komut.ExecuteNonQuery();
+            this.tBLURUNLERTableAdapter3.Fill(this.dbCRMDataSet10.TBLURUNLER);
+
+            // Kategori Sayısı Azaltma
+            SqlCommand komut3 = new SqlCommand("Update TBLKATEGORILER set UrunSayisi=UrunSayisi-1 where KategoriID=@p2", bgl.sqlbaglanti());
+            komut3.Parameters.AddWithValue("@p2", cbKategori.SelectedValue);
+            komut3.ExecuteNonQuery();
+        }
+
+        private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            // kayıt seçme
+            txtUrunId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
+            cbKategori.SelectedText = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            txtUrunAd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+            cbMarka.SelectedText = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            txtSatisFiyat.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
+            txtAlisFiyat.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
+            cbDepo.SelectedText = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+        }
+
+        private void btnGuncelle_Click(object sender, EventArgs e)
+        {
+            // Ürün güncelleme
+            SqlCommand komut = new SqlCommand("Update TBLURUNLER set UrunKategori= @URUNKATEGORI, UrunAd= @URUNAD, Marka= @MARKA, SatisFiyati= @SATISFIYATI, AlisFiyati= @ALISFIYATI, Depo=@DEPO where id= @ID", bgl.sqlbaglanti());
+            komut.Parameters.AddWithValue("@URUNKATEGORI", SqlDbType.NVarChar).Value = cbKategori.Text;
+            komut.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
+            komut.Parameters.AddWithValue("@MARKA", SqlDbType.NVarChar).Value = cbMarka.Text;
+            komut.Parameters.AddWithValue("@SATISFIYATI", SqlDbType.Float).Value = Convert.ToSingle(txtSatisFiyat.Text);
+            komut.Parameters.AddWithValue("@ALISFIYATI", SqlDbType.Float).Value = Convert.ToSingle(txtAlisFiyat.Text);
+            komut.Parameters.AddWithValue("@DEPO", SqlDbType.NVarChar).Value = cbDepo.Text;
+            komut.Parameters.AddWithValue("@ID", SqlDbType.Int).Value =Convert.ToInt32(txtUrunId.Text);
+            komut.ExecuteNonQuery();
+            this.tBLURUNLERTableAdapter3.Fill(this.dbCRMDataSet10.TBLURUNLER);
         }
     }
 }

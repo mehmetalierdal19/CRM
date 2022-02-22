@@ -35,7 +35,7 @@ namespace CRM
             this.tBLURUNLERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSet1 = new CRM.dbCRMDataSet1();
             this.tBLURUNLERTableAdapter = new CRM.dbCRMDataSet1TableAdapters.TBLURUNLERTableAdapter();
-            this.btnMusteriEkle = new System.Windows.Forms.Button();
+            this.btnUrunEkle = new System.Windows.Forms.Button();
             this.lblUrunKategori = new System.Windows.Forms.Label();
             this.lblUrunAd = new System.Windows.Forms.Label();
             this.lblMarka = new System.Windows.Forms.Label();
@@ -64,6 +64,10 @@ namespace CRM
             this.dbCRMDataSet10 = new CRM.dbCRMDataSet10();
             this.tBLURUNLERBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tBLURUNLERTableAdapter3 = new CRM.dbCRMDataSet10TableAdapters.TBLURUNLERTableAdapter();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtAlisFiyat = new System.Windows.Forms.TextBox();
+            this.lblUrunId = new System.Windows.Forms.Label();
+            this.txtUrunId = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.urunKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -72,8 +76,6 @@ namespace CRM
             this.satisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtAlisFiyat = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
@@ -115,16 +117,16 @@ namespace CRM
             // 
             this.tBLURUNLERTableAdapter.ClearBeforeFill = true;
             // 
-            // btnMusteriEkle
+            // btnUrunEkle
             // 
-            this.btnMusteriEkle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMusteriEkle.Location = new System.Drawing.Point(870, 628);
-            this.btnMusteriEkle.Name = "btnMusteriEkle";
-            this.btnMusteriEkle.Size = new System.Drawing.Size(151, 37);
-            this.btnMusteriEkle.TabIndex = 1;
-            this.btnMusteriEkle.Text = "Ekle";
-            this.btnMusteriEkle.UseVisualStyleBackColor = true;
-            this.btnMusteriEkle.Click += new System.EventHandler(this.btnMusteriEkle_Click);
+            this.btnUrunEkle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnUrunEkle.Location = new System.Drawing.Point(870, 628);
+            this.btnUrunEkle.Name = "btnUrunEkle";
+            this.btnUrunEkle.Size = new System.Drawing.Size(151, 37);
+            this.btnUrunEkle.TabIndex = 1;
+            this.btnUrunEkle.Text = "Ekle";
+            this.btnUrunEkle.UseVisualStyleBackColor = true;
+            this.btnUrunEkle.Click += new System.EventHandler(this.btnUrunEkle_Click);
             // 
             // lblUrunKategori
             // 
@@ -271,6 +273,7 @@ namespace CRM
             this.btnSil.TabIndex = 12;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // btnGuncelle
             // 
@@ -281,6 +284,7 @@ namespace CRM
             this.btnGuncelle.TabIndex = 13;
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
+            this.btnGuncelle.Click += new System.EventHandler(this.btnGuncelle_Click);
             // 
             // tBLURUNLERTableAdapter1
             // 
@@ -326,83 +330,6 @@ namespace CRM
             // 
             this.tBLURUNLERTableAdapter3.ClearBeforeFill = true;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.urunKategoriDataGridViewTextBoxColumn,
-            this.urunAdDataGridViewTextBoxColumn,
-            this.markaDataGridViewTextBoxColumn,
-            this.satisFiyatiDataGridViewTextBoxColumn,
-            this.alisFiyatiDataGridViewTextBoxColumn,
-            this.depoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tBLURUNLERBindingSource3;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 169);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 496);
-            this.dataGridView1.TabIndex = 14;
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "id";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // urunKategoriDataGridViewTextBoxColumn
-            // 
-            this.urunKategoriDataGridViewTextBoxColumn.DataPropertyName = "UrunKategori";
-            this.urunKategoriDataGridViewTextBoxColumn.HeaderText = "UrunKategori";
-            this.urunKategoriDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.urunKategoriDataGridViewTextBoxColumn.Name = "urunKategoriDataGridViewTextBoxColumn";
-            this.urunKategoriDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // urunAdDataGridViewTextBoxColumn
-            // 
-            this.urunAdDataGridViewTextBoxColumn.DataPropertyName = "UrunAd";
-            this.urunAdDataGridViewTextBoxColumn.HeaderText = "UrunAd";
-            this.urunAdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.urunAdDataGridViewTextBoxColumn.Name = "urunAdDataGridViewTextBoxColumn";
-            this.urunAdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // markaDataGridViewTextBoxColumn
-            // 
-            this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
-            this.markaDataGridViewTextBoxColumn.HeaderText = "Marka";
-            this.markaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
-            this.markaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // satisFiyatiDataGridViewTextBoxColumn
-            // 
-            this.satisFiyatiDataGridViewTextBoxColumn.DataPropertyName = "SatisFiyati";
-            this.satisFiyatiDataGridViewTextBoxColumn.HeaderText = "SatisFiyati";
-            this.satisFiyatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.satisFiyatiDataGridViewTextBoxColumn.Name = "satisFiyatiDataGridViewTextBoxColumn";
-            this.satisFiyatiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // alisFiyatiDataGridViewTextBoxColumn
-            // 
-            this.alisFiyatiDataGridViewTextBoxColumn.DataPropertyName = "AlisFiyati";
-            this.alisFiyatiDataGridViewTextBoxColumn.HeaderText = "AlisFiyati";
-            this.alisFiyatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.alisFiyatiDataGridViewTextBoxColumn.Name = "alisFiyatiDataGridViewTextBoxColumn";
-            this.alisFiyatiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // depoDataGridViewTextBoxColumn
-            // 
-            this.depoDataGridViewTextBoxColumn.DataPropertyName = "Depo";
-            this.depoDataGridViewTextBoxColumn.HeaderText = "Depo";
-            this.depoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.depoDataGridViewTextBoxColumn.Name = "depoDataGridViewTextBoxColumn";
-            this.depoDataGridViewTextBoxColumn.Width = 125;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -421,12 +348,112 @@ namespace CRM
             this.txtAlisFiyat.Size = new System.Drawing.Size(345, 28);
             this.txtAlisFiyat.TabIndex = 16;
             // 
+            // lblUrunId
+            // 
+            this.lblUrunId.AutoSize = true;
+            this.lblUrunId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblUrunId.Location = new System.Drawing.Point(867, 109);
+            this.lblUrunId.Name = "lblUrunId";
+            this.lblUrunId.Size = new System.Drawing.Size(101, 25);
+            this.lblUrunId.TabIndex = 17;
+            this.lblUrunId.Text = "Ürün ID:";
+            // 
+            // txtUrunId
+            // 
+            this.txtUrunId.Enabled = false;
+            this.txtUrunId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunId.Location = new System.Drawing.Point(1118, 110);
+            this.txtUrunId.Name = "txtUrunId";
+            this.txtUrunId.Size = new System.Drawing.Size(345, 28);
+            this.txtUrunId.TabIndex = 18;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.idDataGridViewTextBoxColumn,
+            this.urunKategoriDataGridViewTextBoxColumn,
+            this.urunAdDataGridViewTextBoxColumn,
+            this.markaDataGridViewTextBoxColumn,
+            this.satisFiyatiDataGridViewTextBoxColumn,
+            this.alisFiyatiDataGridViewTextBoxColumn,
+            this.depoDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.tBLURUNLERBindingSource3;
+            this.dataGridView1.Location = new System.Drawing.Point(12, 109);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(794, 556);
+            this.dataGridView1.TabIndex = 14;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // idDataGridViewTextBoxColumn
+            // 
+            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
+            this.idDataGridViewTextBoxColumn.HeaderText = "Ürün ID";
+            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
+            this.idDataGridViewTextBoxColumn.ReadOnly = true;
+            this.idDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // urunKategoriDataGridViewTextBoxColumn
+            // 
+            this.urunKategoriDataGridViewTextBoxColumn.DataPropertyName = "UrunKategori";
+            this.urunKategoriDataGridViewTextBoxColumn.HeaderText = "Ürün Kategori";
+            this.urunKategoriDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.urunKategoriDataGridViewTextBoxColumn.Name = "urunKategoriDataGridViewTextBoxColumn";
+            this.urunKategoriDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // urunAdDataGridViewTextBoxColumn
+            // 
+            this.urunAdDataGridViewTextBoxColumn.DataPropertyName = "UrunAd";
+            this.urunAdDataGridViewTextBoxColumn.HeaderText = "Ürün Ad";
+            this.urunAdDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.urunAdDataGridViewTextBoxColumn.Name = "urunAdDataGridViewTextBoxColumn";
+            this.urunAdDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // markaDataGridViewTextBoxColumn
+            // 
+            this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
+            this.markaDataGridViewTextBoxColumn.HeaderText = "Marka";
+            this.markaDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
+            this.markaDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // satisFiyatiDataGridViewTextBoxColumn
+            // 
+            this.satisFiyatiDataGridViewTextBoxColumn.DataPropertyName = "SatisFiyati";
+            this.satisFiyatiDataGridViewTextBoxColumn.HeaderText = "Satış Fiyatı";
+            this.satisFiyatiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.satisFiyatiDataGridViewTextBoxColumn.Name = "satisFiyatiDataGridViewTextBoxColumn";
+            this.satisFiyatiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // alisFiyatiDataGridViewTextBoxColumn
+            // 
+            this.alisFiyatiDataGridViewTextBoxColumn.DataPropertyName = "AlisFiyati";
+            this.alisFiyatiDataGridViewTextBoxColumn.HeaderText = "Alış Fiyatı";
+            this.alisFiyatiDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.alisFiyatiDataGridViewTextBoxColumn.Name = "alisFiyatiDataGridViewTextBoxColumn";
+            this.alisFiyatiDataGridViewTextBoxColumn.Width = 125;
+            // 
+            // depoDataGridViewTextBoxColumn
+            // 
+            this.depoDataGridViewTextBoxColumn.DataPropertyName = "Depo";
+            this.depoDataGridViewTextBoxColumn.HeaderText = "Depo";
+            this.depoDataGridViewTextBoxColumn.MinimumWidth = 6;
+            this.depoDataGridViewTextBoxColumn.Name = "depoDataGridViewTextBoxColumn";
+            this.depoDataGridViewTextBoxColumn.Width = 125;
+            // 
             // Ürünler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1532, 677);
+            this.Controls.Add(this.txtUrunId);
+            this.Controls.Add(this.lblUrunId);
             this.Controls.Add(this.txtAlisFiyat);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.dataGridView1);
@@ -442,7 +469,7 @@ namespace CRM
             this.Controls.Add(this.lblMarka);
             this.Controls.Add(this.lblUrunAd);
             this.Controls.Add(this.lblUrunKategori);
-            this.Controls.Add(this.btnMusteriEkle);
+            this.Controls.Add(this.btnUrunEkle);
             this.Name = "Ürünler";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Ürünler";
@@ -471,7 +498,7 @@ namespace CRM
         private dbCRMDataSet1 dbCRMDataSet1;
         private System.Windows.Forms.BindingSource tBLURUNLERBindingSource;
         private dbCRMDataSet1TableAdapters.TBLURUNLERTableAdapter tBLURUNLERTableAdapter;
-        private System.Windows.Forms.Button btnMusteriEkle;
+        private System.Windows.Forms.Button btnUrunEkle;
         private System.Windows.Forms.Label lblUrunKategori;
         private System.Windows.Forms.Label lblUrunAd;
         private System.Windows.Forms.Label lblMarka;
@@ -502,6 +529,10 @@ namespace CRM
         private dbCRMDataSet10 dbCRMDataSet10;
         private System.Windows.Forms.BindingSource tBLURUNLERBindingSource3;
         private dbCRMDataSet10TableAdapters.TBLURUNLERTableAdapter tBLURUNLERTableAdapter3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtAlisFiyat;
+        private System.Windows.Forms.Label lblUrunId;
+        private System.Windows.Forms.TextBox txtUrunId;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn urunKategoriDataGridViewTextBoxColumn;
@@ -510,7 +541,5 @@ namespace CRM
         private System.Windows.Forms.DataGridViewTextBoxColumn satisFiyatiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alisFiyatiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn depoDataGridViewTextBoxColumn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAlisFiyat;
     }
 }
