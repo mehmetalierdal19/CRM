@@ -99,9 +99,9 @@ namespace CRM
             // btnalis
             // 
             this.btnalis.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnalis.Location = new System.Drawing.Point(317, 471);
+            this.btnalis.Location = new System.Drawing.Point(292, 470);
             this.btnalis.Name = "btnalis";
-            this.btnalis.Size = new System.Drawing.Size(115, 37);
+            this.btnalis.Size = new System.Drawing.Size(140, 40);
             this.btnalis.TabIndex = 11;
             this.btnalis.Text = "Alış Yap";
             this.btnalis.UseVisualStyleBackColor = true;

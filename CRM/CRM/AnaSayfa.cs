@@ -57,5 +57,11 @@ namespace CRM
             AlışveSatışlar avs = new AlışveSatışlar();
             avs.ShowDialog();
         }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            Aktiviteler akt = new Aktiviteler();
+            akt.ShowDialog();
+        }
     }
 }
