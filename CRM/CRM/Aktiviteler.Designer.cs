@@ -29,6 +29,7 @@ namespace CRM
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblAktiviteID = new System.Windows.Forms.Label();
             this.lblMusteri = new System.Windows.Forms.Label();
             this.lblAktiviteTipi = new System.Windows.Forms.Label();
@@ -52,6 +53,20 @@ namespace CRM
             this.btnAktiviteEkle = new System.Windows.Forms.Button();
             this.btnAktiviteGuncelle = new System.Windows.Forms.Button();
             this.btnAktiviteSil = new System.Windows.Forms.Button();
+            this.dbCRMDataSet7 = new CRM.dbCRMDataSet7();
+            this.dbCRMDataSet7BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMARKALARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMARKALARTableAdapter = new CRM.dbCRMDataSet7TableAdapters.TBLMARKALARTableAdapter();
+            this.dbCRMDataSet = new CRM.dbCRMDataSet();
+            this.dbCRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMUSTERILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMUSTERILERTableAdapter = new CRM.dbCRMDataSetTableAdapters.TBLMUSTERILERTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAktiviteID
@@ -172,15 +187,16 @@ namespace CRM
             // 
             // cbMusteri
             // 
+            this.cbMusteri.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLMUSTERILERBindingSource, "id", true));
+            this.cbMusteri.DataSource = this.tBLMUSTERILERBindingSource;
+            this.cbMusteri.DisplayMember = "MUSTERIAD";
             this.cbMusteri.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMusteri.FormattingEnabled = true;
-            this.cbMusteri.Items.AddRange(new object[] {
-            "Ali",
-            "Mehmet"});
             this.cbMusteri.Location = new System.Drawing.Point(1151, 21);
             this.cbMusteri.Name = "cbMusteri";
             this.cbMusteri.Size = new System.Drawing.Size(221, 28);
             this.cbMusteri.TabIndex = 18;
+            this.cbMusteri.ValueMember = "id";
             // 
             // cbAktiviteTipi
             // 
@@ -212,6 +228,7 @@ namespace CRM
             // 
             // dtBaslangicTarih
             // 
+            this.dtBaslangicTarih.CustomFormat = "";
             this.dtBaslangicTarih.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtBaslangicTarih.Location = new System.Drawing.Point(748, 439);
             this.dtBaslangicTarih.Name = "dtBaslangicTarih";
@@ -270,6 +287,7 @@ namespace CRM
             this.btnAktiviteEkle.TabIndex = 26;
             this.btnAktiviteEkle.Text = "Ekle";
             this.btnAktiviteEkle.UseVisualStyleBackColor = true;
+            this.btnAktiviteEkle.Click += new System.EventHandler(this.btnAktiviteEkle_Click);
             // 
             // btnAktiviteGuncelle
             // 
@@ -290,6 +308,45 @@ namespace CRM
             this.btnAktiviteSil.TabIndex = 28;
             this.btnAktiviteSil.Text = "Sil";
             this.btnAktiviteSil.UseVisualStyleBackColor = true;
+            this.btnAktiviteSil.Click += new System.EventHandler(this.btnAktiviteSil_Click);
+            // 
+            // dbCRMDataSet7
+            // 
+            this.dbCRMDataSet7.DataSetName = "dbCRMDataSet7";
+            this.dbCRMDataSet7.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbCRMDataSet7BindingSource
+            // 
+            this.dbCRMDataSet7BindingSource.DataSource = this.dbCRMDataSet7;
+            this.dbCRMDataSet7BindingSource.Position = 0;
+            // 
+            // tBLMARKALARBindingSource
+            // 
+            this.tBLMARKALARBindingSource.DataMember = "TBLMARKALAR";
+            this.tBLMARKALARBindingSource.DataSource = this.dbCRMDataSet7BindingSource;
+            // 
+            // tBLMARKALARTableAdapter
+            // 
+            this.tBLMARKALARTableAdapter.ClearBeforeFill = true;
+            // 
+            // dbCRMDataSet
+            // 
+            this.dbCRMDataSet.DataSetName = "dbCRMDataSet";
+            this.dbCRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbCRMDataSetBindingSource
+            // 
+            this.dbCRMDataSetBindingSource.DataSource = this.dbCRMDataSet;
+            this.dbCRMDataSetBindingSource.Position = 0;
+            // 
+            // tBLMUSTERILERBindingSource
+            // 
+            this.tBLMUSTERILERBindingSource.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource.DataSource = this.dbCRMDataSetBindingSource;
+            // 
+            // tBLMUSTERILERTableAdapter
+            // 
+            this.tBLMUSTERILERTableAdapter.ClearBeforeFill = true;
             // 
             // Aktiviteler
             // 
@@ -323,6 +380,12 @@ namespace CRM
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aktiviteler";
             this.Load += new System.EventHandler(this.Aktiviteler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -353,5 +416,13 @@ namespace CRM
         private System.Windows.Forms.Button btnAktiviteEkle;
         private System.Windows.Forms.Button btnAktiviteGuncelle;
         private System.Windows.Forms.Button btnAktiviteSil;
+        private System.Windows.Forms.BindingSource dbCRMDataSet7BindingSource;
+        private dbCRMDataSet7 dbCRMDataSet7;
+        private System.Windows.Forms.BindingSource tBLMARKALARBindingSource;
+        private dbCRMDataSet7TableAdapters.TBLMARKALARTableAdapter tBLMARKALARTableAdapter;
+        private System.Windows.Forms.BindingSource dbCRMDataSetBindingSource;
+        private dbCRMDataSet dbCRMDataSet;
+        private System.Windows.Forms.BindingSource tBLMUSTERILERBindingSource;
+        private dbCRMDataSetTableAdapters.TBLMUSTERILERTableAdapter tBLMUSTERILERTableAdapter;
     }
 }
