@@ -76,12 +76,12 @@ namespace CRM
         {
             // kayıt seçme
             txtUrunId.Text = dataGridView1.CurrentRow.Cells[0].Value.ToString();
-            cbKategori.SelectedText = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            cbKategori.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtUrunAd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-            cbMarka.SelectedText = dataGridView1.CurrentRow.Cells[3].Value.ToString();
+            cbMarka.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
             txtSatisFiyat.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             txtAlisFiyat.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
-            cbDepo.SelectedText = dataGridView1.CurrentRow.Cells[6].Value.ToString();
+            cbDepo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
 
         private void btnGuncelle_Click(object sender, EventArgs e)

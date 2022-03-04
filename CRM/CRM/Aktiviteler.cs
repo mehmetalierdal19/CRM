@@ -21,6 +21,8 @@ namespace CRM
 
         private void Aktiviteler_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'tBLPERSONELDATASET.TBLPERSONEL' table. You can move, or remove it, as needed.
+            this.tBLPERSONELTableAdapter.Fill(this.tBLPERSONELDATASET.TBLPERSONEL);
             // TODO: This line of code loads data into the 'dbCRMDataSet.TBLMUSTERILER' table. You can move, or remove it, as needed.
             this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
             // TODO: This line of code loads data into the 'dbCRMDataSet7.TBLMARKALAR' table. You can move, or remove it, as needed.
@@ -31,7 +33,7 @@ namespace CRM
         private void btnAktiviteEkle_Click(object sender, EventArgs e)
         {
             // Aktivite Ekleme
-            SqlCommand komut = new SqlCommand("Insert Into TBLAKTIVITELER (Musteri, AktiviteTipi, AktiviteAdi, Aciklama, Lokasyon, BaslangicTarihi, BaslangicSaati, BitisTarihi, BitisSaat, Oncelik) values (@MUSTERI, @AKTIVITETIPI, @AKTIVITEADI, @ACIKLAMA, @LOKASYON, @BASLANGIC, @BASLANGICSAAT, @BITIS, @BITISSAAT, @ONCELIK)", bgl.sqlbaglanti());
+            SqlCommand komut = new SqlCommand("Insert Into TBLAKTIVITELER (Musteri, AktiviteTipi, AktiviteAdi, Aciklama, Lokasyon, BaslangicTarihi, BaslangicSaati, BitisTarihi, BitisSaat, Oncelik, Sorumlu) values (@MUSTERI, @AKTIVITETIPI, @AKTIVITEADI, @ACIKLAMA, @LOKASYON, @BASLANGIC, @BASLANGICSAAT, @BITIS, @BITISSAAT, @ONCELIK, @SORUMLU)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@MUSTERI", SqlDbType.NVarChar).Value = cbMusteri.Text;
             komut.Parameters.AddWithValue("@AKTIVITETIPI", SqlDbType.NVarChar).Value = cbAktiviteTipi.Text;
             komut.Parameters.AddWithValue("@AKTIVITEADI", SqlDbType.NVarChar).Value = txtAktiviteAd.Text;
@@ -42,6 +44,7 @@ namespace CRM
             komut.Parameters.AddWithValue("@BITIS", SqlDbType.Date).Value = dtBitisTarih.Value;
             komut.Parameters.AddWithValue("@BITISSAAT", SqlDbType.Time).Value = dtBitisSaat.Value;
             komut.Parameters.AddWithValue("@ONCELIK", SqlDbType.NVarChar).Value = cbOncelik.Text;
+            komut.Parameters.AddWithValue("@SORUMLU", SqlDbType.NVarChar).Value = cbSorumlu.Text;
             komut.ExecuteNonQuery();
         }
 

@@ -63,5 +63,11 @@ namespace CRM
             Aktiviteler akt = new Aktiviteler();
             akt.ShowDialog();
         }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Personeller prs = new Personeller();
+            prs.ShowDialog();
+        }
     }
 }

@@ -43,6 +43,9 @@ namespace CRM
             this.txtAktiviteAd = new System.Windows.Forms.TextBox();
             this.txtAciklama = new System.Windows.Forms.TextBox();
             this.cbMusteri = new System.Windows.Forms.ComboBox();
+            this.tBLMUSTERILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbCRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbCRMDataSet = new CRM.dbCRMDataSet();
             this.cbAktiviteTipi = new System.Windows.Forms.ComboBox();
             this.cbLokasyon = new System.Windows.Forms.ComboBox();
             this.dtBaslangicTarih = new System.Windows.Forms.DateTimePicker();
@@ -57,16 +60,20 @@ namespace CRM
             this.dbCRMDataSet7BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLMARKALARBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLMARKALARTableAdapter = new CRM.dbCRMDataSet7TableAdapters.TBLMARKALARTableAdapter();
-            this.dbCRMDataSet = new CRM.dbCRMDataSet();
-            this.dbCRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLMUSTERILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLMUSTERILERTableAdapter = new CRM.dbCRMDataSetTableAdapters.TBLMUSTERILERTableAdapter();
+            this.lblSorumlu = new System.Windows.Forms.Label();
+            this.cbSorumlu = new System.Windows.Forms.ComboBox();
+            this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
+            this.tBLPERSONELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAktiviteID
@@ -197,6 +204,21 @@ namespace CRM
             this.cbMusteri.Size = new System.Drawing.Size(221, 28);
             this.cbMusteri.TabIndex = 18;
             this.cbMusteri.ValueMember = "id";
+            // 
+            // tBLMUSTERILERBindingSource
+            // 
+            this.tBLMUSTERILERBindingSource.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource.DataSource = this.dbCRMDataSetBindingSource;
+            // 
+            // dbCRMDataSetBindingSource
+            // 
+            this.dbCRMDataSetBindingSource.DataSource = this.dbCRMDataSet;
+            this.dbCRMDataSetBindingSource.Position = 0;
+            // 
+            // dbCRMDataSet
+            // 
+            this.dbCRMDataSet.DataSetName = "dbCRMDataSet";
+            this.dbCRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbAktiviteTipi
             // 
@@ -329,30 +351,54 @@ namespace CRM
             // 
             this.tBLMARKALARTableAdapter.ClearBeforeFill = true;
             // 
-            // dbCRMDataSet
-            // 
-            this.dbCRMDataSet.DataSetName = "dbCRMDataSet";
-            this.dbCRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dbCRMDataSetBindingSource
-            // 
-            this.dbCRMDataSetBindingSource.DataSource = this.dbCRMDataSet;
-            this.dbCRMDataSetBindingSource.Position = 0;
-            // 
-            // tBLMUSTERILERBindingSource
-            // 
-            this.tBLMUSTERILERBindingSource.DataMember = "TBLMUSTERILER";
-            this.tBLMUSTERILERBindingSource.DataSource = this.dbCRMDataSetBindingSource;
-            // 
             // tBLMUSTERILERTableAdapter
             // 
             this.tBLMUSTERILERTableAdapter.ClearBeforeFill = true;
+            // 
+            // lblSorumlu
+            // 
+            this.lblSorumlu.AutoSize = true;
+            this.lblSorumlu.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblSorumlu.Location = new System.Drawing.Point(1076, 576);
+            this.lblSorumlu.Name = "lblSorumlu";
+            this.lblSorumlu.Size = new System.Drawing.Size(107, 25);
+            this.lblSorumlu.TabIndex = 29;
+            this.lblSorumlu.Text = "Sorumlu:";
+            // 
+            // cbSorumlu
+            // 
+            this.cbSorumlu.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLPERSONELBindingSource, "ID", true));
+            this.cbSorumlu.DataSource = this.tBLPERSONELBindingSource;
+            this.cbSorumlu.DisplayMember = "PersonelAd";
+            this.cbSorumlu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbSorumlu.FormattingEnabled = true;
+            this.cbSorumlu.Location = new System.Drawing.Point(1192, 573);
+            this.cbSorumlu.Name = "cbSorumlu";
+            this.cbSorumlu.Size = new System.Drawing.Size(222, 28);
+            this.cbSorumlu.TabIndex = 30;
+            this.cbSorumlu.ValueMember = "ID";
+            // 
+            // tBLPERSONELDATASET
+            // 
+            this.tBLPERSONELDATASET.DataSetName = "TBLPERSONELDATASET";
+            this.tBLPERSONELDATASET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLPERSONELBindingSource
+            // 
+            this.tBLPERSONELBindingSource.DataMember = "TBLPERSONEL";
+            this.tBLPERSONELBindingSource.DataSource = this.tBLPERSONELDATASET;
+            // 
+            // tBLPERSONELTableAdapter
+            // 
+            this.tBLPERSONELTableAdapter.ClearBeforeFill = true;
             // 
             // Aktiviteler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1461, 717);
+            this.Controls.Add(this.cbSorumlu);
+            this.Controls.Add(this.lblSorumlu);
             this.Controls.Add(this.btnAktiviteSil);
             this.Controls.Add(this.btnAktiviteGuncelle);
             this.Controls.Add(this.btnAktiviteEkle);
@@ -380,12 +426,14 @@ namespace CRM
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Aktiviteler";
             this.Load += new System.EventHandler(this.Aktiviteler_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -424,5 +472,10 @@ namespace CRM
         private dbCRMDataSet dbCRMDataSet;
         private System.Windows.Forms.BindingSource tBLMUSTERILERBindingSource;
         private dbCRMDataSetTableAdapters.TBLMUSTERILERTableAdapter tBLMUSTERILERTableAdapter;
+        private System.Windows.Forms.Label lblSorumlu;
+        private System.Windows.Forms.ComboBox cbSorumlu;
+        private TBLPERSONELDATASET tBLPERSONELDATASET;
+        private System.Windows.Forms.BindingSource tBLPERSONELBindingSource;
+        private TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter tBLPERSONELTableAdapter;
     }
 }
