@@ -14,6 +14,7 @@ namespace CRM
     public partial class Aktiviteler : Form
     {
         baglanti bgl = new baglanti();
+
         public Aktiviteler()
         {
             InitializeComponent();
@@ -51,6 +52,18 @@ namespace CRM
         private void btnAktiviteSil_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbAktiviteTipi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cbMusteri.Text != "" && cbAktiviteTipi.Text != "")
+            {
+                txtAktiviteAd.Text = cbMusteri.Text + ": " + cbAktiviteTipi.Text;
+            }
+            else
+            {
+                txtAktiviteAd.Text = "";
+            }
         }
     }
 }

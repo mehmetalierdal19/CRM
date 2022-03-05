@@ -36,15 +36,5 @@ namespace CRM
             komut.ExecuteNonQuery();
             this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
         }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

@@ -45,7 +45,7 @@ namespace CRM
             this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.Font = new System.Drawing.Font("Verdana", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(359, 53);
+            this.label1.Location = new System.Drawing.Point(373, 19);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(335, 55);
             this.label1.TabIndex = 0;
@@ -145,7 +145,7 @@ namespace CRM
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1085, 725);
+            this.ClientSize = new System.Drawing.Size(1113, 657);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);

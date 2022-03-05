@@ -63,8 +63,8 @@ namespace CRM
             this.tBLMUSTERILERTableAdapter = new CRM.dbCRMDataSetTableAdapters.TBLMUSTERILERTableAdapter();
             this.lblSorumlu = new System.Windows.Forms.Label();
             this.cbSorumlu = new System.Windows.Forms.ComboBox();
-            this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
             this.tBLPERSONELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).BeginInit();
@@ -72,8 +72,8 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAktiviteID
@@ -235,6 +235,7 @@ namespace CRM
             this.cbAktiviteTipi.Name = "cbAktiviteTipi";
             this.cbAktiviteTipi.Size = new System.Drawing.Size(202, 28);
             this.cbAktiviteTipi.TabIndex = 19;
+            this.cbAktiviteTipi.SelectedIndexChanged += new System.EventHandler(this.cbAktiviteTipi_SelectedIndexChanged);
             // 
             // cbLokasyon
             // 
@@ -378,15 +379,15 @@ namespace CRM
             this.cbSorumlu.TabIndex = 30;
             this.cbSorumlu.ValueMember = "ID";
             // 
-            // tBLPERSONELDATASET
-            // 
-            this.tBLPERSONELDATASET.DataSetName = "TBLPERSONELDATASET";
-            this.tBLPERSONELDATASET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
             // tBLPERSONELBindingSource
             // 
             this.tBLPERSONELBindingSource.DataMember = "TBLPERSONEL";
             this.tBLPERSONELBindingSource.DataSource = this.tBLPERSONELDATASET;
+            // 
+            // tBLPERSONELDATASET
+            // 
+            this.tBLPERSONELDATASET.DataSetName = "TBLPERSONELDATASET";
+            this.tBLPERSONELDATASET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // tBLPERSONELTableAdapter
             // 
@@ -432,8 +433,8 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

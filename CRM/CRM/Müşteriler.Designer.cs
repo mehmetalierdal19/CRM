@@ -138,7 +138,6 @@ namespace CRM
             this.lblTel.Size = new System.Drawing.Size(196, 25);
             this.lblTel.TabIndex = 5;
             this.lblTel.Text = "Telefon Numarası:";
-            this.lblTel.Click += new System.EventHandler(this.label4_Click);
             // 
             // txtAd
             // 
@@ -177,18 +176,17 @@ namespace CRM
             // 
             this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button2.Location = new System.Drawing.Point(1108, 512);
-            this.button2.Name = "button2";
+            this.button2.Name = "btnMusteriSil";
             this.button2.Size = new System.Drawing.Size(131, 38);
             this.button2.TabIndex = 10;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.button3.Location = new System.Drawing.Point(1296, 512);
-            this.button3.Name = "button3";
+            this.button3.Name = "btnMusteriGuncelle";
             this.button3.Size = new System.Drawing.Size(131, 38);
             this.button3.TabIndex = 11;
             this.button3.Text = "Güncelle";
