@@ -114,7 +114,6 @@ namespace CRM
             this.txtSatisFiyati.Name = "txtSatisFiyati";
             this.txtSatisFiyati.Size = new System.Drawing.Size(220, 28);
             this.txtSatisFiyati.TabIndex = 10;
-            this.txtSatisFiyati.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // txtAlisFiyati
             // 

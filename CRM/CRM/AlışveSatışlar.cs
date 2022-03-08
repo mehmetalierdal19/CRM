@@ -20,22 +20,12 @@ namespace CRM
             InitializeComponent();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void AlışveSatışlar_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbCRMDataSet12.TBLURUNLER' table. You can move, or remove it, as needed.
             this.tBLURUNLERTableAdapter.Fill(this.dbCRMDataSet12.TBLURUNLER);
             // TODO: This line of code loads data into the 'dbCRMDataSet11.TBLISLEMLER' table. You can move, or remove it, as needed.
             this.tBLISLEMLERTableAdapter.Fill(this.dbCRMDataSet11.TBLISLEMLER);
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
 
         }
 
@@ -66,21 +56,6 @@ namespace CRM
                 txtAlisFiyati.Text = satir["AlisFiyati"].ToString();
                 txtSatisFiyati.Text = satir["SatisFiyati"].ToString();
             }
-        }
-
-        private void lblUrunAd2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAlis_Click(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void cbÜrünAd2_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
         }
 
         private void btnalis_Click_1(object sender, EventArgs e)
