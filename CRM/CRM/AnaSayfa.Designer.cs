@@ -38,6 +38,7 @@ namespace CRM
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
+            this.btnStoklar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -140,12 +141,24 @@ namespace CRM
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
+            // btnStoklar
+            // 
+            this.btnStoklar.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnStoklar.Location = new System.Drawing.Point(600, 95);
+            this.btnStoklar.Name = "btnStoklar";
+            this.btnStoklar.Size = new System.Drawing.Size(256, 50);
+            this.btnStoklar.TabIndex = 9;
+            this.btnStoklar.Text = "Stoklar";
+            this.btnStoklar.UseVisualStyleBackColor = true;
+            this.btnStoklar.Click += new System.EventHandler(this.btnStoklar_Click);
+            // 
             // AnaSayfa
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1113, 657);
+            this.Controls.Add(this.btnStoklar);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
@@ -174,5 +187,6 @@ namespace CRM
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button btnStoklar;
     }
 }

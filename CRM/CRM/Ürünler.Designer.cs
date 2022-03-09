@@ -39,7 +39,7 @@ namespace CRM
             this.lblUrunKategori = new System.Windows.Forms.Label();
             this.lblUrunAd = new System.Windows.Forms.Label();
             this.lblMarka = new System.Windows.Forms.Label();
-            this.lblSatisFiyati = new System.Windows.Forms.Label();
+            this.lblStokMiktari = new System.Windows.Forms.Label();
             this.lblDepo = new System.Windows.Forms.Label();
             this.cbKategori = new System.Windows.Forms.ComboBox();
             this.tBLKATEGORILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,7 +51,7 @@ namespace CRM
             this.tBLDEPOLARBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSet8 = new CRM.dbCRMDataSet8();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
-            this.txtSatisFiyat = new System.Windows.Forms.TextBox();
+            this.txtStokMiktari = new System.Windows.Forms.TextBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.tBLURUNLERTableAdapter1 = new CRM.dbCRMDataSet5TableAdapters.TBLURUNLERTableAdapter();
@@ -64,8 +64,7 @@ namespace CRM
             this.dbCRMDataSet10 = new CRM.dbCRMDataSet10();
             this.tBLURUNLERBindingSource3 = new System.Windows.Forms.BindingSource(this.components);
             this.tBLURUNLERTableAdapter3 = new CRM.dbCRMDataSet10TableAdapters.TBLURUNLERTableAdapter();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtAlisFiyat = new System.Windows.Forms.TextBox();
+            this.lblBirim = new System.Windows.Forms.Label();
             this.lblUrunId = new System.Windows.Forms.Label();
             this.txtUrunId = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
@@ -76,6 +75,7 @@ namespace CRM
             this.satisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.alisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cbBirim = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
@@ -158,16 +158,16 @@ namespace CRM
             this.lblMarka.TabIndex = 4;
             this.lblMarka.Text = "Marka:";
             // 
-            // lblSatisFiyati
+            // lblStokMiktari
             // 
-            this.lblSatisFiyati.AutoSize = true;
-            this.lblSatisFiyati.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblSatisFiyati.Location = new System.Drawing.Point(865, 415);
-            this.lblSatisFiyati.Name = "lblSatisFiyati";
-            this.lblSatisFiyati.Size = new System.Drawing.Size(134, 25);
-            this.lblSatisFiyati.TabIndex = 5;
-            this.lblSatisFiyati.Text = "Satış Fiyatı:";
-            this.lblSatisFiyati.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblStokMiktari.AutoSize = true;
+            this.lblStokMiktari.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblStokMiktari.Location = new System.Drawing.Point(865, 415);
+            this.lblStokMiktari.Name = "lblStokMiktari";
+            this.lblStokMiktari.Size = new System.Drawing.Size(144, 25);
+            this.lblStokMiktari.TabIndex = 5;
+            this.lblStokMiktari.Text = "Stok Miktarı:";
+            this.lblStokMiktari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // lblDepo
             // 
@@ -256,13 +256,13 @@ namespace CRM
             this.txtUrunAd.Size = new System.Drawing.Size(345, 28);
             this.txtUrunAd.TabIndex = 10;
             // 
-            // txtSatisFiyat
+            // txtStokMiktari
             // 
-            this.txtSatisFiyat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtSatisFiyat.Location = new System.Drawing.Point(1118, 416);
-            this.txtSatisFiyat.Name = "txtSatisFiyat";
-            this.txtSatisFiyat.Size = new System.Drawing.Size(345, 28);
-            this.txtSatisFiyat.TabIndex = 11;
+            this.txtStokMiktari.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtStokMiktari.Location = new System.Drawing.Point(1118, 416);
+            this.txtStokMiktari.Name = "txtStokMiktari";
+            this.txtStokMiktari.Size = new System.Drawing.Size(345, 28);
+            this.txtStokMiktari.TabIndex = 11;
             // 
             // btnSil
             // 
@@ -330,23 +330,15 @@ namespace CRM
             // 
             this.tBLURUNLERTableAdapter3.ClearBeforeFill = true;
             // 
-            // label1
+            // lblBirim
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(867, 501);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 25);
-            this.label1.TabIndex = 15;
-            this.label1.Text = "Alış Fiyatı:";
-            // 
-            // txtAlisFiyat
-            // 
-            this.txtAlisFiyat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAlisFiyat.Location = new System.Drawing.Point(1118, 506);
-            this.txtAlisFiyat.Name = "txtAlisFiyat";
-            this.txtAlisFiyat.Size = new System.Drawing.Size(345, 28);
-            this.txtAlisFiyat.TabIndex = 16;
+            this.lblBirim.AutoSize = true;
+            this.lblBirim.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblBirim.Location = new System.Drawing.Point(867, 501);
+            this.lblBirim.Name = "lblBirim";
+            this.lblBirim.Size = new System.Drawing.Size(75, 25);
+            this.lblBirim.TabIndex = 15;
+            this.lblBirim.Text = "Birim:";
             // 
             // lblUrunId
             // 
@@ -446,26 +438,74 @@ namespace CRM
             this.depoDataGridViewTextBoxColumn.Name = "depoDataGridViewTextBoxColumn";
             this.depoDataGridViewTextBoxColumn.Width = 125;
             // 
+            // cbBirim
+            // 
+            this.cbBirim.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.cbBirim.FormattingEnabled = true;
+            this.cbBirim.Items.AddRange(new object[] {
+            "Adet",
+            "Ay",
+            "Bidon",
+            "Cilt",
+            "Çuval",
+            "Dakika",
+            "Galon",
+            "Gram",
+            "Gün",
+            "Karat",
+            "Kasa",
+            "Kavanoz",
+            "Kilogram",
+            "Koli",
+            "Kutu",
+            "Litre",
+            "Makara",
+            "Metre",
+            "Paket",
+            "Metrekare",
+            "Metreküp",
+            "Palet",
+            "Parça",
+            "Porsiyon",
+            "Rulo",
+            "Saat",
+            "Sayfa",
+            "Seans",
+            "Saniye",
+            "Şişe",
+            "Takım",
+            "Teneke",
+            "Tepsi",
+            "Ton",
+            "Top",
+            "Torba",
+            "Varil",
+            "Yıl"});
+            this.cbBirim.Location = new System.Drawing.Point(1120, 498);
+            this.cbBirim.Name = "cbBirim";
+            this.cbBirim.Size = new System.Drawing.Size(343, 28);
+            this.cbBirim.TabIndex = 19;
+            // 
             // Ürünler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1532, 677);
+            this.Controls.Add(this.cbBirim);
             this.Controls.Add(this.txtUrunId);
             this.Controls.Add(this.lblUrunId);
-            this.Controls.Add(this.txtAlisFiyat);
-            this.Controls.Add(this.label1);
+            this.Controls.Add(this.lblBirim);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
-            this.Controls.Add(this.txtSatisFiyat);
+            this.Controls.Add(this.txtStokMiktari);
             this.Controls.Add(this.txtUrunAd);
             this.Controls.Add(this.cbDepo);
             this.Controls.Add(this.cbMarka);
             this.Controls.Add(this.cbKategori);
             this.Controls.Add(this.lblDepo);
-            this.Controls.Add(this.lblSatisFiyati);
+            this.Controls.Add(this.lblStokMiktari);
             this.Controls.Add(this.lblMarka);
             this.Controls.Add(this.lblUrunAd);
             this.Controls.Add(this.lblUrunKategori);
@@ -502,13 +542,13 @@ namespace CRM
         private System.Windows.Forms.Label lblUrunKategori;
         private System.Windows.Forms.Label lblUrunAd;
         private System.Windows.Forms.Label lblMarka;
-        private System.Windows.Forms.Label lblSatisFiyati;
+        private System.Windows.Forms.Label lblStokMiktari;
         private System.Windows.Forms.Label lblDepo;
         private System.Windows.Forms.ComboBox cbKategori;
         private System.Windows.Forms.ComboBox cbMarka;
         private System.Windows.Forms.ComboBox cbDepo;
         private System.Windows.Forms.TextBox txtUrunAd;
-        private System.Windows.Forms.TextBox txtSatisFiyat;
+        private System.Windows.Forms.TextBox txtStokMiktari;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
         private dbCRMDataSet5 dbCRMDataSet5;
@@ -529,8 +569,7 @@ namespace CRM
         private dbCRMDataSet10 dbCRMDataSet10;
         private System.Windows.Forms.BindingSource tBLURUNLERBindingSource3;
         private dbCRMDataSet10TableAdapters.TBLURUNLERTableAdapter tBLURUNLERTableAdapter3;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtAlisFiyat;
+        private System.Windows.Forms.Label lblBirim;
         private System.Windows.Forms.Label lblUrunId;
         private System.Windows.Forms.TextBox txtUrunId;
         private System.Windows.Forms.DataGridView dataGridView1;
@@ -541,5 +580,6 @@ namespace CRM
         private System.Windows.Forms.DataGridViewTextBoxColumn satisFiyatiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn alisFiyatiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn depoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.ComboBox cbBirim;
     }
 }

@@ -69,5 +69,11 @@ namespace CRM
             Personeller prs = new Personeller();
             prs.ShowDialog();
         }
+
+        private void btnStoklar_Click(object sender, EventArgs e)
+        {
+            Stoklar stklr = new Stoklar();
+            stklr.ShowDialog();
+        }
     }
 }
