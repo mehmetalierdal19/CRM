@@ -22,10 +22,12 @@ namespace CRM
 
         private void Aktiviteler_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dbMUSTERILERDataSet.TBLMUSTERILER' table. You can move, or remove it, as needed.
+            this.tBLMUSTERILERTableAdapter1.Fill(this.dbMUSTERILERDataSet.TBLMUSTERILER);
             // TODO: This line of code loads data into the 'tBLPERSONELDATASET.TBLPERSONEL' table. You can move, or remove it, as needed.
             this.tBLPERSONELTableAdapter.Fill(this.tBLPERSONELDATASET.TBLPERSONEL);
             // TODO: This line of code loads data into the 'dbCRMDataSet.TBLMUSTERILER' table. You can move, or remove it, as needed.
-            this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
+            //this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
             // TODO: This line of code loads data into the 'dbCRMDataSet7.TBLMARKALAR' table. You can move, or remove it, as needed.
             this.tBLMARKALARTableAdapter.Fill(this.dbCRMDataSet7.TBLMARKALAR);
 

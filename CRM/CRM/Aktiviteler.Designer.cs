@@ -66,6 +66,10 @@ namespace CRM
             this.tBLPERSONELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
+            this.dbMUSTERILERDataSet = new CRM.dbMUSTERILERDataSet();
+            this.dbMUSTERILERDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMUSTERILERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLMUSTERILERTableAdapter1 = new CRM.dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
@@ -74,6 +78,9 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAktiviteID
@@ -195,7 +202,7 @@ namespace CRM
             // cbMusteri
             // 
             this.cbMusteri.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLMUSTERILERBindingSource, "id", true));
-            this.cbMusteri.DataSource = this.tBLMUSTERILERBindingSource;
+            this.cbMusteri.DataSource = this.tBLMUSTERILERBindingSource1;
             this.cbMusteri.DisplayMember = "MUSTERIAD";
             this.cbMusteri.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMusteri.FormattingEnabled = true;
@@ -393,6 +400,25 @@ namespace CRM
             // 
             this.tBLPERSONELTableAdapter.ClearBeforeFill = true;
             // 
+            // dbMUSTERILERDataSet
+            // 
+            this.dbMUSTERILERDataSet.DataSetName = "dbMUSTERILERDataSet";
+            this.dbMUSTERILERDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // dbMUSTERILERDataSetBindingSource
+            // 
+            this.dbMUSTERILERDataSetBindingSource.DataSource = this.dbMUSTERILERDataSet;
+            this.dbMUSTERILERDataSetBindingSource.Position = 0;
+            // 
+            // tBLMUSTERILERBindingSource1
+            // 
+            this.tBLMUSTERILERBindingSource1.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource1.DataSource = this.dbMUSTERILERDataSetBindingSource;
+            // 
+            // tBLMUSTERILERTableAdapter1
+            // 
+            this.tBLMUSTERILERTableAdapter1.ClearBeforeFill = true;
+            // 
             // Aktiviteler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -435,6 +461,9 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -478,5 +507,9 @@ namespace CRM
         private TBLPERSONELDATASET tBLPERSONELDATASET;
         private System.Windows.Forms.BindingSource tBLPERSONELBindingSource;
         private TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter tBLPERSONELTableAdapter;
+        private System.Windows.Forms.BindingSource dbMUSTERILERDataSetBindingSource;
+        private dbMUSTERILERDataSet dbMUSTERILERDataSet;
+        private System.Windows.Forms.BindingSource tBLMUSTERILERBindingSource1;
+        private dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter tBLMUSTERILERTableAdapter1;
     }
 }
