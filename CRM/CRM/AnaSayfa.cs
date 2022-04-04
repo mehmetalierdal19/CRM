@@ -75,5 +75,17 @@ namespace CRM
             Stoklar stklr = new Stoklar();
             stklr.ShowDialog();
         }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            Gorusmeler grs = new Gorusmeler();
+            grs.ShowDialog();
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            Tedarikciler tdr = new Tedarikciler();
+            tdr.ShowDialog();
+        }
     }
 }

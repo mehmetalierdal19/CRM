@@ -17,3 +17,5 @@ C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.AlışveSatışlar.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Aktiviteler.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Personeller.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Stoklar.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Gorusmeler.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Tedarikciler.resources
