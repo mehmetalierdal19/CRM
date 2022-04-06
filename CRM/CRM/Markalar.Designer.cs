@@ -31,18 +31,20 @@ namespace CRM
         {
             this.components = new System.ComponentModel.Container();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dbCRMDataSet3 = new CRM.dbCRMDataSet3();
-            this.tBLMARKALARBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLMARKALARTableAdapter = new CRM.dbCRMDataSet3TableAdapters.TBLMARKALARTableAdapter();
             this.markaIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.markaAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tBLMARKALARBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbCRMDataSet3 = new CRM.dbCRMDataSet3();
+            this.tBLMARKALARTableAdapter = new CRM.dbCRMDataSet3TableAdapters.TBLMARKALARTableAdapter();
             this.lblMarkaAd = new System.Windows.Forms.Label();
             this.txtMarkaAd = new System.Windows.Forms.TextBox();
             this.btnMarkaEkle = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtID = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet3)).BeginInit();
             this.SuspendLayout();
             // 
             // dataGridView1
@@ -55,27 +57,13 @@ namespace CRM
             this.markaIDDataGridViewTextBoxColumn,
             this.markaAdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tBLMARKALARBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 139);
+            this.dataGridView1.Location = new System.Drawing.Point(367, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 299);
+            this.dataGridView1.Size = new System.Drawing.Size(454, 285);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // dbCRMDataSet3
-            // 
-            this.dbCRMDataSet3.DataSetName = "dbCRMDataSet3";
-            this.dbCRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLMARKALARBindingSource
-            // 
-            this.tBLMARKALARBindingSource.DataMember = "TBLMARKALAR";
-            this.tBLMARKALARBindingSource.DataSource = this.dbCRMDataSet3;
-            // 
-            // tBLMARKALARTableAdapter
-            // 
-            this.tBLMARKALARTableAdapter.ClearBeforeFill = true;
             // 
             // markaIDDataGridViewTextBoxColumn
             // 
@@ -94,27 +82,42 @@ namespace CRM
             this.markaAdDataGridViewTextBoxColumn.Name = "markaAdDataGridViewTextBoxColumn";
             this.markaAdDataGridViewTextBoxColumn.Width = 125;
             // 
+            // tBLMARKALARBindingSource
+            // 
+            this.tBLMARKALARBindingSource.DataMember = "TBLMARKALAR";
+            this.tBLMARKALARBindingSource.DataSource = this.dbCRMDataSet3;
+            // 
+            // dbCRMDataSet3
+            // 
+            this.dbCRMDataSet3.DataSetName = "dbCRMDataSet3";
+            this.dbCRMDataSet3.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLMARKALARTableAdapter
+            // 
+            this.tBLMARKALARTableAdapter.ClearBeforeFill = true;
+            // 
             // lblMarkaAd
             // 
             this.lblMarkaAd.AutoSize = true;
-            this.lblMarkaAd.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMarkaAd.Location = new System.Drawing.Point(497, 270);
+            this.lblMarkaAd.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.lblMarkaAd.Location = new System.Drawing.Point(608, 390);
             this.lblMarkaAd.Name = "lblMarkaAd";
-            this.lblMarkaAd.Size = new System.Drawing.Size(141, 29);
+            this.lblMarkaAd.Size = new System.Drawing.Size(170, 34);
             this.lblMarkaAd.TabIndex = 1;
             this.lblMarkaAd.Text = "Marka Adı:";
             // 
             // txtMarkaAd
             // 
-            this.txtMarkaAd.Location = new System.Drawing.Point(693, 277);
+            this.txtMarkaAd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtMarkaAd.Location = new System.Drawing.Point(809, 395);
             this.txtMarkaAd.Name = "txtMarkaAd";
-            this.txtMarkaAd.Size = new System.Drawing.Size(246, 22);
+            this.txtMarkaAd.Size = new System.Drawing.Size(246, 28);
             this.txtMarkaAd.TabIndex = 2;
             // 
             // btnMarkaEkle
             // 
             this.btnMarkaEkle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnMarkaEkle.Location = new System.Drawing.Point(502, 401);
+            this.btnMarkaEkle.Location = new System.Drawing.Point(360, 533);
             this.btnMarkaEkle.Name = "btnMarkaEkle";
             this.btnMarkaEkle.Size = new System.Drawing.Size(123, 37);
             this.btnMarkaEkle.TabIndex = 3;
@@ -125,7 +128,7 @@ namespace CRM
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(816, 401);
+            this.button1.Location = new System.Drawing.Point(590, 533);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(123, 37);
             this.button1.TabIndex = 4;
@@ -133,12 +136,33 @@ namespace CRM
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(29, 389);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(160, 34);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Marka ID:";
+            // 
+            // txtID
+            // 
+            this.txtID.Enabled = false;
+            this.txtID.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtID.Location = new System.Drawing.Point(237, 396);
+            this.txtID.Name = "txtID";
+            this.txtID.Size = new System.Drawing.Size(246, 28);
+            this.txtID.TabIndex = 6;
+            // 
             // Markalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1095, 639);
+            this.Controls.Add(this.txtID);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnMarkaEkle);
             this.Controls.Add(this.txtMarkaAd);
@@ -149,8 +173,8 @@ namespace CRM
             this.Text = "Markalar";
             this.Load += new System.EventHandler(this.Markalar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -168,5 +192,7 @@ namespace CRM
         private System.Windows.Forms.TextBox txtMarkaAd;
         private System.Windows.Forms.Button btnMarkaEkle;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtID;
     }
 }

@@ -101,7 +101,7 @@ namespace CRM
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(738, 630);
+            this.button1.Location = new System.Drawing.Point(786, 534);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(131, 38);
             this.button1.TabIndex = 1;
@@ -112,7 +112,7 @@ namespace CRM
             // lblAd
             // 
             this.lblAd.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAd.Location = new System.Drawing.Point(676, 57);
+            this.lblAd.Location = new System.Drawing.Point(705, 139);
             this.lblAd.Name = "lblAd";
             this.lblAd.Size = new System.Drawing.Size(136, 30);
             this.lblAd.TabIndex = 2;
@@ -122,7 +122,7 @@ namespace CRM
             // 
             this.lblYetkiliName.AutoSize = true;
             this.lblYetkiliName.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYetkiliName.Location = new System.Drawing.Point(626, 118);
+            this.lblYetkiliName.Location = new System.Drawing.Point(655, 200);
             this.lblYetkiliName.Name = "lblYetkiliName";
             this.lblYetkiliName.Size = new System.Drawing.Size(186, 25);
             this.lblYetkiliName.TabIndex = 3;
@@ -132,7 +132,7 @@ namespace CRM
             // 
             this.lblYetkiliEposta.AutoSize = true;
             this.lblYetkiliEposta.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblYetkiliEposta.Location = new System.Drawing.Point(1103, 62);
+            this.lblYetkiliEposta.Location = new System.Drawing.Point(1132, 144);
             this.lblYetkiliEposta.Name = "lblYetkiliEposta";
             this.lblYetkiliEposta.Size = new System.Drawing.Size(165, 25);
             this.lblYetkiliEposta.TabIndex = 4;
@@ -142,7 +142,7 @@ namespace CRM
             // 
             this.lblTel.AutoSize = true;
             this.lblTel.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblTel.Location = new System.Drawing.Point(548, 187);
+            this.lblTel.Location = new System.Drawing.Point(577, 269);
             this.lblTel.Name = "lblTel";
             this.lblTel.Size = new System.Drawing.Size(264, 25);
             this.lblTel.TabIndex = 5;
@@ -151,7 +151,7 @@ namespace CRM
             // txtAd
             // 
             this.txtAd.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAd.Location = new System.Drawing.Point(821, 59);
+            this.txtAd.Location = new System.Drawing.Point(850, 141);
             this.txtAd.Name = "txtAd";
             this.txtAd.Size = new System.Drawing.Size(232, 26);
             this.txtAd.TabIndex = 6;
@@ -159,7 +159,7 @@ namespace CRM
             // txtYetkiliName
             // 
             this.txtYetkiliName.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtYetkiliName.Location = new System.Drawing.Point(821, 119);
+            this.txtYetkiliName.Location = new System.Drawing.Point(850, 201);
             this.txtYetkiliName.Name = "txtYetkiliName";
             this.txtYetkiliName.Size = new System.Drawing.Size(232, 26);
             this.txtYetkiliName.TabIndex = 7;
@@ -167,7 +167,7 @@ namespace CRM
             // txtEposta
             // 
             this.txtEposta.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtEposta.Location = new System.Drawing.Point(1285, 59);
+            this.txtEposta.Location = new System.Drawing.Point(1314, 141);
             this.txtEposta.Name = "txtEposta";
             this.txtEposta.Size = new System.Drawing.Size(220, 26);
             this.txtEposta.TabIndex = 8;
@@ -175,7 +175,7 @@ namespace CRM
             // txtTel
             // 
             this.txtTel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTel.Location = new System.Drawing.Point(821, 184);
+            this.txtTel.Location = new System.Drawing.Point(850, 266);
             this.txtTel.MaxLength = 11;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(232, 26);
@@ -184,7 +184,7 @@ namespace CRM
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(968, 630);
+            this.button2.Location = new System.Drawing.Point(1016, 534);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(131, 38);
             this.button2.TabIndex = 10;
@@ -195,7 +195,7 @@ namespace CRM
             // button3
             // 
             this.button3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button3.Location = new System.Drawing.Point(1181, 630);
+            this.button3.Location = new System.Drawing.Point(1229, 534);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(131, 38);
             this.button3.TabIndex = 11;
@@ -207,7 +207,7 @@ namespace CRM
             // 
             this.lblAdres.AutoSize = true;
             this.lblAdres.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblAdres.Location = new System.Drawing.Point(1122, 118);
+            this.lblAdres.Location = new System.Drawing.Point(1151, 200);
             this.lblAdres.Name = "lblAdres";
             this.lblAdres.Size = new System.Drawing.Size(146, 25);
             this.lblAdres.TabIndex = 12;
@@ -217,7 +217,7 @@ namespace CRM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(484, 252);
+            this.label2.Location = new System.Drawing.Point(513, 334);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(328, 25);
             this.label2.TabIndex = 13;
@@ -227,7 +227,7 @@ namespace CRM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(1127, 184);
+            this.label3.Location = new System.Drawing.Point(1156, 266);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(150, 25);
             this.label3.TabIndex = 14;
@@ -237,7 +237,7 @@ namespace CRM
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.Location = new System.Drawing.Point(1108, 252);
+            this.label4.Location = new System.Drawing.Point(1137, 334);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(169, 25);
             this.label4.TabIndex = 15;
@@ -247,7 +247,7 @@ namespace CRM
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label5.Location = new System.Drawing.Point(635, 336);
+            this.label5.Location = new System.Drawing.Point(664, 418);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(186, 25);
             this.label5.TabIndex = 16;
@@ -256,7 +256,7 @@ namespace CRM
             // txtAdres
             // 
             this.txtAdres.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtAdres.Location = new System.Drawing.Point(1285, 115);
+            this.txtAdres.Location = new System.Drawing.Point(1314, 197);
             this.txtAdres.Name = "txtAdres";
             this.txtAdres.Size = new System.Drawing.Size(220, 26);
             this.txtAdres.TabIndex = 17;
@@ -264,7 +264,7 @@ namespace CRM
             // txtVergiNo
             // 
             this.txtVergiNo.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtVergiNo.Location = new System.Drawing.Point(1285, 249);
+            this.txtVergiNo.Location = new System.Drawing.Point(1314, 331);
             this.txtVergiNo.Name = "txtVergiNo";
             this.txtVergiNo.Size = new System.Drawing.Size(220, 26);
             this.txtVergiNo.TabIndex = 18;
@@ -272,7 +272,7 @@ namespace CRM
             // txtVergiD
             // 
             this.txtVergiD.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtVergiD.Location = new System.Drawing.Point(1285, 181);
+            this.txtVergiD.Location = new System.Drawing.Point(1314, 263);
             this.txtVergiD.Name = "txtVergiD";
             this.txtVergiD.Size = new System.Drawing.Size(220, 26);
             this.txtVergiD.TabIndex = 19;
@@ -280,7 +280,7 @@ namespace CRM
             // txtPosition
             // 
             this.txtPosition.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtPosition.Location = new System.Drawing.Point(821, 253);
+            this.txtPosition.Location = new System.Drawing.Point(850, 335);
             this.txtPosition.Name = "txtPosition";
             this.txtPosition.Size = new System.Drawing.Size(232, 26);
             this.txtPosition.TabIndex = 20;
@@ -296,7 +296,7 @@ namespace CRM
             "Takip",
             "Portföy",
             "Kaybedildi"});
-            this.cbMusteriAsama.Location = new System.Drawing.Point(821, 341);
+            this.cbMusteriAsama.Location = new System.Drawing.Point(850, 423);
             this.cbMusteriAsama.Name = "cbMusteriAsama";
             this.cbMusteriAsama.Size = new System.Drawing.Size(232, 26);
             this.cbMusteriAsama.TabIndex = 21;
@@ -305,7 +305,7 @@ namespace CRM
             // 
             this.lblid.AutoSize = true;
             this.lblid.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblid.Location = new System.Drawing.Point(1175, 342);
+            this.lblid.Location = new System.Drawing.Point(1204, 424);
             this.lblid.Name = "lblid";
             this.lblid.Size = new System.Drawing.Size(111, 25);
             this.lblid.TabIndex = 22;
@@ -315,7 +315,7 @@ namespace CRM
             // 
             this.txtID.Enabled = false;
             this.txtID.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtID.Location = new System.Drawing.Point(1285, 339);
+            this.txtID.Location = new System.Drawing.Point(1314, 421);
             this.txtID.Name = "txtID";
             this.txtID.Size = new System.Drawing.Size(220, 26);
             this.txtID.TabIndex = 23;
@@ -336,11 +336,11 @@ namespace CRM
             this.vergiNoDataGridViewTextBoxColumn,
             this.müsteriAsamasiDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tBLMUSTERILERBindingSource1;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 33);
+            this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(466, 423);
+            this.dataGridView1.Size = new System.Drawing.Size(495, 656);
             this.dataGridView1.TabIndex = 24;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 

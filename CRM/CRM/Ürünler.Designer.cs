@@ -120,7 +120,7 @@ namespace CRM
             // btnUrunEkle
             // 
             this.btnUrunEkle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnUrunEkle.Location = new System.Drawing.Point(870, 628);
+            this.btnUrunEkle.Location = new System.Drawing.Point(460, 280);
             this.btnUrunEkle.Name = "btnUrunEkle";
             this.btnUrunEkle.Size = new System.Drawing.Size(151, 37);
             this.btnUrunEkle.TabIndex = 1;
@@ -132,7 +132,7 @@ namespace CRM
             // 
             this.lblUrunKategori.AutoSize = true;
             this.lblUrunKategori.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunKategori.Location = new System.Drawing.Point(865, 169);
+            this.lblUrunKategori.Location = new System.Drawing.Point(126, 108);
             this.lblUrunKategori.Name = "lblUrunKategori";
             this.lblUrunKategori.Size = new System.Drawing.Size(178, 25);
             this.lblUrunKategori.TabIndex = 2;
@@ -142,7 +142,7 @@ namespace CRM
             // 
             this.lblUrunAd.AutoSize = true;
             this.lblUrunAd.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunAd.Location = new System.Drawing.Point(865, 259);
+            this.lblUrunAd.Location = new System.Drawing.Point(194, 191);
             this.lblUrunAd.Name = "lblUrunAd";
             this.lblUrunAd.Size = new System.Drawing.Size(110, 25);
             this.lblUrunAd.TabIndex = 3;
@@ -152,7 +152,7 @@ namespace CRM
             // 
             this.lblMarka.AutoSize = true;
             this.lblMarka.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMarka.Location = new System.Drawing.Point(865, 341);
+            this.lblMarka.Location = new System.Drawing.Point(597, 112);
             this.lblMarka.Name = "lblMarka";
             this.lblMarka.Size = new System.Drawing.Size(83, 25);
             this.lblMarka.TabIndex = 4;
@@ -162,7 +162,7 @@ namespace CRM
             // 
             this.lblStokMiktari.AutoSize = true;
             this.lblStokMiktari.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStokMiktari.Location = new System.Drawing.Point(865, 415);
+            this.lblStokMiktari.Location = new System.Drawing.Point(597, 191);
             this.lblStokMiktari.Name = "lblStokMiktari";
             this.lblStokMiktari.Size = new System.Drawing.Size(144, 25);
             this.lblStokMiktari.TabIndex = 5;
@@ -173,7 +173,7 @@ namespace CRM
             // 
             this.lblDepo.AutoSize = true;
             this.lblDepo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDepo.Location = new System.Drawing.Point(867, 575);
+            this.lblDepo.Location = new System.Drawing.Point(1016, 195);
             this.lblDepo.Name = "lblDepo";
             this.lblDepo.Size = new System.Drawing.Size(72, 25);
             this.lblDepo.TabIndex = 6;
@@ -186,9 +186,9 @@ namespace CRM
             this.cbKategori.DisplayMember = "KategoriAd";
             this.cbKategori.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbKategori.FormattingEnabled = true;
-            this.cbKategori.Location = new System.Drawing.Point(1118, 169);
+            this.cbKategori.Location = new System.Drawing.Point(322, 109);
             this.cbKategori.Name = "cbKategori";
-            this.cbKategori.Size = new System.Drawing.Size(345, 28);
+            this.cbKategori.Size = new System.Drawing.Size(225, 28);
             this.cbKategori.TabIndex = 7;
             this.cbKategori.ValueMember = "KategoriID";
             // 
@@ -209,9 +209,9 @@ namespace CRM
             this.cbMarka.DisplayMember = "MarkaAd";
             this.cbMarka.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMarka.FormattingEnabled = true;
-            this.cbMarka.Location = new System.Drawing.Point(1118, 342);
+            this.cbMarka.Location = new System.Drawing.Point(757, 112);
             this.cbMarka.Name = "cbMarka";
-            this.cbMarka.Size = new System.Drawing.Size(345, 28);
+            this.cbMarka.Size = new System.Drawing.Size(225, 28);
             this.cbMarka.TabIndex = 8;
             this.cbMarka.ValueMember = "MarkaID";
             // 
@@ -232,9 +232,9 @@ namespace CRM
             this.cbDepo.DisplayMember = "DepoAd";
             this.cbDepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbDepo.FormattingEnabled = true;
-            this.cbDepo.Location = new System.Drawing.Point(1118, 572);
+            this.cbDepo.Location = new System.Drawing.Point(1129, 193);
             this.cbDepo.Name = "cbDepo";
-            this.cbDepo.Size = new System.Drawing.Size(345, 28);
+            this.cbDepo.Size = new System.Drawing.Size(225, 28);
             this.cbDepo.TabIndex = 9;
             this.cbDepo.ValueMember = "DepoID";
             // 
@@ -251,23 +251,23 @@ namespace CRM
             // txtUrunAd
             // 
             this.txtUrunAd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(1118, 260);
+            this.txtUrunAd.Location = new System.Drawing.Point(322, 192);
             this.txtUrunAd.Name = "txtUrunAd";
-            this.txtUrunAd.Size = new System.Drawing.Size(345, 28);
+            this.txtUrunAd.Size = new System.Drawing.Size(225, 28);
             this.txtUrunAd.TabIndex = 10;
             // 
             // txtStokMiktari
             // 
             this.txtStokMiktari.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStokMiktari.Location = new System.Drawing.Point(1118, 416);
+            this.txtStokMiktari.Location = new System.Drawing.Point(757, 192);
             this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(345, 28);
+            this.txtStokMiktari.Size = new System.Drawing.Size(225, 28);
             this.txtStokMiktari.TabIndex = 11;
             // 
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(1090, 628);
+            this.btnSil.Location = new System.Drawing.Point(680, 280);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(151, 37);
             this.btnSil.TabIndex = 12;
@@ -278,7 +278,7 @@ namespace CRM
             // btnGuncelle
             // 
             this.btnGuncelle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(1312, 628);
+            this.btnGuncelle.Location = new System.Drawing.Point(902, 280);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(151, 37);
             this.btnGuncelle.TabIndex = 13;
@@ -334,7 +334,7 @@ namespace CRM
             // 
             this.lblBirim.AutoSize = true;
             this.lblBirim.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblBirim.Location = new System.Drawing.Point(867, 501);
+            this.lblBirim.Location = new System.Drawing.Point(1016, 115);
             this.lblBirim.Name = "lblBirim";
             this.lblBirim.Size = new System.Drawing.Size(75, 25);
             this.lblBirim.TabIndex = 15;
@@ -344,7 +344,7 @@ namespace CRM
             // 
             this.lblUrunId.AutoSize = true;
             this.lblUrunId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunId.Location = new System.Drawing.Point(867, 109);
+            this.lblUrunId.Location = new System.Drawing.Point(626, 25);
             this.lblUrunId.Name = "lblUrunId";
             this.lblUrunId.Size = new System.Drawing.Size(101, 25);
             this.lblUrunId.TabIndex = 17;
@@ -354,15 +354,16 @@ namespace CRM
             // 
             this.txtUrunId.Enabled = false;
             this.txtUrunId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunId.Location = new System.Drawing.Point(1118, 110);
+            this.txtUrunId.Location = new System.Drawing.Point(757, 26);
             this.txtUrunId.Name = "txtUrunId";
-            this.txtUrunId.Size = new System.Drawing.Size(345, 28);
+            this.txtUrunId.Size = new System.Drawing.Size(225, 28);
             this.txtUrunId.TabIndex = 18;
             // 
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -373,11 +374,11 @@ namespace CRM
             this.alisFiyatiDataGridViewTextBoxColumn,
             this.depoDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tBLURUNLERBindingSource3;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 109);
+            this.dataGridView1.Location = new System.Drawing.Point(181, 386);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(794, 556);
+            this.dataGridView1.Size = new System.Drawing.Size(1223, 279);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
@@ -481,9 +482,9 @@ namespace CRM
             "Torba",
             "Varil",
             "Yıl"});
-            this.cbBirim.Location = new System.Drawing.Point(1120, 498);
+            this.cbBirim.Location = new System.Drawing.Point(1131, 113);
             this.cbBirim.Name = "cbBirim";
-            this.cbBirim.Size = new System.Drawing.Size(343, 28);
+            this.cbBirim.Size = new System.Drawing.Size(223, 28);
             this.cbBirim.TabIndex = 19;
             // 
             // Ürünler

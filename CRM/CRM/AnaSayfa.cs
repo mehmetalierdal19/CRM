@@ -51,13 +51,6 @@ namespace CRM
             Depolar dplr = new Depolar();
             dplr.ShowDialog();
         }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            AlışveSatışlar avs = new AlışveSatışlar();
-            avs.ShowDialog();
-        }
-
         private void button6_Click(object sender, EventArgs e)
         {
             Aktiviteler akt = new Aktiviteler();
@@ -86,6 +79,12 @@ namespace CRM
         {
             Tedarikciler tdr = new Tedarikciler();
             tdr.ShowDialog();
+        }
+
+        private void button10_Click(object sender, EventArgs e)
+        {
+            Satislar sts = new Satislar();
+            sts.ShowDialog();
         }
     }
 }

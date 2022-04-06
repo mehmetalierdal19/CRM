@@ -201,7 +201,7 @@ namespace CRM
             this.txtAciklama.Location = new System.Drawing.Point(137, 264);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(999, 126);
+            this.txtAciklama.Size = new System.Drawing.Size(999, 72);
             this.txtAciklama.TabIndex = 15;
             // 
             // txtDaire
@@ -245,7 +245,7 @@ namespace CRM
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(650, 424);
+            this.btnEkle.Location = new System.Drawing.Point(355, 378);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(140, 41);
             this.btnEkle.TabIndex = 21;
@@ -256,7 +256,7 @@ namespace CRM
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(828, 424);
+            this.btnSil.Location = new System.Drawing.Point(533, 378);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(140, 41);
             this.btnSil.TabIndex = 22;
@@ -266,7 +266,7 @@ namespace CRM
             // btnGuncelle
             // 
             this.btnGuncelle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnGuncelle.Location = new System.Drawing.Point(996, 424);
+            this.btnGuncelle.Location = new System.Drawing.Point(701, 378);
             this.btnGuncelle.Name = "btnGuncelle";
             this.btnGuncelle.Size = new System.Drawing.Size(140, 41);
             this.btnGuncelle.TabIndex = 23;
@@ -277,6 +277,7 @@ namespace CRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1213, 700);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);

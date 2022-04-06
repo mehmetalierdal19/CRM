@@ -34,29 +34,29 @@ namespace CRM
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.cbMusteri = new System.Windows.Forms.ComboBox();
-            this.cbSorumlu = new System.Windows.Forms.ComboBox();
-            this.txtAciklama = new System.Windows.Forms.TextBox();
-            this.dbMUSTERILERDataSet = new CRM.dbMUSTERILERDataSet();
             this.tBLMUSTERILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLMUSTERILERTableAdapter = new CRM.dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter();
-            this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
-            this.tBLPERSONELDATASETBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbMUSTERILERDataSet = new CRM.dbMUSTERILERDataSet();
+            this.cbSorumlu = new System.Windows.Forms.ComboBox();
             this.tBLPERSONELBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLPERSONELDATASETBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
+            this.txtAciklama = new System.Windows.Forms.TextBox();
+            this.tBLMUSTERILERTableAdapter = new CRM.dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter();
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASETBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASETBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(31, 127);
+            this.label1.Location = new System.Drawing.Point(31, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 25);
             this.label1.TabIndex = 0;
@@ -76,7 +76,7 @@ namespace CRM
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.Location = new System.Drawing.Point(20, 242);
+            this.label3.Location = new System.Drawing.Point(20, 157);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(107, 25);
             this.label3.TabIndex = 2;
@@ -89,11 +89,21 @@ namespace CRM
             this.cbMusteri.DisplayMember = "MUSTERIAD";
             this.cbMusteri.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMusteri.FormattingEnabled = true;
-            this.cbMusteri.Location = new System.Drawing.Point(133, 128);
+            this.cbMusteri.Location = new System.Drawing.Point(169, 74);
             this.cbMusteri.Name = "cbMusteri";
             this.cbMusteri.Size = new System.Drawing.Size(201, 28);
             this.cbMusteri.TabIndex = 3;
             this.cbMusteri.ValueMember = "id";
+            // 
+            // tBLMUSTERILERBindingSource
+            // 
+            this.tBLMUSTERILERBindingSource.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource.DataSource = this.dbMUSTERILERDataSet;
+            // 
+            // dbMUSTERILERDataSet
+            // 
+            this.dbMUSTERILERDataSet.DataSetName = "dbMUSTERILERDataSet";
+            this.dbMUSTERILERDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbSorumlu
             // 
@@ -102,48 +112,38 @@ namespace CRM
             this.cbSorumlu.DisplayMember = "PersonelAd";
             this.cbSorumlu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbSorumlu.FormattingEnabled = true;
-            this.cbSorumlu.Location = new System.Drawing.Point(133, 243);
+            this.cbSorumlu.Location = new System.Drawing.Point(169, 154);
             this.cbSorumlu.Name = "cbSorumlu";
             this.cbSorumlu.Size = new System.Drawing.Size(201, 28);
             this.cbSorumlu.TabIndex = 4;
             this.cbSorumlu.ValueMember = "ID";
             // 
-            // txtAciklama
+            // tBLPERSONELBindingSource
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(583, 73);
-            this.txtAciklama.Multiline = true;
-            this.txtAciklama.Name = "txtAciklama";
-            this.txtAciklama.Size = new System.Drawing.Size(583, 198);
-            this.txtAciklama.TabIndex = 5;
-            // 
-            // dbMUSTERILERDataSet
-            // 
-            this.dbMUSTERILERDataSet.DataSetName = "dbMUSTERILERDataSet";
-            this.dbMUSTERILERDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // tBLMUSTERILERBindingSource
-            // 
-            this.tBLMUSTERILERBindingSource.DataMember = "TBLMUSTERILER";
-            this.tBLMUSTERILERBindingSource.DataSource = this.dbMUSTERILERDataSet;
-            // 
-            // tBLMUSTERILERTableAdapter
-            // 
-            this.tBLMUSTERILERTableAdapter.ClearBeforeFill = true;
-            // 
-            // tBLPERSONELDATASET
-            // 
-            this.tBLPERSONELDATASET.DataSetName = "TBLPERSONELDATASET";
-            this.tBLPERSONELDATASET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.tBLPERSONELBindingSource.DataMember = "TBLPERSONEL";
+            this.tBLPERSONELBindingSource.DataSource = this.tBLPERSONELDATASETBindingSource;
             // 
             // tBLPERSONELDATASETBindingSource
             // 
             this.tBLPERSONELDATASETBindingSource.DataSource = this.tBLPERSONELDATASET;
             this.tBLPERSONELDATASETBindingSource.Position = 0;
             // 
-            // tBLPERSONELBindingSource
+            // tBLPERSONELDATASET
             // 
-            this.tBLPERSONELBindingSource.DataMember = "TBLPERSONEL";
-            this.tBLPERSONELBindingSource.DataSource = this.tBLPERSONELDATASETBindingSource;
+            this.tBLPERSONELDATASET.DataSetName = "TBLPERSONELDATASET";
+            this.tBLPERSONELDATASET.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // txtAciklama
+            // 
+            this.txtAciklama.Location = new System.Drawing.Point(583, 74);
+            this.txtAciklama.Multiline = true;
+            this.txtAciklama.Name = "txtAciklama";
+            this.txtAciklama.Size = new System.Drawing.Size(583, 219);
+            this.txtAciklama.TabIndex = 5;
+            // 
+            // tBLMUSTERILERTableAdapter
+            // 
+            this.tBLMUSTERILERTableAdapter.ClearBeforeFill = true;
             // 
             // tBLPERSONELTableAdapter
             // 
@@ -152,7 +152,7 @@ namespace CRM
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(833, 325);
+            this.btnEkle.Location = new System.Drawing.Point(113, 249);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(140, 44);
             this.btnEkle.TabIndex = 6;
@@ -163,7 +163,7 @@ namespace CRM
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(1026, 325);
+            this.btnSil.Location = new System.Drawing.Point(318, 249);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(140, 44);
             this.btnSil.TabIndex = 7;
@@ -174,6 +174,7 @@ namespace CRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1253, 714);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -186,11 +187,11 @@ namespace CRM
             this.Name = "Gorusmeler";
             this.Text = "Gorusmeler";
             this.Load += new System.EventHandler(this.Gorusmeler_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASETBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASETBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

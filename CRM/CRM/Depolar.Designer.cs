@@ -40,6 +40,8 @@ namespace CRM
             this.txtDepoAd = new System.Windows.Forms.TextBox();
             this.btnDepoEkle = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLDEPOLARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet4)).BeginInit();
@@ -55,11 +57,11 @@ namespace CRM
             this.depoIDDataGridViewTextBoxColumn,
             this.depoAdDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.tBLDEPOLARBindingSource;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 94);
+            this.dataGridView1.Location = new System.Drawing.Point(430, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(411, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(574, 286);
             this.dataGridView1.TabIndex = 0;
             // 
             // depoIDDataGridViewTextBoxColumn
@@ -97,7 +99,7 @@ namespace CRM
             // 
             this.lblDepoAd.AutoSize = true;
             this.lblDepoAd.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDepoAd.Location = new System.Drawing.Point(460, 233);
+            this.lblDepoAd.Location = new System.Drawing.Point(616, 386);
             this.lblDepoAd.Name = "lblDepoAd";
             this.lblDepoAd.Size = new System.Drawing.Size(132, 29);
             this.lblDepoAd.TabIndex = 1;
@@ -106,7 +108,7 @@ namespace CRM
             // txtDepoAd
             // 
             this.txtDepoAd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtDepoAd.Location = new System.Drawing.Point(648, 236);
+            this.txtDepoAd.Location = new System.Drawing.Point(764, 389);
             this.txtDepoAd.Name = "txtDepoAd";
             this.txtDepoAd.Size = new System.Drawing.Size(225, 28);
             this.txtDepoAd.TabIndex = 2;
@@ -114,7 +116,7 @@ namespace CRM
             // btnDepoEkle
             // 
             this.btnDepoEkle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnDepoEkle.Location = new System.Drawing.Point(465, 377);
+            this.btnDepoEkle.Location = new System.Drawing.Point(430, 496);
             this.btnDepoEkle.Name = "btnDepoEkle";
             this.btnDepoEkle.Size = new System.Drawing.Size(120, 33);
             this.btnDepoEkle.TabIndex = 3;
@@ -125,19 +127,40 @@ namespace CRM
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(753, 377);
+            this.button1.Location = new System.Drawing.Point(610, 496);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(120, 33);
             this.button1.TabIndex = 4;
             this.button1.Text = "Sil";
             this.button1.UseVisualStyleBackColor = true;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(142, 391);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 29);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Depo ID:";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Enabled = false;
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(283, 392);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(225, 28);
+            this.textBox1.TabIndex = 6;
+            // 
             // Depolar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1021, 450);
+            this.ClientSize = new System.Drawing.Size(1234, 624);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnDepoEkle);
             this.Controls.Add(this.txtDepoAd);
@@ -167,5 +190,7 @@ namespace CRM
         private System.Windows.Forms.TextBox txtDepoAd;
         private System.Windows.Forms.Button btnDepoEkle;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

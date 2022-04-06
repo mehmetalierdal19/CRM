@@ -46,6 +46,9 @@ namespace CRM
             this.tBLMUSTERILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSet = new CRM.dbCRMDataSet();
+            this.tBLMUSTERILERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.dbMUSTERILERDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dbMUSTERILERDataSet = new CRM.dbMUSTERILERDataSet();
             this.cbAktiviteTipi = new System.Windows.Forms.ComboBox();
             this.cbLokasyon = new System.Windows.Forms.ComboBox();
             this.dtBaslangicTarih = new System.Windows.Forms.DateTimePicker();
@@ -66,21 +69,18 @@ namespace CRM
             this.tBLPERSONELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLPERSONELDATASET = new CRM.TBLPERSONELDATASET();
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
-            this.dbMUSTERILERDataSet = new CRM.dbMUSTERILERDataSet();
-            this.dbMUSTERILERDataSetBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tBLMUSTERILERBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.tBLMUSTERILERTableAdapter1 = new CRM.dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSetBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSetBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblAktiviteID
@@ -187,7 +187,7 @@ namespace CRM
             this.txtAktiviteAd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtAktiviteAd.Location = new System.Drawing.Point(1151, 95);
             this.txtAktiviteAd.Name = "txtAktiviteAd";
-            this.txtAktiviteAd.Size = new System.Drawing.Size(221, 28);
+            this.txtAktiviteAd.Size = new System.Drawing.Size(216, 28);
             this.txtAktiviteAd.TabIndex = 12;
             // 
             // txtAciklama
@@ -208,7 +208,7 @@ namespace CRM
             this.cbMusteri.FormattingEnabled = true;
             this.cbMusteri.Location = new System.Drawing.Point(1151, 21);
             this.cbMusteri.Name = "cbMusteri";
-            this.cbMusteri.Size = new System.Drawing.Size(221, 28);
+            this.cbMusteri.Size = new System.Drawing.Size(216, 28);
             this.cbMusteri.TabIndex = 18;
             this.cbMusteri.ValueMember = "id";
             // 
@@ -226,6 +226,21 @@ namespace CRM
             // 
             this.dbCRMDataSet.DataSetName = "dbCRMDataSet";
             this.dbCRMDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            // 
+            // tBLMUSTERILERBindingSource1
+            // 
+            this.tBLMUSTERILERBindingSource1.DataMember = "TBLMUSTERILER";
+            this.tBLMUSTERILERBindingSource1.DataSource = this.dbMUSTERILERDataSetBindingSource;
+            // 
+            // dbMUSTERILERDataSetBindingSource
+            // 
+            this.dbMUSTERILERDataSetBindingSource.DataSource = this.dbMUSTERILERDataSet;
+            this.dbMUSTERILERDataSetBindingSource.Position = 0;
+            // 
+            // dbMUSTERILERDataSet
+            // 
+            this.dbMUSTERILERDataSet.DataSetName = "dbMUSTERILERDataSet";
+            this.dbMUSTERILERDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cbAktiviteTipi
             // 
@@ -253,7 +268,7 @@ namespace CRM
             "Genel Merkez"});
             this.cbLokasyon.Location = new System.Drawing.Point(748, 362);
             this.cbLokasyon.Name = "cbLokasyon";
-            this.cbLokasyon.Size = new System.Drawing.Size(294, 28);
+            this.cbLokasyon.Size = new System.Drawing.Size(619, 28);
             this.cbLokasyon.TabIndex = 20;
             // 
             // dtBaslangicTarih
@@ -291,7 +306,7 @@ namespace CRM
             this.dtBaslangicSaat.CustomFormat = "";
             this.dtBaslangicSaat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtBaslangicSaat.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtBaslangicSaat.Location = new System.Drawing.Point(1081, 436);
+            this.dtBaslangicSaat.Location = new System.Drawing.Point(1167, 439);
             this.dtBaslangicSaat.Name = "dtBaslangicSaat";
             this.dtBaslangicSaat.ShowUpDown = true;
             this.dtBaslangicSaat.Size = new System.Drawing.Size(200, 28);
@@ -302,7 +317,7 @@ namespace CRM
             this.dtBitisSaat.CustomFormat = "";
             this.dtBitisSaat.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.dtBitisSaat.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtBitisSaat.Location = new System.Drawing.Point(1081, 506);
+            this.dtBitisSaat.Location = new System.Drawing.Point(1167, 506);
             this.dtBitisSaat.Name = "dtBitisSaat";
             this.dtBitisSaat.ShowUpDown = true;
             this.dtBitisSaat.Size = new System.Drawing.Size(200, 28);
@@ -311,7 +326,7 @@ namespace CRM
             // btnAktiviteEkle
             // 
             this.btnAktiviteEkle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAktiviteEkle.Location = new System.Drawing.Point(612, 647);
+            this.btnAktiviteEkle.Location = new System.Drawing.Point(835, 637);
             this.btnAktiviteEkle.Name = "btnAktiviteEkle";
             this.btnAktiviteEkle.Size = new System.Drawing.Size(113, 37);
             this.btnAktiviteEkle.TabIndex = 26;
@@ -322,7 +337,7 @@ namespace CRM
             // btnAktiviteGuncelle
             // 
             this.btnAktiviteGuncelle.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAktiviteGuncelle.Location = new System.Drawing.Point(915, 647);
+            this.btnAktiviteGuncelle.Location = new System.Drawing.Point(1138, 637);
             this.btnAktiviteGuncelle.Name = "btnAktiviteGuncelle";
             this.btnAktiviteGuncelle.Size = new System.Drawing.Size(127, 37);
             this.btnAktiviteGuncelle.TabIndex = 27;
@@ -332,7 +347,7 @@ namespace CRM
             // btnAktiviteSil
             // 
             this.btnAktiviteSil.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnAktiviteSil.Location = new System.Drawing.Point(765, 647);
+            this.btnAktiviteSil.Location = new System.Drawing.Point(988, 637);
             this.btnAktiviteSil.Name = "btnAktiviteSil";
             this.btnAktiviteSil.Size = new System.Drawing.Size(113, 37);
             this.btnAktiviteSil.TabIndex = 28;
@@ -382,7 +397,7 @@ namespace CRM
             this.cbSorumlu.FormattingEnabled = true;
             this.cbSorumlu.Location = new System.Drawing.Point(1192, 573);
             this.cbSorumlu.Name = "cbSorumlu";
-            this.cbSorumlu.Size = new System.Drawing.Size(222, 28);
+            this.cbSorumlu.Size = new System.Drawing.Size(180, 28);
             this.cbSorumlu.TabIndex = 30;
             this.cbSorumlu.ValueMember = "ID";
             // 
@@ -400,21 +415,6 @@ namespace CRM
             // 
             this.tBLPERSONELTableAdapter.ClearBeforeFill = true;
             // 
-            // dbMUSTERILERDataSet
-            // 
-            this.dbMUSTERILERDataSet.DataSetName = "dbMUSTERILERDataSet";
-            this.dbMUSTERILERDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // dbMUSTERILERDataSetBindingSource
-            // 
-            this.dbMUSTERILERDataSetBindingSource.DataSource = this.dbMUSTERILERDataSet;
-            this.dbMUSTERILERDataSetBindingSource.Position = 0;
-            // 
-            // tBLMUSTERILERBindingSource1
-            // 
-            this.tBLMUSTERILERBindingSource1.DataMember = "TBLMUSTERILER";
-            this.tBLMUSTERILERBindingSource1.DataSource = this.dbMUSTERILERDataSetBindingSource;
-            // 
             // tBLMUSTERILERTableAdapter1
             // 
             this.tBLMUSTERILERTableAdapter1.ClearBeforeFill = true;
@@ -423,6 +423,7 @@ namespace CRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1461, 717);
             this.Controls.Add(this.cbSorumlu);
             this.Controls.Add(this.lblSorumlu);
@@ -456,14 +457,14 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSetBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet7BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELDATASET)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSetBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

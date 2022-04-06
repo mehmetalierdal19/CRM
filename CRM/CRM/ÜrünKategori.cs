@@ -64,5 +64,10 @@ namespace CRM
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
         }
+
+        private void txtKategoriid_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

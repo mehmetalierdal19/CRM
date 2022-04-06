@@ -52,12 +52,6 @@
     <Compile Include="Aktiviteler.Designer.cs">
       <DependentUpon>Aktiviteler.cs</DependentUpon>
     </Compile>
-    <Compile Include="AlışveSatışlar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="AlışveSatışlar.Designer.cs">
-      <DependentUpon>AlışveSatışlar.cs</DependentUpon>
-    </Compile>
     <Compile Include="AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,6 +78,11 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>dbCRMDataSet12.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="dbCRMDataSet13.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbCRMDataSet13.xsd</DependentUpon>
     </Compile>
     <Compile Include="dbCRMDataSet2.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -135,6 +134,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbMUSTERILERDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbURUNLERDataSet14.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbURUNLERDataSet14.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Depolar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,6 +171,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Satislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Satislar.Designer.cs">
+      <DependentUpon>Satislar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Stoklar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -199,9 +209,6 @@
     <EmbeddedResource Include="Aktiviteler.resx">
       <DependentUpon>Aktiviteler.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="AlışveSatışlar.resx">
-      <DependentUpon>AlışveSatışlar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
     </EmbeddedResource>
@@ -229,6 +236,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Satislar.resx">
+      <DependentUpon>Satislar.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Stoklar.resx">
       <DependentUpon>Stoklar.cs</DependentUpon>
     </EmbeddedResource>
@@ -284,6 +294,17 @@
     </None>
     <None Include="dbCRMDataSet12.xss">
       <DependentUpon>dbCRMDataSet12.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet13.xsc">
+      <DependentUpon>dbCRMDataSet13.xsd</DependentUpon>
+    </None>
+    <None Include="dbCRMDataSet13.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbCRMDataSet13.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbCRMDataSet13.xss">
+      <DependentUpon>dbCRMDataSet13.xsd</DependentUpon>
     </None>
     <None Include="dbCRMDataSet2.xsc">
       <DependentUpon>dbCRMDataSet2.xsd</DependentUpon>
@@ -394,6 +415,17 @@
     </None>
     <None Include="dbMUSTERILERDataSet.xss">
       <DependentUpon>dbMUSTERILERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbURUNLERDataSet14.xsc">
+      <DependentUpon>dbURUNLERDataSet14.xsd</DependentUpon>
+    </None>
+    <None Include="dbURUNLERDataSet14.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbURUNLERDataSet14.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbURUNLERDataSet14.xss">
+      <DependentUpon>dbURUNLERDataSet14.xsd</DependentUpon>
     </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
