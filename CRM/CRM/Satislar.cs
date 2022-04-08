@@ -40,7 +40,7 @@ namespace CRM
             double toplam = birimFiyat * miktar;
             double indirimMiktar;
             double satisToplam;
-            int urunID = Convert.ToInt32(cbUrun.SelectedValue);
+            string urunID = cbUrun.Text;
             if (txtKDV.Text != "" && txtIndirim.Text == "")
             {
                 kdvMiktar = toplam * (KDV / 100);
@@ -58,8 +58,8 @@ namespace CRM
 
 
             // ürünler tablosundan Stok Miktarı ve kodu tutma
-            SqlCommand komut4 = new SqlCommand("Select * from TBLURUNLER where id=@ID", bgl.sqlbaglanti());
-            komut4.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = urunID;
+            SqlCommand komut4 = new SqlCommand("Select * from TBLURUNLER where UrunAd=@UAD", bgl.sqlbaglanti());
+            komut4.Parameters.AddWithValue("@UAD", SqlDbType.NVarChar).Value = urunID.ToString();
             SqlDataAdapter da = new SqlDataAdapter(komut4);
             DataTable dt = new DataTable();
             da.Fill(dt);
@@ -88,8 +88,8 @@ namespace CRM
                 komut.ExecuteNonQuery();
 
                 // urunler tablosundan stok azaltma
-                SqlCommand komut2 = new SqlCommand("update TBLURUNLER set Stok = Stok - " + miktar + " where id=@ID", bgl.sqlbaglanti());
-                komut2.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = urunID;
+                SqlCommand komut2 = new SqlCommand("update TBLURUNLER set Stok = Stok - " + miktar + " where UrunAd=@ID", bgl.sqlbaglanti());
+                komut2.Parameters.AddWithValue("@ID", SqlDbType.NVarChar).Value = urunID.ToString();
                 komut2.ExecuteNonQuery();
                 // stoklar tablosundan stok azaltma
                 SqlCommand komut3 = new SqlCommand("update TBLSTOKLAR set StokMiktari = StokMiktari - " + miktar + " where StokKodu =" + stokKodu, bgl.sqlbaglanti());
