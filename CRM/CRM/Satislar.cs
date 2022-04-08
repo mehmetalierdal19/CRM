@@ -32,6 +32,7 @@ namespace CRM
         private void button1_Click(object sender, EventArgs e)
         {
             int stokMiktar = 0;
+            int stokKodu = 0;
             double miktar = Convert.ToDouble(txtMiktar.Text);
             double birimFiyat = Convert.ToDouble(txtBirimFiyat.Text);
             double KDV = Convert.ToDouble(txtKDV.Text);
@@ -56,7 +57,7 @@ namespace CRM
             }
 
 
-            // Stok Miktarı tutma
+            // ürünler tablosundan Stok Miktarı ve kodu tutma
             SqlCommand komut4 = new SqlCommand("Select * from TBLURUNLER where id=@ID", bgl.sqlbaglanti());
             komut4.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = urunID;
             SqlDataAdapter da = new SqlDataAdapter(komut4);
@@ -65,6 +66,7 @@ namespace CRM
             foreach (DataRow satir in dt.Rows)
             {
                 stokMiktar =Convert.ToInt32( satir["Stok"].ToString());
+                stokKodu = Convert.ToInt32(satir["StokKodu"].ToString());
             }
 
             if(miktar < stokMiktar)
@@ -89,9 +91,8 @@ namespace CRM
                 SqlCommand komut2 = new SqlCommand("update TBLURUNLER set Stok = Stok - " + miktar + " where id=@ID", bgl.sqlbaglanti());
                 komut2.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = urunID;
                 komut2.ExecuteNonQuery();
-
                 // stoklar tablosundan stok azaltma
-                SqlCommand komut3 = new SqlCommand("update TBLSTOKLAR set StokMiktari = StokMiktari - " + miktar + " where id =" + urunID, bgl.sqlbaglanti());
+                SqlCommand komut3 = new SqlCommand("update TBLSTOKLAR set StokMiktari = StokMiktari - " + miktar + " where StokKodu =" + stokKodu, bgl.sqlbaglanti());
                 komut3.ExecuteNonQuery();
             }
             else
@@ -102,6 +103,21 @@ namespace CRM
         private void button3_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void cbUrunK_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            cbUrun.Items.Clear();
+            string kategori = cbUrunK.Text;
+            SqlCommand komut2 = new SqlCommand("Select * from TBLURUNLER where UrunKategori=@URUNK", bgl.sqlbaglanti());
+            komut2.Parameters.AddWithValue("@URUNK", SqlDbType.NVarChar).Value = kategori.ToString();
+            SqlDataAdapter da = new SqlDataAdapter(komut2);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow satir in dt.Rows)
+            {
+                cbUrun.Items.Add(satir["UrunAd"].ToString());
+            }
         }
     }
 }

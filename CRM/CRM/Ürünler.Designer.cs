@@ -76,6 +76,9 @@ namespace CRM
             this.alisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.depoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbBirim = new System.Windows.Forms.ComboBox();
+            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.txtStokKodu = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
@@ -344,7 +347,7 @@ namespace CRM
             // 
             this.lblUrunId.AutoSize = true;
             this.lblUrunId.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunId.Location = new System.Drawing.Point(626, 25);
+            this.lblUrunId.Location = new System.Drawing.Point(381, 23);
             this.lblUrunId.Name = "lblUrunId";
             this.lblUrunId.Size = new System.Drawing.Size(101, 25);
             this.lblUrunId.TabIndex = 17;
@@ -354,7 +357,7 @@ namespace CRM
             // 
             this.txtUrunId.Enabled = false;
             this.txtUrunId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunId.Location = new System.Drawing.Point(757, 26);
+            this.txtUrunId.Location = new System.Drawing.Point(516, 25);
             this.txtUrunId.Name = "txtUrunId";
             this.txtUrunId.Size = new System.Drawing.Size(225, 28);
             this.txtUrunId.TabIndex = 18;
@@ -487,12 +490,47 @@ namespace CRM
             this.cbBirim.Size = new System.Drawing.Size(223, 28);
             this.cbBirim.TabIndex = 19;
             // 
+            // linkLabel1
+            // 
+            this.linkLabel1.AutoSize = true;
+            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.linkLabel1.Location = new System.Drawing.Point(1164, 36);
+            this.linkLabel1.Name = "linkLabel1";
+            this.linkLabel1.Size = new System.Drawing.Size(71, 17);
+            this.linkLabel1.TabIndex = 20;
+            this.linkLabel1.TabStop = true;
+            this.linkLabel1.Text = "Kod Üret";
+            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(775, 24);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(124, 25);
+            this.label1.TabIndex = 21;
+            this.label1.Text = "Stok Kodu:";
+            // 
+            // txtStokKodu
+            // 
+            this.txtStokKodu.Enabled = false;
+            this.txtStokKodu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtStokKodu.Location = new System.Drawing.Point(935, 25);
+            this.txtStokKodu.Name = "txtStokKodu";
+            this.txtStokKodu.Size = new System.Drawing.Size(223, 28);
+            this.txtStokKodu.TabIndex = 22;
+            // 
             // Ürünler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1532, 677);
+            this.Controls.Add(this.txtStokKodu);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cbBirim);
             this.Controls.Add(this.txtUrunId);
             this.Controls.Add(this.lblUrunId);
@@ -582,5 +620,8 @@ namespace CRM
         private System.Windows.Forms.DataGridViewTextBoxColumn alisFiyatiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn depoDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cbBirim;
+        private System.Windows.Forms.LinkLabel linkLabel1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox txtStokKodu;
     }
 }

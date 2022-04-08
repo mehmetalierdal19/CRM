@@ -21,7 +21,6 @@ namespace CRM
         {
             Ürünler urn = new Ürünler();
             urn.ShowDialog();
-            this.Close();
         }
     }
 }

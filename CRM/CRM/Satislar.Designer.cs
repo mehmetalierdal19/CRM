@@ -250,6 +250,7 @@ namespace CRM
             // 
             // txtSatisTutar
             // 
+            this.txtSatisTutar.Enabled = false;
             this.txtSatisTutar.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtSatisTutar.Location = new System.Drawing.Point(581, 195);
             this.txtSatisTutar.Name = "txtSatisTutar";
@@ -384,15 +385,12 @@ namespace CRM
             // cbUrun
             // 
             this.cbUrun.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLURUNLERBindingSource, "id", true));
-            this.cbUrun.DataSource = this.tBLURUNLERBindingSource;
-            this.cbUrun.DisplayMember = "UrunAd";
             this.cbUrun.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbUrun.FormattingEnabled = true;
             this.cbUrun.Location = new System.Drawing.Point(581, 83);
             this.cbUrun.Name = "cbUrun";
             this.cbUrun.Size = new System.Drawing.Size(185, 26);
             this.cbUrun.TabIndex = 26;
-            this.cbUrun.ValueMember = "id";
             // 
             // tBLURUNLERBindingSource
             // 
@@ -416,6 +414,7 @@ namespace CRM
             this.cbUrunK.Size = new System.Drawing.Size(185, 26);
             this.cbUrunK.TabIndex = 27;
             this.cbUrunK.ValueMember = "KategoriID";
+            this.cbUrunK.SelectedIndexChanged += new System.EventHandler(this.cbUrunK_SelectedIndexChanged);
             // 
             // tBLKATEGORILERBindingSource
             // 
