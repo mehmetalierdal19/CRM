@@ -45,6 +45,8 @@ namespace CRM
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.dtTarih = new System.Windows.Forms.DateTimePicker();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLPERSONELBindingSource)).BeginInit();
@@ -56,7 +58,7 @@ namespace CRM
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(31, 73);
+            this.label1.Location = new System.Drawing.Point(20, 73);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(96, 25);
             this.label1.TabIndex = 0;
@@ -66,7 +68,7 @@ namespace CRM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(465, 73);
+            this.label2.Location = new System.Drawing.Point(494, 74);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(112, 25);
             this.label2.TabIndex = 1;
@@ -89,9 +91,9 @@ namespace CRM
             this.cbMusteri.DisplayMember = "MUSTERIAD";
             this.cbMusteri.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMusteri.FormattingEnabled = true;
-            this.cbMusteri.Location = new System.Drawing.Point(169, 74);
+            this.cbMusteri.Location = new System.Drawing.Point(201, 74);
             this.cbMusteri.Name = "cbMusteri";
-            this.cbMusteri.Size = new System.Drawing.Size(201, 28);
+            this.cbMusteri.Size = new System.Drawing.Size(266, 28);
             this.cbMusteri.TabIndex = 3;
             this.cbMusteri.ValueMember = "id";
             // 
@@ -112,9 +114,9 @@ namespace CRM
             this.cbSorumlu.DisplayMember = "PersonelAd";
             this.cbSorumlu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbSorumlu.FormattingEnabled = true;
-            this.cbSorumlu.Location = new System.Drawing.Point(169, 154);
+            this.cbSorumlu.Location = new System.Drawing.Point(201, 158);
             this.cbSorumlu.Name = "cbSorumlu";
-            this.cbSorumlu.Size = new System.Drawing.Size(201, 28);
+            this.cbSorumlu.Size = new System.Drawing.Size(266, 28);
             this.cbSorumlu.TabIndex = 4;
             this.cbSorumlu.ValueMember = "ID";
             // 
@@ -135,7 +137,7 @@ namespace CRM
             // 
             // txtAciklama
             // 
-            this.txtAciklama.Location = new System.Drawing.Point(583, 74);
+            this.txtAciklama.Location = new System.Drawing.Point(612, 75);
             this.txtAciklama.Multiline = true;
             this.txtAciklama.Name = "txtAciklama";
             this.txtAciklama.Size = new System.Drawing.Size(583, 219);
@@ -152,7 +154,7 @@ namespace CRM
             // btnEkle
             // 
             this.btnEkle.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnEkle.Location = new System.Drawing.Point(113, 249);
+            this.btnEkle.Location = new System.Drawing.Point(108, 330);
             this.btnEkle.Name = "btnEkle";
             this.btnEkle.Size = new System.Drawing.Size(140, 44);
             this.btnEkle.TabIndex = 6;
@@ -163,12 +165,30 @@ namespace CRM
             // btnSil
             // 
             this.btnSil.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.btnSil.Location = new System.Drawing.Point(318, 249);
+            this.btnSil.Location = new System.Drawing.Point(313, 330);
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(140, 44);
             this.btnSil.TabIndex = 7;
             this.btnSil.Text = "Sil";
             this.btnSil.UseVisualStyleBackColor = true;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.Location = new System.Drawing.Point(20, 235);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(175, 25);
+            this.label4.TabIndex = 8;
+            this.label4.Text = "Görüşme Tarihi:";
+            // 
+            // dtTarih
+            // 
+            this.dtTarih.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.dtTarih.Location = new System.Drawing.Point(201, 233);
+            this.dtTarih.Name = "dtTarih";
+            this.dtTarih.Size = new System.Drawing.Size(266, 28);
+            this.dtTarih.TabIndex = 9;
             // 
             // Gorusmeler
             // 
@@ -176,6 +196,8 @@ namespace CRM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1253, 714);
+            this.Controls.Add(this.dtTarih);
+            this.Controls.Add(this.label4);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
             this.Controls.Add(this.txtAciklama);
@@ -214,5 +236,7 @@ namespace CRM
         private TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter tBLPERSONELTableAdapter;
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnSil;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.DateTimePicker dtTarih;
     }
 }

@@ -19,3 +19,4 @@ C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Stoklar.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Gorusmeler.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Tedarikciler.resources
 C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Satislar.resources
+C:\Users\Mehmet\Documents\CRM\CRM\CRM\obj\Debug\CRM.Alislar.resources

@@ -58,7 +58,7 @@ namespace CRM
 
 
             // ürünler tablosundan Stok Miktarı ve kodu tutma
-            SqlCommand komut4 = new SqlCommand("Select * from TBLURUNLER where UrunAd=@UAD", bgl.sqlbaglanti());
+            SqlCommand komut4 = new SqlCommand("Select * from TBLURUNLER where UrunKodu=@UAD", bgl.sqlbaglanti());
             komut4.Parameters.AddWithValue("@UAD", SqlDbType.NVarChar).Value = urunID.ToString();
             SqlDataAdapter da = new SqlDataAdapter(komut4);
             DataTable dt = new DataTable();
@@ -88,7 +88,7 @@ namespace CRM
                 komut.ExecuteNonQuery();
 
                 // urunler tablosundan stok azaltma
-                SqlCommand komut2 = new SqlCommand("update TBLURUNLER set Stok = Stok - " + miktar + " where UrunAd=@ID", bgl.sqlbaglanti());
+                SqlCommand komut2 = new SqlCommand("update TBLURUNLER set Stok = Stok - " + miktar + " where UrunKodu=@ID", bgl.sqlbaglanti());
                 komut2.Parameters.AddWithValue("@ID", SqlDbType.NVarChar).Value = urunID.ToString();
                 komut2.ExecuteNonQuery();
                 // stoklar tablosundan stok azaltma
@@ -116,7 +116,7 @@ namespace CRM
             da.Fill(dt);
             foreach (DataRow satir in dt.Rows)
             {
-                cbUrun.Items.Add(satir["UrunAd"].ToString());
+                cbUrun.Items.Add(satir["UrunKodu"].ToString());
             }
         }
     }

@@ -49,9 +49,11 @@ namespace CRM
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1164, 638);
             this.Controls.Add(this.button1);
             this.Name = "Stoklar";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Stoklar";
             this.ResumeLayout(false);
 

@@ -41,7 +41,6 @@ namespace CRM
             this.label10 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
             this.txtTedarikci = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
             this.txtYetkili = new System.Windows.Forms.TextBox();
             this.txtEposta = new System.Windows.Forms.TextBox();
             this.txtAciklama = new System.Windows.Forms.TextBox();
@@ -52,6 +51,7 @@ namespace CRM
             this.btnEkle = new System.Windows.Forms.Button();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
             this.SuspendLayout();
             // 
             // lblid
@@ -171,14 +171,6 @@ namespace CRM
             this.txtTedarikci.Size = new System.Drawing.Size(191, 28);
             this.txtTedarikci.TabIndex = 11;
             // 
-            // txtTel
-            // 
-            this.txtTel.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTel.Location = new System.Drawing.Point(533, 108);
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(191, 28);
-            this.txtTel.TabIndex = 12;
-            // 
             // txtYetkili
             // 
             this.txtYetkili.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -273,12 +265,22 @@ namespace CRM
             this.btnGuncelle.Text = "Güncelle";
             this.btnGuncelle.UseVisualStyleBackColor = true;
             // 
+            // txtTel
+            // 
+            this.txtTel.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtTel.Location = new System.Drawing.Point(533, 103);
+            this.txtTel.Mask = "(999) 000-0000";
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(191, 28);
+            this.txtTel.TabIndex = 24;
+            // 
             // Tedarikciler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1213, 700);
+            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnEkle);
@@ -289,7 +291,6 @@ namespace CRM
             this.Controls.Add(this.txtAciklama);
             this.Controls.Add(this.txtEposta);
             this.Controls.Add(this.txtYetkili);
-            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtTedarikci);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label10);
@@ -323,7 +324,6 @@ namespace CRM
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.TextBox txtID;
         private System.Windows.Forms.TextBox txtTedarikci;
-        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.TextBox txtYetkili;
         private System.Windows.Forms.TextBox txtEposta;
         private System.Windows.Forms.TextBox txtAciklama;
@@ -334,5 +334,6 @@ namespace CRM
         private System.Windows.Forms.Button btnEkle;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
+        private System.Windows.Forms.MaskedTextBox txtTel;
     }
 }

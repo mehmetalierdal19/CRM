@@ -41,7 +41,6 @@ namespace CRM
             this.txtAd = new System.Windows.Forms.TextBox();
             this.txtYetkiliName = new System.Windows.Forms.TextBox();
             this.txtEposta = new System.Windows.Forms.TextBox();
-            this.txtTel = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.lblAdres = new System.Windows.Forms.Label();
@@ -74,6 +73,7 @@ namespace CRM
             this.tBLPERSONELBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
             this.tBLMUSTERILERTableAdapter1 = new CRM.dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter();
+            this.txtTel = new System.Windows.Forms.MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -171,15 +171,6 @@ namespace CRM
             this.txtEposta.Name = "txtEposta";
             this.txtEposta.Size = new System.Drawing.Size(220, 26);
             this.txtEposta.TabIndex = 8;
-            // 
-            // txtTel
-            // 
-            this.txtTel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtTel.Location = new System.Drawing.Point(850, 266);
-            this.txtTel.MaxLength = 11;
-            this.txtTel.Name = "txtTel";
-            this.txtTel.Size = new System.Drawing.Size(232, 26);
-            this.txtTel.TabIndex = 9;
             // 
             // button2
             // 
@@ -458,12 +449,22 @@ namespace CRM
             // 
             this.tBLMUSTERILERTableAdapter1.ClearBeforeFill = true;
             // 
+            // txtTel
+            // 
+            this.txtTel.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtTel.Location = new System.Drawing.Point(850, 272);
+            this.txtTel.Mask = "(999) 000-0000";
+            this.txtTel.Name = "txtTel";
+            this.txtTel.Size = new System.Drawing.Size(232, 26);
+            this.txtTel.TabIndex = 25;
+            // 
             // Müşteriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1572, 680);
+            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.lblid);
@@ -479,7 +480,6 @@ namespace CRM
             this.Controls.Add(this.lblAdres);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
-            this.Controls.Add(this.txtTel);
             this.Controls.Add(this.txtEposta);
             this.Controls.Add(this.txtYetkiliName);
             this.Controls.Add(this.txtAd);
@@ -518,7 +518,6 @@ namespace CRM
         private System.Windows.Forms.TextBox txtAd;
         private System.Windows.Forms.TextBox txtYetkiliName;
         private System.Windows.Forms.TextBox txtEposta;
-        private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label lblAdres;
@@ -551,5 +550,6 @@ namespace CRM
         private System.Windows.Forms.DataGridViewTextBoxColumn vergiDairesiDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn vergiNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn müsteriAsamasiDataGridViewTextBoxColumn;
+        private System.Windows.Forms.MaskedTextBox txtTel;
     }
 }

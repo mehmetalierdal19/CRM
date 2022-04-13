@@ -52,6 +52,12 @@
     <Compile Include="Aktiviteler.Designer.cs">
       <DependentUpon>Aktiviteler.cs</DependentUpon>
     </Compile>
+    <Compile Include="Alislar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Alislar.Designer.cs">
+      <DependentUpon>Alislar.cs</DependentUpon>
+    </Compile>
     <Compile Include="AnaSayfa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>dbMUSTERILERDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="dbTBLTEDARIKCIDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dbTBLTEDARIKCIDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="dbURUNLERDataSet14.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -208,6 +219,9 @@
     </Compile>
     <EmbeddedResource Include="Aktiviteler.resx">
       <DependentUpon>Aktiviteler.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Alislar.resx">
+      <DependentUpon>Alislar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="AnaSayfa.resx">
       <DependentUpon>AnaSayfa.cs</DependentUpon>
@@ -415,6 +429,17 @@
     </None>
     <None Include="dbMUSTERILERDataSet.xss">
       <DependentUpon>dbMUSTERILERDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbTBLTEDARIKCIDataSet.xsc">
+      <DependentUpon>dbTBLTEDARIKCIDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="dbTBLTEDARIKCIDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dbTBLTEDARIKCIDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="dbTBLTEDARIKCIDataSet.xss">
+      <DependentUpon>dbTBLTEDARIKCIDataSet.xsd</DependentUpon>
     </None>
     <None Include="dbURUNLERDataSet14.xsc">
       <DependentUpon>dbURUNLERDataSet14.xsd</DependentUpon>

@@ -42,7 +42,7 @@ namespace CRM
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
             //Ürün Ekleme
-            SqlCommand komut = new SqlCommand("Insert INTO TBLURUNLER (UrunKategori, UrunAd, Marka, Stok, Birim, Depo, StokKodu) VALUES (@URUNKATEGORI, @URUNAD, @MARKA, @STOK, @BIRIM, @DEPO, @SKOD)", bgl.sqlbaglanti());
+            SqlCommand komut = new SqlCommand("Insert INTO TBLURUNLER (UrunKategori, UrunAd, Marka, Stok, Birim, Depo, StokKodu, UrunKodu) VALUES (@URUNKATEGORI, @URUNAD, @MARKA, @STOK, @BIRIM, @DEPO, @SKOD, @UKOD)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@URUNKATEGORI", SqlDbType.NVarChar).Value =cbKategori.Text;
             komut.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
             komut.Parameters.AddWithValue("@MARKA", SqlDbType.NVarChar).Value =cbMarka.Text;
@@ -50,6 +50,7 @@ namespace CRM
             komut.Parameters.AddWithValue("@BIRIM", SqlDbType.Float).Value = cbBirim.Text;
             komut.Parameters.AddWithValue("@DEPO", SqlDbType.NVarChar).Value = cbDepo.Text;
             komut.Parameters.AddWithValue("@SKOD", SqlDbType.Int).Value = Convert.ToInt32(txtStokKodu.Text);
+            komut.Parameters.AddWithValue("@UKOD", SqlDbType.NVarChar).Value = txtUrunKodu.Text;
             komut.ExecuteNonQuery();
 
             // Kategori Sayısı Arttırma
@@ -58,11 +59,12 @@ namespace CRM
             komut2.ExecuteNonQuery();
             
             // Stok Ekleme
-            SqlCommand komut3 = new SqlCommand("Insert Into TBLSTOKLAR (UrunAd, StokMiktari, Birim, StokKodu) values (@URUNAD, @STOK, @BIRIM, @KOD)", bgl.sqlbaglanti());
+            SqlCommand komut3 = new SqlCommand("Insert Into TBLSTOKLAR (UrunAd, StokMiktari, Birim, StokKodu, UrunKodu) values (@URUNAD, @STOK, @BIRIM, @KOD, @URUNKOD)", bgl.sqlbaglanti());
             komut3.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
             komut3.Parameters.AddWithValue("@STOK", SqlDbType.Float).Value = Convert.ToSingle(txtStokMiktari.Text);
             komut3.Parameters.AddWithValue("@BIRIM", SqlDbType.NVarChar).Value = cbBirim.Text;
             komut3.Parameters.AddWithValue("@KOD", SqlDbType.Int).Value = Convert.ToInt32(txtStokKodu.Text);
+            komut3.Parameters.AddWithValue("@URUNKOD", SqlDbType.NVarChar).Value =Convert.ToString( txtUrunKodu.Text);
             komut3.ExecuteNonQuery();
         }
 
@@ -108,8 +110,43 @@ namespace CRM
         Random rndm = new Random();
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-            int sayi = rndm.Next(1000, 9999999);
-            txtStokKodu.Text = Convert.ToString(sayi);
+            int sayi = rndm.Next(100, 9999999);
+            SqlCommand komut = new SqlCommand("Select StokKodu from TBLURUNLER", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow satir in dt.Rows)
+            {
+                if (satir["StokKodu"].ToString() == Convert.ToString(sayi))
+                {
+                    MessageBox.Show("Stok kodu aynı. Lütfen tekrar deneyiniz!");
+                }
+                if(satir["StokKodu"].ToString() != Convert.ToString(sayi))
+                {
+                    txtStokKodu.Text = Convert.ToString(sayi);
+                }
+            }
+            
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            int sayi = rndm.Next(100, 9999999);
+            SqlCommand komut = new SqlCommand("Select UrunKodu from TBLURUNLER", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            foreach (DataRow satir in dt.Rows)
+            {
+                if (Convert.ToString(sayi) == satir["UrunKodu"].ToString())
+                {
+                    MessageBox.Show("Ürün kodu aynı. Lütfen tekrar deneyiniz!");
+                }
+                else
+                {
+                    txtUrunKodu.Text = Convert.ToString(sayi);
+                }
+            }
         }
     }
 }

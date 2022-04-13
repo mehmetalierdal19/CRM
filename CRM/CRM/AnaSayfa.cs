@@ -86,5 +86,11 @@ namespace CRM
             Satislar sts = new Satislar();
             sts.ShowDialog();
         }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            Alislar als = new Alislar();
+            als.Show();
+        }
     }
 }
