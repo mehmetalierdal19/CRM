@@ -22,11 +22,12 @@ namespace CRM
         private void Satislar_Load(object sender, EventArgs e)
         {
             // TODO: This line of code loads data into the 'dbURUNLERDataSet14.TBLURUNLER' table. You can move, or remove it, as needed.
-            this.tBLURUNLERTableAdapter.Fill(this.dbURUNLERDataSet14.TBLURUNLER);
+            //this.tBLURUNLERTableAdapter.Fill(this.dbURUNLERDataSet14.TBLURUNLER);
             // TODO: This line of code loads data into the 'dbCRMDataSet13.TBLKATEGORILER' table. You can move, or remove it, as needed.
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet13.TBLKATEGORILER);
             // TODO: This line of code loads data into the 'dbMUSTERILERDataSet.TBLMUSTERILER' table. You can move, or remove it, as needed.
             this.tBLMUSTERILERTableAdapter.Fill(this.dbMUSTERILERDataSet.TBLMUSTERILER);
+            kayitGetir();
 
         }
         private void button1_Click(object sender, EventArgs e)
@@ -94,6 +95,8 @@ namespace CRM
                 // stoklar tablosundan stok azaltma
                 SqlCommand komut3 = new SqlCommand("update TBLSTOKLAR set StokMiktari = StokMiktari - " + miktar + " where StokKodu =" + stokKodu, bgl.sqlbaglanti());
                 komut3.ExecuteNonQuery();
+
+                kayitGetir();
             }
             else
             {
@@ -116,8 +119,16 @@ namespace CRM
             da.Fill(dt);
             foreach (DataRow satir in dt.Rows)
             {
-                cbUrun.Items.Add(satir["UrunKodu"].ToString());
+                cbUrun.Items.Add(satir["UrunKodu"].ToString() + " - " + satir["UrunAd"].ToString());
             }
+        }
+        private void kayitGetir()
+        {
+            SqlCommand komut = new SqlCommand("Select * from TBLSATIS", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

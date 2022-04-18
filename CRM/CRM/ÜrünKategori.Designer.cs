@@ -196,7 +196,6 @@ namespace CRM
             this.txtKategoriid.Name = "txtKategoriid";
             this.txtKategoriid.Size = new System.Drawing.Size(255, 28);
             this.txtKategoriid.TabIndex = 9;
-            this.txtKategoriid.TextChanged += new System.EventHandler(this.txtKategoriid_TextChanged);
             // 
             // ÜrünKategori
             // 

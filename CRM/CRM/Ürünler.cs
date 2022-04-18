@@ -42,11 +42,10 @@ namespace CRM
         private void btnUrunEkle_Click(object sender, EventArgs e)
         {
             //Ürün Ekleme
-            SqlCommand komut = new SqlCommand("Insert INTO TBLURUNLER (UrunKategori, UrunAd, Marka, Stok, Birim, Depo, StokKodu, UrunKodu) VALUES (@URUNKATEGORI, @URUNAD, @MARKA, @STOK, @BIRIM, @DEPO, @SKOD, @UKOD)", bgl.sqlbaglanti());
+            SqlCommand komut = new SqlCommand("Insert INTO TBLURUNLER (UrunKategori, UrunAd, Marka, Birim, Depo, StokKodu, UrunKodu) VALUES (@URUNKATEGORI, @URUNAD, @MARKA, @BIRIM, @DEPO, @SKOD, @UKOD)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@URUNKATEGORI", SqlDbType.NVarChar).Value =cbKategori.Text;
             komut.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
             komut.Parameters.AddWithValue("@MARKA", SqlDbType.NVarChar).Value =cbMarka.Text;
-            komut.Parameters.AddWithValue("@STOK", SqlDbType.Float).Value = Convert.ToSingle(txtStokMiktari.Text);
             komut.Parameters.AddWithValue("@BIRIM", SqlDbType.Float).Value = cbBirim.Text;
             komut.Parameters.AddWithValue("@DEPO", SqlDbType.NVarChar).Value = cbDepo.Text;
             komut.Parameters.AddWithValue("@SKOD", SqlDbType.Int).Value = Convert.ToInt32(txtStokKodu.Text);
@@ -61,7 +60,7 @@ namespace CRM
             // Stok Ekleme
             SqlCommand komut3 = new SqlCommand("Insert Into TBLSTOKLAR (UrunAd, StokMiktari, Birim, StokKodu, UrunKodu) values (@URUNAD, @STOK, @BIRIM, @KOD, @URUNKOD)", bgl.sqlbaglanti());
             komut3.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
-            komut3.Parameters.AddWithValue("@STOK", SqlDbType.Float).Value = Convert.ToSingle(txtStokMiktari.Text);
+            komut3.Parameters.AddWithValue("@STOK", SqlDbType.Float).Value = 0;
             komut3.Parameters.AddWithValue("@BIRIM", SqlDbType.NVarChar).Value = cbBirim.Text;
             komut3.Parameters.AddWithValue("@KOD", SqlDbType.Int).Value = Convert.ToInt32(txtStokKodu.Text);
             komut3.Parameters.AddWithValue("@URUNKOD", SqlDbType.NVarChar).Value =Convert.ToString( txtUrunKodu.Text);
@@ -88,7 +87,6 @@ namespace CRM
             cbKategori.Text = dataGridView1.CurrentRow.Cells[1].Value.ToString();
             txtUrunAd.Text = dataGridView1.CurrentRow.Cells[2].Value.ToString();
             cbMarka.Text = dataGridView1.CurrentRow.Cells[3].Value.ToString();
-            txtStokMiktari.Text = dataGridView1.CurrentRow.Cells[4].Value.ToString();
             cbBirim.Text = dataGridView1.CurrentRow.Cells[5].Value.ToString();
             cbDepo.Text = dataGridView1.CurrentRow.Cells[6].Value.ToString();
         }
@@ -96,11 +94,10 @@ namespace CRM
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
             // Ürün güncelleme
-            SqlCommand komut = new SqlCommand("Update TBLURUNLER set UrunKategori= @URUNKATEGORI, UrunAd= @URUNAD, Marka= @MARKA, Stok= @STOK, Birim= @BIRIM, Depo=@DEPO where id= @ID", bgl.sqlbaglanti());
+            SqlCommand komut = new SqlCommand("Update TBLURUNLER set UrunKategori= @URUNKATEGORI, UrunAd= @URUNAD, Marka= @MARKA, Birim= @BIRIM, Depo=@DEPO where id= @ID", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@URUNKATEGORI", SqlDbType.NVarChar).Value = cbKategori.Text;
             komut.Parameters.AddWithValue("@URUNAD", SqlDbType.NVarChar).Value = txtUrunAd.Text;
             komut.Parameters.AddWithValue("@MARKA", SqlDbType.NVarChar).Value = cbMarka.Text;
-            komut.Parameters.AddWithValue("@STOK", SqlDbType.Float).Value = Convert.ToSingle(txtStokMiktari.Text);
             komut.Parameters.AddWithValue("@BIRIM", SqlDbType.Float).Value = Convert.ToSingle(cbBirim.Text);
             komut.Parameters.AddWithValue("@DEPO", SqlDbType.NVarChar).Value = cbDepo.Text;
             komut.Parameters.AddWithValue("@ID", SqlDbType.Int).Value =Convert.ToInt32(txtUrunId.Text);

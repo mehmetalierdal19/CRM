@@ -24,6 +24,7 @@ namespace CRM
             this.tBLTEDARIKCITableAdapter.Fill(this.dbTBLTEDARIKCIDataSet.TBLTEDARIKCI);
             // TODO: This line of code loads data into the 'dbCRMDataSet13.TBLKATEGORILER' table. You can move, or remove it, as needed.
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet13.TBLKATEGORILER);
+            kayitGetir();
 
         }
 
@@ -80,6 +81,7 @@ namespace CRM
             // stoklar tablosundan stok azaltma
             SqlCommand komut4 = new SqlCommand("update TBLSTOKLAR set StokMiktari = StokMiktari + " + miktar + " where StokKodu =" + stokKodu, bgl.sqlbaglanti());
             komut4.ExecuteNonQuery();
+            kayitGetir();
         }
 
         
@@ -95,8 +97,16 @@ namespace CRM
             da.Fill(dt);
             foreach (DataRow satir in dt.Rows)
             {
-                cbUrunKodu.Items.Add(satir["UrunKodu"].ToString());
+                cbUrunKodu.Items.Add(satir["UrunKodu"].ToString() + " - " + satir["UrunAd"].ToString());
             }
+        }
+        private void kayitGetir()
+        {
+            SqlCommand komut = new SqlCommand("Select * from TBLALISLAR", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
         }
     }
 }

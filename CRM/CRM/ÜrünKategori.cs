@@ -32,7 +32,7 @@ namespace CRM
             // kategori ekleme
             SqlCommand komut = new SqlCommand("Insert INTO TBLKATEGORILER (KategoriAD, UrunSayisi) VALUES (@KATEGORIAD, @URUNSAYISI)", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@KATEGORIAD", SqlDbType.NVarChar).Value = txtKategoriAd.Text;
-            komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = Convert.ToInt32(txtUrunSayisi.Text);
+            komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = 0;
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
         }
@@ -63,11 +63,6 @@ namespace CRM
             komut.Parameters.AddWithValue("@KATEGORIID", SqlDbType.Int).Value = Convert.ToInt32(txtKategoriid.Text);
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
-        }
-
-        private void txtKategoriid_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }

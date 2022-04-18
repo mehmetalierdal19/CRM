@@ -39,7 +39,6 @@ namespace CRM
             this.lblUrunKategori = new System.Windows.Forms.Label();
             this.lblUrunAd = new System.Windows.Forms.Label();
             this.lblMarka = new System.Windows.Forms.Label();
-            this.lblStokMiktari = new System.Windows.Forms.Label();
             this.lblDepo = new System.Windows.Forms.Label();
             this.cbKategori = new System.Windows.Forms.ComboBox();
             this.tBLKATEGORILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -51,7 +50,6 @@ namespace CRM
             this.tBLDEPOLARBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSet8 = new CRM.dbCRMDataSet8();
             this.txtUrunAd = new System.Windows.Forms.TextBox();
-            this.txtStokMiktari = new System.Windows.Forms.TextBox();
             this.btnSil = new System.Windows.Forms.Button();
             this.btnGuncelle = new System.Windows.Forms.Button();
             this.tBLURUNLERTableAdapter1 = new CRM.dbCRMDataSet5TableAdapters.TBLURUNLERTableAdapter();
@@ -164,22 +162,11 @@ namespace CRM
             this.lblMarka.TabIndex = 4;
             this.lblMarka.Text = "Marka:";
             // 
-            // lblStokMiktari
-            // 
-            this.lblStokMiktari.AutoSize = true;
-            this.lblStokMiktari.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblStokMiktari.Location = new System.Drawing.Point(492, 198);
-            this.lblStokMiktari.Name = "lblStokMiktari";
-            this.lblStokMiktari.Size = new System.Drawing.Size(144, 25);
-            this.lblStokMiktari.TabIndex = 5;
-            this.lblStokMiktari.Text = "Stok Miktarı:";
-            this.lblStokMiktari.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // lblDepo
             // 
             this.lblDepo.AutoSize = true;
             this.lblDepo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDepo.Location = new System.Drawing.Point(1035, 205);
+            this.lblDepo.Location = new System.Drawing.Point(492, 198);
             this.lblDepo.Name = "lblDepo";
             this.lblDepo.Size = new System.Drawing.Size(72, 25);
             this.lblDepo.TabIndex = 6;
@@ -238,7 +225,7 @@ namespace CRM
             this.cbDepo.DisplayMember = "DepoAd";
             this.cbDepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbDepo.FormattingEnabled = true;
-            this.cbDepo.Location = new System.Drawing.Point(1113, 202);
+            this.cbDepo.Location = new System.Drawing.Point(652, 200);
             this.cbDepo.Name = "cbDepo";
             this.cbDepo.Size = new System.Drawing.Size(225, 28);
             this.cbDepo.TabIndex = 9;
@@ -261,14 +248,6 @@ namespace CRM
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(225, 28);
             this.txtUrunAd.TabIndex = 10;
-            // 
-            // txtStokMiktari
-            // 
-            this.txtStokMiktari.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStokMiktari.Location = new System.Drawing.Point(652, 199);
-            this.txtStokMiktari.Name = "txtStokMiktari";
-            this.txtStokMiktari.Size = new System.Drawing.Size(225, 28);
-            this.txtStokMiktari.TabIndex = 11;
             // 
             // btnSil
             // 
@@ -576,13 +555,11 @@ namespace CRM
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnGuncelle);
             this.Controls.Add(this.btnSil);
-            this.Controls.Add(this.txtStokMiktari);
             this.Controls.Add(this.txtUrunAd);
             this.Controls.Add(this.cbDepo);
             this.Controls.Add(this.cbMarka);
             this.Controls.Add(this.cbKategori);
             this.Controls.Add(this.lblDepo);
-            this.Controls.Add(this.lblStokMiktari);
             this.Controls.Add(this.lblMarka);
             this.Controls.Add(this.lblUrunAd);
             this.Controls.Add(this.lblUrunKategori);
@@ -619,13 +596,11 @@ namespace CRM
         private System.Windows.Forms.Label lblUrunKategori;
         private System.Windows.Forms.Label lblUrunAd;
         private System.Windows.Forms.Label lblMarka;
-        private System.Windows.Forms.Label lblStokMiktari;
         private System.Windows.Forms.Label lblDepo;
         private System.Windows.Forms.ComboBox cbKategori;
         private System.Windows.Forms.ComboBox cbMarka;
         private System.Windows.Forms.ComboBox cbDepo;
         private System.Windows.Forms.TextBox txtUrunAd;
-        private System.Windows.Forms.TextBox txtStokMiktari;
         private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Button btnGuncelle;
         private dbCRMDataSet5 dbCRMDataSet5;
