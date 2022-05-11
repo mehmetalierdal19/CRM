@@ -55,11 +55,8 @@ namespace CRM
             this.cbParaBirim = new System.Windows.Forms.ComboBox();
             this.cbTeslimat = new System.Windows.Forms.ComboBox();
             this.cbOdemeTip = new System.Windows.Forms.ComboBox();
-            this.cbBirim = new System.Windows.Forms.ComboBox();
-            this.cbUrun = new System.Windows.Forms.ComboBox();
             this.tBLURUNLERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbURUNLERDataSet14 = new CRM.dbURUNLERDataSet14();
-            this.cbUrunK = new System.Windows.Forms.ComboBox();
             this.tBLKATEGORILERBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dbCRMDataSet13 = new CRM.dbCRMDataSet13();
             this.cbMusteri = new System.Windows.Forms.ComboBox();
@@ -73,6 +70,14 @@ namespace CRM
             this.tBLKATEGORILERTableAdapter = new CRM.dbCRMDataSet13TableAdapters.TBLKATEGORILERTableAdapter();
             this.tBLURUNLERTableAdapter = new CRM.dbURUNLERDataSet14TableAdapters.TBLURUNLERTableAdapter();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridView2 = new System.Windows.Forms.DataGridView();
+            this.txtSatisArama = new System.Windows.Forms.TextBox();
+            this.txtUrunArama = new System.Windows.Forms.TextBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.txtKategori = new System.Windows.Forms.TextBox();
+            this.txtUrunKodu = new System.Windows.Forms.TextBox();
+            this.txtBirim = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbURUNLERDataSet14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).BeginInit();
@@ -80,6 +85,7 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -336,64 +342,6 @@ namespace CRM
             this.cbOdemeTip.Size = new System.Drawing.Size(185, 26);
             this.cbOdemeTip.TabIndex = 24;
             // 
-            // cbBirim
-            // 
-            this.cbBirim.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbBirim.FormattingEnabled = true;
-            this.cbBirim.Items.AddRange(new object[] {
-            "Adet",
-            "Ay",
-            "Bidon",
-            "Cilt",
-            "Çuval",
-            "Dakika",
-            "Galon",
-            "Gram",
-            "Gün",
-            "Karat",
-            "Kasa",
-            "Kavanoz",
-            "Kilogram",
-            "Koli",
-            "Kutu",
-            "Litre",
-            "Makara",
-            "Metre",
-            "Paket",
-            "Metrekare",
-            "Metreküp",
-            "Palet",
-            "Parça",
-            "Porsiyon",
-            "Rulo",
-            "Saat",
-            "Sayfa",
-            "Seans",
-            "Saniye",
-            "Şişe",
-            "Takım",
-            "Teneke",
-            "Tepsi",
-            "Ton",
-            "Top",
-            "Torba",
-            "Varil",
-            "Yıl"});
-            this.cbBirim.Location = new System.Drawing.Point(257, 145);
-            this.cbBirim.Name = "cbBirim";
-            this.cbBirim.Size = new System.Drawing.Size(185, 26);
-            this.cbBirim.TabIndex = 25;
-            // 
-            // cbUrun
-            // 
-            this.cbUrun.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLURUNLERBindingSource, "id", true));
-            this.cbUrun.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbUrun.FormattingEnabled = true;
-            this.cbUrun.Location = new System.Drawing.Point(581, 83);
-            this.cbUrun.Name = "cbUrun";
-            this.cbUrun.Size = new System.Drawing.Size(185, 26);
-            this.cbUrun.TabIndex = 26;
-            // 
             // tBLURUNLERBindingSource
             // 
             this.tBLURUNLERBindingSource.DataMember = "TBLURUNLER";
@@ -403,20 +351,6 @@ namespace CRM
             // 
             this.dbURUNLERDataSet14.DataSetName = "dbURUNLERDataSet14";
             this.dbURUNLERDataSet14.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // cbUrunK
-            // 
-            this.cbUrunK.DataBindings.Add(new System.Windows.Forms.Binding("SelectedValue", this.tBLKATEGORILERBindingSource, "KategoriID", true));
-            this.cbUrunK.DataSource = this.tBLKATEGORILERBindingSource;
-            this.cbUrunK.DisplayMember = "KategoriAd";
-            this.cbUrunK.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cbUrunK.FormattingEnabled = true;
-            this.cbUrunK.Location = new System.Drawing.Point(257, 87);
-            this.cbUrunK.Name = "cbUrunK";
-            this.cbUrunK.Size = new System.Drawing.Size(185, 26);
-            this.cbUrunK.TabIndex = 27;
-            this.cbUrunK.ValueMember = "KategoriID";
-            this.cbUrunK.SelectedIndexChanged += new System.EventHandler(this.cbUrunK_SelectedIndexChanged);
             // 
             // tBLKATEGORILERBindingSource
             // 
@@ -479,6 +413,7 @@ namespace CRM
             this.button2.TabIndex = 31;
             this.button2.Text = "Sil";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button3
             // 
@@ -511,24 +446,102 @@ namespace CRM
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(1518, 341);
+            this.dataGridView1.Size = new System.Drawing.Size(1012, 341);
             this.dataGridView1.TabIndex = 33;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // dataGridView2
+            // 
+            this.dataGridView2.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView2.Location = new System.Drawing.Point(1030, 432);
+            this.dataGridView2.Name = "dataGridView2";
+            this.dataGridView2.RowHeadersWidth = 51;
+            this.dataGridView2.RowTemplate.Height = 24;
+            this.dataGridView2.Size = new System.Drawing.Size(492, 341);
+            this.dataGridView2.TabIndex = 34;
+            this.dataGridView2.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView2_CellMouseClick);
+            // 
+            // txtSatisArama
+            // 
+            this.txtSatisArama.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtSatisArama.Location = new System.Drawing.Point(12, 394);
+            this.txtSatisArama.Name = "txtSatisArama";
+            this.txtSatisArama.Size = new System.Drawing.Size(141, 26);
+            this.txtSatisArama.TabIndex = 35;
+            this.txtSatisArama.TextChanged += new System.EventHandler(this.txtSatisArama_TextChanged);
+            // 
+            // txtUrunArama
+            // 
+            this.txtUrunArama.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunArama.Location = new System.Drawing.Point(1369, 394);
+            this.txtUrunArama.Name = "txtUrunArama";
+            this.txtUrunArama.Size = new System.Drawing.Size(153, 26);
+            this.txtUrunArama.TabIndex = 36;
+            this.txtUrunArama.TextChanged += new System.EventHandler(this.txtUrunArama_TextChanged);
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Location = new System.Drawing.Point(161, 403);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(125, 17);
+            this.label16.TabIndex = 37;
+            this.label16.Text = "*Ürün Kodu Giriniz";
+            // 
+            // label17
+            // 
+            this.label17.AutoSize = true;
+            this.label17.Location = new System.Drawing.Point(1164, 403);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(185, 17);
+            this.label17.TabIndex = 38;
+            this.label17.Text = "*Ürün Kodu Veya Adı Giriniz";
+            // 
+            // txtKategori
+            // 
+            this.txtKategori.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtKategori.Location = new System.Drawing.Point(257, 87);
+            this.txtKategori.Name = "txtKategori";
+            this.txtKategori.Size = new System.Drawing.Size(185, 26);
+            this.txtKategori.TabIndex = 39;
+            // 
+            // txtUrunKodu
+            // 
+            this.txtUrunKodu.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtUrunKodu.Location = new System.Drawing.Point(581, 87);
+            this.txtUrunKodu.Name = "txtUrunKodu";
+            this.txtUrunKodu.Size = new System.Drawing.Size(185, 26);
+            this.txtUrunKodu.TabIndex = 40;
+            // 
+            // txtBirim
+            // 
+            this.txtBirim.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtBirim.Location = new System.Drawing.Point(257, 141);
+            this.txtBirim.Name = "txtBirim";
+            this.txtBirim.Size = new System.Drawing.Size(185, 26);
+            this.txtBirim.TabIndex = 41;
             // 
             // Satislar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
-            this.ClientSize = new System.Drawing.Size(1745, 785);
+            this.ClientSize = new System.Drawing.Size(1534, 785);
+            this.Controls.Add(this.txtBirim);
+            this.Controls.Add(this.txtUrunKodu);
+            this.Controls.Add(this.txtKategori);
+            this.Controls.Add(this.label17);
+            this.Controls.Add(this.label16);
+            this.Controls.Add(this.txtUrunArama);
+            this.Controls.Add(this.txtSatisArama);
+            this.Controls.Add(this.dataGridView2);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtSatisTarih);
             this.Controls.Add(this.cbMusteri);
-            this.Controls.Add(this.cbUrunK);
-            this.Controls.Add(this.cbUrun);
-            this.Controls.Add(this.cbBirim);
             this.Controls.Add(this.cbOdemeTip);
             this.Controls.Add(this.cbTeslimat);
             this.Controls.Add(this.cbParaBirim);
@@ -565,6 +578,7 @@ namespace CRM
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbMUSTERILERDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -597,9 +611,6 @@ namespace CRM
         private System.Windows.Forms.ComboBox cbParaBirim;
         private System.Windows.Forms.ComboBox cbTeslimat;
         private System.Windows.Forms.ComboBox cbOdemeTip;
-        private System.Windows.Forms.ComboBox cbBirim;
-        private System.Windows.Forms.ComboBox cbUrun;
-        private System.Windows.Forms.ComboBox cbUrunK;
         private System.Windows.Forms.ComboBox cbMusteri;
         private System.Windows.Forms.DateTimePicker dtSatisTarih;
         private System.Windows.Forms.Button button1;
@@ -615,5 +626,13 @@ namespace CRM
         private System.Windows.Forms.BindingSource tBLURUNLERBindingSource;
         private dbURUNLERDataSet14TableAdapters.TBLURUNLERTableAdapter tBLURUNLERTableAdapter;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridView2;
+        private System.Windows.Forms.TextBox txtSatisArama;
+        private System.Windows.Forms.TextBox txtUrunArama;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.TextBox txtKategori;
+        private System.Windows.Forms.TextBox txtUrunKodu;
+        private System.Windows.Forms.TextBox txtBirim;
     }
 }

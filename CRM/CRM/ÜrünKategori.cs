@@ -26,6 +26,12 @@ namespace CRM
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
 
         }
+        private void temizle()
+        {
+            txtKategoriAd.Text = "";
+            txtKategoriid.Text = "";
+            txtUrunSayisi.Text = "";
+        }
 
         private void btnKategoriEkle_Click(object sender, EventArgs e)
         {
@@ -35,17 +41,18 @@ namespace CRM
             komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = 0;
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            temizle();
         }
 
         private void btnKategoriGuncelle_Click(object sender, EventArgs e)
         {
             // kategori güncelleme
-            SqlCommand komut = new SqlCommand("Update TBLKATEGORILER set KategoriAd=@KATEGORIAD, UrunSayisi=@URUNSAYISI where KategoriID=@KATEGORIID", bgl.sqlbaglanti());
+            SqlCommand komut = new SqlCommand("Update TBLKATEGORILER set KategoriAd=@KATEGORIAD where KategoriID=@KATEGORIID", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@KATEGORIAD", SqlDbType.NVarChar).Value = txtKategoriAd.Text;
-            komut.Parameters.AddWithValue("@URUNSAYISI", SqlDbType.Int).Value = Convert.ToInt32(txtUrunSayisi.Text);
             komut.Parameters.AddWithValue("@KATEGORIID", SqlDbType.Int).Value = Convert.ToInt32(txtKategoriid.Text);
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            temizle();
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -63,6 +70,20 @@ namespace CRM
             komut.Parameters.AddWithValue("@KATEGORIID", SqlDbType.Int).Value = Convert.ToInt32(txtKategoriid.Text);
             komut.ExecuteNonQuery();
             this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            temizle();
+        }
+
+        private void txtKategoriArama_TextChanged(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Select * from TBLKATEGORILER where KategoriAd like '%" + txtKategoriArama.Text + "%'", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            if(txtKategoriArama.Text == "")
+            {
+                this.tBLKATEGORILERTableAdapter.Fill(this.dbCRMDataSet2.TBLKATEGORILER);
+            }
         }
     }
 }

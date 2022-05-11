@@ -29,6 +29,19 @@ namespace CRM
             //this.tBLMUSTERILERTableAdapter.Fill(this.dbCRMDataSet.TBLMUSTERILER);
 
         }
+        private void temizle()
+        {
+            txtAd.Text = "";
+            txtAdres.Text = "";
+            txtEposta.Text = "";
+            txtID.Text = "";
+            txtPosition.Text = "";
+            txtTel.Text = "";
+            txtVergiD.Text = "";
+            txtVergiNo.Text = "";
+            txtYetkiliName.Text = "";
+            cbMusteriAsama.Text = "";
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -45,6 +58,7 @@ namespace CRM
             komut.Parameters.AddWithValue("@ASAMA", SqlDbType.NVarChar).Value = cbMusteriAsama.Text;
             komut.ExecuteNonQuery();
             this.tBLMUSTERILERTableAdapter1.Fill(this.dbMUSTERILERDataSet.TBLMUSTERILER);
+            temizle();
         }
 
         private void dataGridView1_CellMouseClick(object sender, DataGridViewCellMouseEventArgs e)
@@ -69,16 +83,8 @@ namespace CRM
             komut.Parameters.AddWithValue("@ID", SqlDbType.Int).Value = Convert.ToInt32(txtID.Text);
             komut.ExecuteNonQuery();
             this.tBLMUSTERILERTableAdapter1.Fill(this.dbMUSTERILERDataSet.TBLMUSTERILER);
-            txtAd.Text = "";
-            txtAdres.Text = "";
-            txtEposta.Text = "";
-            txtID.Text = "";
-            txtPosition.Text = "";
-            txtTel.Text = "";
-            txtVergiD.Text = "";
-            txtVergiNo.Text = "";
-            txtYetkiliName.Text = "";
-            cbMusteriAsama.Text = "";
+            temizle();
+            
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -96,17 +102,20 @@ namespace CRM
             komut.Parameters.AddWithValue("ID", SqlDbType.Int).Value = Convert.ToInt32(txtID.Text);
             komut.ExecuteNonQuery();
             this.tBLMUSTERILERTableAdapter1.Fill(this.dbMUSTERILERDataSet.TBLMUSTERILER);
+            temizle();
+        }
 
-            txtAd.Text = "";
-            txtAdres.Text = "";
-            txtEposta.Text = "";
-            txtID.Text = "";
-            txtPosition.Text = "";
-            txtTel.Text = "";
-            txtVergiD.Text = "";
-            txtVergiNo.Text = "";
-            txtYetkiliName.Text = "";
-            cbMusteriAsama.Text = "";
+        private void txtArama_TextChanged(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Select * from TBLMUSTERILER WHERE MUSTERIAD like '%" + txtArama.Text + "%' or MusteriYetkili like '%"+txtArama.Text+"%'", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            if(txtArama.Text == "")
+            {
+                this.tBLMUSTERILERTableAdapter1.Fill(this.dbMUSTERILERDataSet.TBLMUSTERILER);
+            }
 
         }
     }

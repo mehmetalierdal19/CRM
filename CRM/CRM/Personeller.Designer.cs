@@ -44,6 +44,10 @@ namespace CRM
             this.btnPersonelEkle = new System.Windows.Forms.Button();
             this.btnPersonelSil = new System.Windows.Forms.Button();
             this.btnPersonelGuncelle = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // lblPersonelid
@@ -177,6 +181,7 @@ namespace CRM
             this.btnPersonelSil.TabIndex = 13;
             this.btnPersonelSil.Text = "Sil";
             this.btnPersonelSil.UseVisualStyleBackColor = true;
+            this.btnPersonelSil.Click += new System.EventHandler(this.btnPersonelSil_Click);
             // 
             // btnPersonelGuncelle
             // 
@@ -187,6 +192,37 @@ namespace CRM
             this.btnPersonelGuncelle.TabIndex = 14;
             this.btnPersonelGuncelle.Text = "Güncelle";
             this.btnPersonelGuncelle.UseVisualStyleBackColor = true;
+            this.btnPersonelGuncelle.Click += new System.EventHandler(this.btnPersonelGuncelle_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(300, 74);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.RowTemplate.Height = 24;
+            this.dataGridView1.Size = new System.Drawing.Size(871, 374);
+            this.dataGridView1.TabIndex = 15;
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.textBox1.Location = new System.Drawing.Point(955, 29);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(216, 28);
+            this.textBox1.TabIndex = 16;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(831, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(101, 17);
+            this.label1.TabIndex = 17;
+            this.label1.Text = "*Ad-Soyad Ara";
             // 
             // Personeller
             // 
@@ -194,6 +230,9 @@ namespace CRM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1469, 738);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnPersonelGuncelle);
             this.Controls.Add(this.btnPersonelSil);
             this.Controls.Add(this.btnPersonelEkle);
@@ -212,6 +251,8 @@ namespace CRM
             this.Name = "Personeller";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Personeller";
+            this.Load += new System.EventHandler(this.Personeller_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -234,5 +275,8 @@ namespace CRM
         private System.Windows.Forms.Button btnPersonelEkle;
         private System.Windows.Forms.Button btnPersonelSil;
         private System.Windows.Forms.Button btnPersonelGuncelle;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
     }
 }

@@ -7,11 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data.SqlClient;
 
 namespace CRM
 {
     public partial class Stoklar : Form
     {
+        baglanti bgl = new baglanti();
         public Stoklar()
         {
             InitializeComponent();
@@ -21,6 +23,33 @@ namespace CRM
         {
             Ürünler urn = new Ürünler();
             urn.ShowDialog();
+        }
+
+        private void Stoklar_Load(object sender, EventArgs e)
+        {
+            kayitGetir();
+        }
+        private void kayitGetir()
+        {
+            SqlCommand komut = new SqlCommand("Select * from TBLSTOKLAR", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+
+        }
+
+        private void txtStokArama_TextChanged(object sender, EventArgs e)
+        {
+            SqlCommand komut = new SqlCommand("Select * from TBLSTOKLAR where UrunKodu Like '%" + txtStokArama.Text + "%'", bgl.sqlbaglanti());
+            SqlDataAdapter da = new SqlDataAdapter(komut);
+            DataTable dt = new DataTable();
+            da.Fill(dt);
+            dataGridView1.DataSource = dt;
+            if(txtStokArama.Text == "")
+            {
+                kayitGetir();
+            }
         }
     }
 }

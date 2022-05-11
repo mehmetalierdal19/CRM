@@ -74,6 +74,8 @@ namespace CRM
             this.tBLPERSONELTableAdapter = new CRM.TBLPERSONELDATASETTableAdapters.TBLPERSONELTableAdapter();
             this.tBLMUSTERILERTableAdapter1 = new CRM.dbMUSTERILERDataSetTableAdapters.TBLMUSTERILERTableAdapter();
             this.txtTel = new System.Windows.Forms.MaskedTextBox();
+            this.txtArama = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMUSTERILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -314,6 +316,8 @@ namespace CRM
             // dataGridView1
             // 
             this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.idDataGridViewTextBoxColumn,
@@ -458,12 +462,31 @@ namespace CRM
             this.txtTel.Size = new System.Drawing.Size(232, 26);
             this.txtTel.TabIndex = 25;
             // 
+            // txtArama
+            // 
+            this.txtArama.Location = new System.Drawing.Point(530, 12);
+            this.txtArama.Name = "txtArama";
+            this.txtArama.Size = new System.Drawing.Size(169, 22);
+            this.txtArama.TabIndex = 26;
+            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(723, 17);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(226, 17);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "*Müşteri Adı veya Yetkili Adı Giriniz";
+            // 
             // Müşteriler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1572, 680);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txtArama);
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.txtID);
@@ -551,5 +574,7 @@ namespace CRM
         private System.Windows.Forms.DataGridViewTextBoxColumn vergiNoDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn müsteriAsamasiDataGridViewTextBoxColumn;
         private System.Windows.Forms.MaskedTextBox txtTel;
+        private System.Windows.Forms.TextBox txtArama;
+        private System.Windows.Forms.Label label1;
     }
 }

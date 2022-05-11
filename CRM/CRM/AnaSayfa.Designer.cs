@@ -38,7 +38,6 @@ namespace CRM
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
             this.btnStoklar = new System.Windows.Forms.Button();
-            this.button8 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button10 = new System.Windows.Forms.Button();
             this.button11 = new System.Windows.Forms.Button();
@@ -81,7 +80,7 @@ namespace CRM
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button2.Location = new System.Drawing.Point(780, 277);
+            this.button2.Location = new System.Drawing.Point(771, 186);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(256, 50);
             this.button2.TabIndex = 3;
@@ -114,7 +113,7 @@ namespace CRM
             // button6
             // 
             this.button6.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button6.Location = new System.Drawing.Point(780, 186);
+            this.button6.Location = new System.Drawing.Point(426, 368);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(256, 50);
             this.button6.TabIndex = 7;
@@ -144,17 +143,6 @@ namespace CRM
             this.btnStoklar.UseVisualStyleBackColor = true;
             this.btnStoklar.Click += new System.EventHandler(this.btnStoklar_Click);
             // 
-            // button8
-            // 
-            this.button8.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button8.Location = new System.Drawing.Point(426, 368);
-            this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(256, 50);
-            this.button8.TabIndex = 10;
-            this.button8.Text = "Görüşmeler";
-            this.button8.UseVisualStyleBackColor = true;
-            this.button8.Click += new System.EventHandler(this.button8_Click);
-            // 
             // button9
             // 
             this.button9.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
@@ -169,7 +157,7 @@ namespace CRM
             // button10
             // 
             this.button10.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(780, 368);
+            this.button10.Location = new System.Drawing.Point(771, 277);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(256, 50);
             this.button10.TabIndex = 12;
@@ -180,7 +168,7 @@ namespace CRM
             // button11
             // 
             this.button11.Font = new System.Drawing.Font("Verdana", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button11.Location = new System.Drawing.Point(780, 459);
+            this.button11.Location = new System.Drawing.Point(771, 368);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(256, 50);
             this.button11.TabIndex = 13;
@@ -197,7 +185,6 @@ namespace CRM
             this.Controls.Add(this.button11);
             this.Controls.Add(this.button10);
             this.Controls.Add(this.button9);
-            this.Controls.Add(this.button8);
             this.Controls.Add(this.btnStoklar);
             this.Controls.Add(this.button7);
             this.Controls.Add(this.button6);
@@ -226,7 +213,6 @@ namespace CRM
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;
         private System.Windows.Forms.Button btnStoklar;
-        private System.Windows.Forms.Button button8;
         private System.Windows.Forms.Button button9;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button11;

@@ -66,20 +66,11 @@ namespace CRM
             this.lblUrunId = new System.Windows.Forms.Label();
             this.txtUrunId = new System.Windows.Forms.TextBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.idDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunKategoriDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.urunAdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.markaDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.satisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.alisFiyatiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.depoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cbBirim = new System.Windows.Forms.ComboBox();
-            this.linkLabel1 = new System.Windows.Forms.LinkLabel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtStokKodu = new System.Windows.Forms.TextBox();
             this.txtUrunKodu = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
+            this.txtArama = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
@@ -146,7 +137,7 @@ namespace CRM
             // 
             this.lblUrunAd.AutoSize = true;
             this.lblUrunAd.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblUrunAd.Location = new System.Drawing.Point(89, 198);
+            this.lblUrunAd.Location = new System.Drawing.Point(997, 32);
             this.lblUrunAd.Name = "lblUrunAd";
             this.lblUrunAd.Size = new System.Drawing.Size(110, 25);
             this.lblUrunAd.TabIndex = 3;
@@ -156,7 +147,7 @@ namespace CRM
             // 
             this.lblMarka.AutoSize = true;
             this.lblMarka.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblMarka.Location = new System.Drawing.Point(492, 119);
+            this.lblMarka.Location = new System.Drawing.Point(528, 114);
             this.lblMarka.Name = "lblMarka";
             this.lblMarka.Size = new System.Drawing.Size(83, 25);
             this.lblMarka.TabIndex = 4;
@@ -166,7 +157,7 @@ namespace CRM
             // 
             this.lblDepo.AutoSize = true;
             this.lblDepo.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.lblDepo.Location = new System.Drawing.Point(492, 198);
+            this.lblDepo.Location = new System.Drawing.Point(127, 210);
             this.lblDepo.Name = "lblDepo";
             this.lblDepo.Size = new System.Drawing.Size(72, 25);
             this.lblDepo.TabIndex = 6;
@@ -202,9 +193,9 @@ namespace CRM
             this.cbMarka.DisplayMember = "MarkaAd";
             this.cbMarka.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbMarka.FormattingEnabled = true;
-            this.cbMarka.Location = new System.Drawing.Point(652, 119);
+            this.cbMarka.Location = new System.Drawing.Point(617, 115);
             this.cbMarka.Name = "cbMarka";
-            this.cbMarka.Size = new System.Drawing.Size(225, 28);
+            this.cbMarka.Size = new System.Drawing.Size(223, 28);
             this.cbMarka.TabIndex = 8;
             this.cbMarka.ValueMember = "MarkaID";
             // 
@@ -225,7 +216,7 @@ namespace CRM
             this.cbDepo.DisplayMember = "DepoAd";
             this.cbDepo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.cbDepo.FormattingEnabled = true;
-            this.cbDepo.Location = new System.Drawing.Point(652, 200);
+            this.cbDepo.Location = new System.Drawing.Point(217, 207);
             this.cbDepo.Name = "cbDepo";
             this.cbDepo.Size = new System.Drawing.Size(225, 28);
             this.cbDepo.TabIndex = 9;
@@ -244,7 +235,7 @@ namespace CRM
             // txtUrunAd
             // 
             this.txtUrunAd.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunAd.Location = new System.Drawing.Point(217, 199);
+            this.txtUrunAd.Location = new System.Drawing.Point(1125, 33);
             this.txtUrunAd.Name = "txtUrunAd";
             this.txtUrunAd.Size = new System.Drawing.Size(225, 28);
             this.txtUrunAd.TabIndex = 10;
@@ -339,26 +330,16 @@ namespace CRM
             // 
             this.txtUrunId.Enabled = false;
             this.txtUrunId.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunId.Location = new System.Drawing.Point(233, 33);
+            this.txtUrunId.Location = new System.Drawing.Point(217, 33);
             this.txtUrunId.Name = "txtUrunId";
             this.txtUrunId.Size = new System.Drawing.Size(225, 28);
             this.txtUrunId.TabIndex = 18;
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.BackgroundColor = System.Drawing.Color.SteelBlue;
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.idDataGridViewTextBoxColumn,
-            this.urunKategoriDataGridViewTextBoxColumn,
-            this.urunAdDataGridViewTextBoxColumn,
-            this.markaDataGridViewTextBoxColumn,
-            this.satisFiyatiDataGridViewTextBoxColumn,
-            this.alisFiyatiDataGridViewTextBoxColumn,
-            this.depoDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.tBLURUNLERBindingSource3;
             this.dataGridView1.Location = new System.Drawing.Point(181, 386);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
@@ -366,63 +347,6 @@ namespace CRM
             this.dataGridView1.Size = new System.Drawing.Size(1223, 279);
             this.dataGridView1.TabIndex = 14;
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // idDataGridViewTextBoxColumn
-            // 
-            this.idDataGridViewTextBoxColumn.DataPropertyName = "id";
-            this.idDataGridViewTextBoxColumn.HeaderText = "Ürün ID";
-            this.idDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.idDataGridViewTextBoxColumn.Name = "idDataGridViewTextBoxColumn";
-            this.idDataGridViewTextBoxColumn.ReadOnly = true;
-            this.idDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // urunKategoriDataGridViewTextBoxColumn
-            // 
-            this.urunKategoriDataGridViewTextBoxColumn.DataPropertyName = "UrunKategori";
-            this.urunKategoriDataGridViewTextBoxColumn.HeaderText = "Ürün Kategori";
-            this.urunKategoriDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.urunKategoriDataGridViewTextBoxColumn.Name = "urunKategoriDataGridViewTextBoxColumn";
-            this.urunKategoriDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // urunAdDataGridViewTextBoxColumn
-            // 
-            this.urunAdDataGridViewTextBoxColumn.DataPropertyName = "UrunAd";
-            this.urunAdDataGridViewTextBoxColumn.HeaderText = "Ürün Ad";
-            this.urunAdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.urunAdDataGridViewTextBoxColumn.Name = "urunAdDataGridViewTextBoxColumn";
-            this.urunAdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // markaDataGridViewTextBoxColumn
-            // 
-            this.markaDataGridViewTextBoxColumn.DataPropertyName = "Marka";
-            this.markaDataGridViewTextBoxColumn.HeaderText = "Marka";
-            this.markaDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.markaDataGridViewTextBoxColumn.Name = "markaDataGridViewTextBoxColumn";
-            this.markaDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // satisFiyatiDataGridViewTextBoxColumn
-            // 
-            this.satisFiyatiDataGridViewTextBoxColumn.DataPropertyName = "SatisFiyati";
-            this.satisFiyatiDataGridViewTextBoxColumn.HeaderText = "Satış Fiyatı";
-            this.satisFiyatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.satisFiyatiDataGridViewTextBoxColumn.Name = "satisFiyatiDataGridViewTextBoxColumn";
-            this.satisFiyatiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // alisFiyatiDataGridViewTextBoxColumn
-            // 
-            this.alisFiyatiDataGridViewTextBoxColumn.DataPropertyName = "AlisFiyati";
-            this.alisFiyatiDataGridViewTextBoxColumn.HeaderText = "Alış Fiyatı";
-            this.alisFiyatiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.alisFiyatiDataGridViewTextBoxColumn.Name = "alisFiyatiDataGridViewTextBoxColumn";
-            this.alisFiyatiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // depoDataGridViewTextBoxColumn
-            // 
-            this.depoDataGridViewTextBoxColumn.DataPropertyName = "Depo";
-            this.depoDataGridViewTextBoxColumn.HeaderText = "Depo";
-            this.depoDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.depoDataGridViewTextBoxColumn.Name = "depoDataGridViewTextBoxColumn";
-            this.depoDataGridViewTextBoxColumn.Width = 125;
             // 
             // cbBirim
             // 
@@ -472,43 +396,11 @@ namespace CRM
             this.cbBirim.Size = new System.Drawing.Size(223, 28);
             this.cbBirim.TabIndex = 19;
             // 
-            // linkLabel1
-            // 
-            this.linkLabel1.AutoSize = true;
-            this.linkLabel1.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.linkLabel1.Location = new System.Drawing.Point(881, 44);
-            this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(71, 17);
-            this.linkLabel1.TabIndex = 20;
-            this.linkLabel1.TabStop = true;
-            this.linkLabel1.Text = "Kod Üret";
-            this.linkLabel1.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel1_LinkClicked);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label1.Location = new System.Drawing.Point(492, 32);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(124, 25);
-            this.label1.TabIndex = 21;
-            this.label1.Text = "Stok Kodu:";
-            // 
-            // txtStokKodu
-            // 
-            this.txtStokKodu.Enabled = false;
-            this.txtStokKodu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtStokKodu.Location = new System.Drawing.Point(652, 33);
-            this.txtStokKodu.Name = "txtStokKodu";
-            this.txtStokKodu.Size = new System.Drawing.Size(223, 28);
-            this.txtStokKodu.TabIndex = 22;
-            // 
             // txtUrunKodu
             // 
             this.txtUrunKodu.Enabled = false;
             this.txtUrunKodu.Font = new System.Drawing.Font("Verdana", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.txtUrunKodu.Location = new System.Drawing.Point(1113, 29);
+            this.txtUrunKodu.Location = new System.Drawing.Point(617, 29);
             this.txtUrunKodu.Name = "txtUrunKodu";
             this.txtUrunKodu.Size = new System.Drawing.Size(223, 28);
             this.txtUrunKodu.TabIndex = 25;
@@ -517,7 +409,7 @@ namespace CRM
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.Location = new System.Drawing.Point(979, 32);
+            this.label2.Location = new System.Drawing.Point(483, 32);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(128, 25);
             this.label2.TabIndex = 24;
@@ -528,7 +420,7 @@ namespace CRM
             this.linkLabel2.AutoSize = true;
             this.linkLabel2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.linkLabel2.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.linkLabel2.Location = new System.Drawing.Point(1351, 44);
+            this.linkLabel2.Location = new System.Drawing.Point(855, 44);
             this.linkLabel2.Name = "linkLabel2";
             this.linkLabel2.Size = new System.Drawing.Size(71, 17);
             this.linkLabel2.TabIndex = 23;
@@ -536,18 +428,25 @@ namespace CRM
             this.linkLabel2.Text = "Kod Üret";
             this.linkLabel2.LinkClicked += new System.Windows.Forms.LinkLabelLinkClickedEventHandler(this.linkLabel2_LinkClicked);
             // 
+            // txtArama
+            // 
+            this.txtArama.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.txtArama.Location = new System.Drawing.Point(1223, 346);
+            this.txtArama.Name = "txtArama";
+            this.txtArama.Size = new System.Drawing.Size(181, 23);
+            this.txtArama.TabIndex = 26;
+            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
+            // 
             // Ürünler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1532, 677);
+            this.Controls.Add(this.txtArama);
             this.Controls.Add(this.txtUrunKodu);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.linkLabel2);
-            this.Controls.Add(this.txtStokKodu);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.linkLabel1);
             this.Controls.Add(this.cbBirim);
             this.Controls.Add(this.txtUrunId);
             this.Controls.Add(this.lblUrunId);
@@ -625,19 +524,10 @@ namespace CRM
         private System.Windows.Forms.Label lblUrunId;
         private System.Windows.Forms.TextBox txtUrunId;
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn idDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunKategoriDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn urunAdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn markaDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn satisFiyatiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn alisFiyatiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn depoDataGridViewTextBoxColumn;
         private System.Windows.Forms.ComboBox cbBirim;
-        private System.Windows.Forms.LinkLabel linkLabel1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtStokKodu;
         private System.Windows.Forms.TextBox txtUrunKodu;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel2;
+        private System.Windows.Forms.TextBox txtArama;
     }
 }

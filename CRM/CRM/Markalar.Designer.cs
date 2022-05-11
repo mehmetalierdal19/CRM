@@ -39,9 +39,11 @@ namespace CRM
             this.lblMarkaAd = new System.Windows.Forms.Label();
             this.txtMarkaAd = new System.Windows.Forms.TextBox();
             this.btnMarkaEkle = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnSil = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.txtID = new System.Windows.Forms.TextBox();
+            this.txtArama = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLMARKALARBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet3)).BeginInit();
@@ -63,7 +65,7 @@ namespace CRM
             this.dataGridView1.RowTemplate.Height = 24;
             this.dataGridView1.Size = new System.Drawing.Size(454, 285);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
             // markaIDDataGridViewTextBoxColumn
             // 
@@ -125,16 +127,16 @@ namespace CRM
             this.btnMarkaEkle.UseVisualStyleBackColor = true;
             this.btnMarkaEkle.Click += new System.EventHandler(this.btnMarkaEkle_Click);
             // 
-            // button1
+            // btnSil
             // 
-            this.button1.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.button1.Location = new System.Drawing.Point(590, 533);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(123, 37);
-            this.button1.TabIndex = 4;
-            this.button1.Text = "Sil";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnSil.Font = new System.Drawing.Font("Verdana", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnSil.Location = new System.Drawing.Point(590, 533);
+            this.btnSil.Name = "btnSil";
+            this.btnSil.Size = new System.Drawing.Size(123, 37);
+            this.btnSil.TabIndex = 4;
+            this.btnSil.Text = "Sil";
+            this.btnSil.UseVisualStyleBackColor = true;
+            this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
             // label1
             // 
@@ -155,15 +157,34 @@ namespace CRM
             this.txtID.Size = new System.Drawing.Size(246, 28);
             this.txtID.TabIndex = 6;
             // 
+            // txtArama
+            // 
+            this.txtArama.Location = new System.Drawing.Point(186, 12);
+            this.txtArama.Name = "txtArama";
+            this.txtArama.Size = new System.Drawing.Size(139, 22);
+            this.txtArama.TabIndex = 7;
+            this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(46, 17);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(120, 17);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "*Marka Adı Giriniz";
+            // 
             // Markalar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1095, 639);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.txtArama);
             this.Controls.Add(this.txtID);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSil);
             this.Controls.Add(this.btnMarkaEkle);
             this.Controls.Add(this.txtMarkaAd);
             this.Controls.Add(this.lblMarkaAd);
@@ -191,8 +212,10 @@ namespace CRM
         private System.Windows.Forms.Label lblMarkaAd;
         private System.Windows.Forms.TextBox txtMarkaAd;
         private System.Windows.Forms.Button btnMarkaEkle;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnSil;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtID;
+        private System.Windows.Forms.TextBox txtArama;
+        private System.Windows.Forms.Label label2;
     }
 }

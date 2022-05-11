@@ -156,12 +156,6 @@
     <Compile Include="Depolar.Designer.cs">
       <DependentUpon>Depolar.cs</DependentUpon>
     </Compile>
-    <Compile Include="Gorusmeler.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Gorusmeler.Designer.cs">
-      <DependentUpon>Gorusmeler.cs</DependentUpon>
-    </Compile>
     <Compile Include="Markalar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -228,9 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Depolar.resx">
       <DependentUpon>Depolar.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Gorusmeler.resx">
-      <DependentUpon>Gorusmeler.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Markalar.resx">
       <DependentUpon>Markalar.cs</DependentUpon>
