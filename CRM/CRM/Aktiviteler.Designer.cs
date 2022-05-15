@@ -448,6 +448,7 @@ namespace CRM
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.Location = new System.Drawing.Point(1115, 394);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(131, 17);

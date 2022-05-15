@@ -101,7 +101,8 @@ namespace CRM
             komut3.ExecuteNonQuery();
             
             // stok silme
-            SqlCommand komut2 = new SqlCommand("Delete from TBLSTOKLAR where UrunKodu=" + txtUrunKodu.Text, bgl.sqlbaglanti());
+            SqlCommand komut2 = new SqlCommand("Delete from TBLSTOKLAR where UrunKodu=@kod", bgl.sqlbaglanti());
+            komut2.Parameters.AddWithValue("@kod", SqlDbType.NVarChar).Value = txtUrunKodu.Text;
             komut2.ExecuteNonQuery();
             temizle();
         }

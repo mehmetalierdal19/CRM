@@ -139,10 +139,11 @@ namespace CRM
 
         private void btnGuncelle_Click(object sender, EventArgs e)
         {
-            SqlCommand komut = new SqlCommand("update TBLALISLAR set ParaBirimi=@PARABIRIMI, AlisTarihi=@ALISTARIHI, Tahsilat=@TAHSILAT, OdemeTipi=@ODEMETIP, Teslimat=@TESLIMAT, Aciklama=@ACIKLAMA where ID=@id", bgl.sqlbaglanti());
+            SqlCommand komut = new SqlCommand("update TBLALISLAR set Tedarikci=@TEDARIKCI, ParaBirimi=@PARABIRIMI, AlisTarihi=@ALISTARIHI, Tahsilat=@TAHSILAT, OdemeTipi=@ODEMETIP, Teslimat=@TESLIMAT, Aciklama=@ACIKLAMA where ID=@id", bgl.sqlbaglanti());
             komut.Parameters.AddWithValue("@PARABIRIMI", SqlDbType.NVarChar).Value = cbParaBirimi.Text;
             komut.Parameters.AddWithValue("@ALISTARIHI", SqlDbType.Time).Value = dtAlisTarih.Value;
             komut.Parameters.AddWithValue("@TAHSILAT", SqlDbType.NVarChar).Value = cbTahsilat.Text;
+            komut.Parameters.AddWithValue("@TESLIMAT", SqlDbType.NVarChar).Value = cbTeslimat.Text;
             komut.Parameters.AddWithValue("@ODEMETIP", SqlDbType.NVarChar).Value = cbOdemeTipi.Text;
             komut.Parameters.AddWithValue("@ACIKLAMA", SqlDbType.NVarChar).Value = txtAciklama.Text;
             komut.Parameters.AddWithValue("@id", SqlDbType.Int).Value = Convert.ToInt32(txtID.Text);

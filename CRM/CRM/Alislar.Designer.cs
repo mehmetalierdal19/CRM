@@ -75,6 +75,7 @@ namespace CRM
             this.txtUrunKodu = new System.Windows.Forms.TextBox();
             this.txtUrunKategori = new System.Windows.Forms.TextBox();
             this.txtBirim = new System.Windows.Forms.TextBox();
+            this.label18 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet13)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLTEDARIKCIBindingSource)).BeginInit();
@@ -399,7 +400,7 @@ namespace CRM
             this.btnSil.Name = "btnSil";
             this.btnSil.Size = new System.Drawing.Size(122, 42);
             this.btnSil.TabIndex = 31;
-            this.btnSil.Text = "Sil";
+            this.btnSil.Text = "İptal Et";
             this.btnSil.UseVisualStyleBackColor = true;
             this.btnSil.Click += new System.EventHandler(this.btnSil_Click);
             // 
@@ -425,7 +426,6 @@ namespace CRM
             // dataGridView2
             // 
             this.dataGridView2.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView2.Location = new System.Drawing.Point(919, 498);
             this.dataGridView2.Name = "dataGridView2";
@@ -438,7 +438,6 @@ namespace CRM
             // dataGridView3
             // 
             this.dataGridView3.BackgroundColor = System.Drawing.Color.SteelBlue;
-            this.dataGridView3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.dataGridView3.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView3.Location = new System.Drawing.Point(29, 498);
             this.dataGridView3.Name = "dataGridView3";
@@ -469,25 +468,26 @@ namespace CRM
             // label16
             // 
             this.label16.AutoSize = true;
-            this.label16.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.Location = new System.Drawing.Point(191, 470);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(141, 17);
+            this.label16.Size = new System.Drawing.Size(143, 17);
             this.label16.TabIndex = 38;
             this.label16.Text = "*Ürün Kodu Giriniz";
             // 
             // label17
             // 
             this.label17.AutoSize = true;
-            this.label17.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.Location = new System.Drawing.Point(1063, 470);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(205, 17);
+            this.label17.Size = new System.Drawing.Size(208, 17);
             this.label17.TabIndex = 39;
             this.label17.Text = "*Ürün Kodu veya Adı Giriniz";
             // 
             // txtUrunKodu
             // 
+            this.txtUrunKodu.Enabled = false;
             this.txtUrunKodu.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUrunKodu.Location = new System.Drawing.Point(546, 90);
             this.txtUrunKodu.Name = "txtUrunKodu";
@@ -496,6 +496,7 @@ namespace CRM
             // 
             // txtUrunKategori
             // 
+            this.txtUrunKategori.Enabled = false;
             this.txtUrunKategori.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUrunKategori.Location = new System.Drawing.Point(182, 90);
             this.txtUrunKategori.Name = "txtUrunKategori";
@@ -504,11 +505,22 @@ namespace CRM
             // 
             // txtBirim
             // 
+            this.txtBirim.Enabled = false;
             this.txtBirim.Font = new System.Drawing.Font("Verdana", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBirim.Location = new System.Drawing.Point(182, 168);
             this.txtBirim.Name = "txtBirim";
             this.txtBirim.Size = new System.Drawing.Size(192, 26);
             this.txtBirim.TabIndex = 42;
+            // 
+            // label18
+            // 
+            this.label18.AutoSize = true;
+            this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label18.Location = new System.Drawing.Point(26, 59);
+            this.label18.Name = "label18";
+            this.label18.Size = new System.Drawing.Size(170, 17);
+            this.label18.TabIndex = 43;
+            this.label18.Text = "* Lütfen Bir Ürün Seçininz";
             // 
             // Alislar
             // 
@@ -516,6 +528,7 @@ namespace CRM
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1457, 768);
+            this.Controls.Add(this.label18);
             this.Controls.Add(this.txtBirim);
             this.Controls.Add(this.txtUrunKategori);
             this.Controls.Add(this.txtUrunKodu);
@@ -557,7 +570,7 @@ namespace CRM
             this.Controls.Add(this.label1);
             this.Name = "Alislar";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Toplam Tutar:";
+            this.Text = "Ürün Alışları";
             this.Load += new System.EventHandler(this.Alislar_Load);
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet13)).EndInit();
@@ -617,5 +630,6 @@ namespace CRM
         private System.Windows.Forms.TextBox txtUrunKodu;
         private System.Windows.Forms.TextBox txtUrunKategori;
         private System.Windows.Forms.TextBox txtBirim;
+        private System.Windows.Forms.Label label18;
     }
 }

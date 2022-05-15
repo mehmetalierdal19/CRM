@@ -212,10 +212,10 @@ namespace CRM
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Font = new System.Drawing.Font("Verdana", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(761, 39);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(156, 17);
+            this.label2.Size = new System.Drawing.Size(160, 17);
             this.label2.TabIndex = 11;
             this.label2.Text = "* Kategori Adı Giriniz";
             // 
@@ -239,7 +239,7 @@ namespace CRM
             this.Controls.Add(this.dataGridView1);
             this.Name = "ÜrünKategori";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Ürün Kategori";
+            this.Text = "Ürün Kategorileri";
             this.Load += new System.EventHandler(this.ÜrünKategori_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLKATEGORILERBindingSource)).EndInit();

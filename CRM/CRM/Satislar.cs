@@ -104,13 +104,17 @@ namespace CRM
         private void button3_Click(object sender, EventArgs e)
         {
                 // Satış güncelleme
-                SqlCommand komut = new SqlCommand("update TBLSATIS set, OdemeTip=@OT, Teslimat=@T, ParaBirimi=@PB, SatisTarihi=@ST, Aciklama=@A where ID=@id", bgl.sqlbaglanti());
+                SqlCommand komut = new SqlCommand("update TBLSATIS set Musteri=@MUSTERI, OdemeTip=@OT, Teslimat=@T, ParaBirimi=@PB, SatisTarihi=@ST, Aciklama=@A where ID=@id", bgl.sqlbaglanti());
+                komut.Parameters.AddWithValue("@MUSTERI", SqlDbType.NVarChar).Value = cbMusteri.Text;
                 komut.Parameters.AddWithValue("@OT", SqlDbType.NVarChar).Value = cbOdemeTip.Text;
                 komut.Parameters.AddWithValue("@T", SqlDbType.NVarChar).Value = cbTeslimat.Text;
                 komut.Parameters.AddWithValue("@PB", SqlDbType.NVarChar).Value = cbParaBirim.Text;
                 komut.Parameters.AddWithValue("@ST", SqlDbType.Time).Value = dtSatisTarih.Value;
                 komut.Parameters.AddWithValue("@A", SqlDbType.NVarChar).Value = txtAciklama.Text;
+                komut.Parameters.AddWithValue("@id", SqlDbType.Int).Value = Convert.ToInt32(txtID.Text);
                 komut.ExecuteNonQuery();
+                satislistele();
+                temizle();
             
         }
 
@@ -126,6 +130,8 @@ namespace CRM
             //foreach (DataRow satir in dt.Rows)
             //{
             //    cbUrun.Items.Add(satir["UrunKodu"].ToString() + " - " + satir["UrunAd"].ToString());
+            
+
                 
             //}
         }
@@ -213,6 +219,7 @@ namespace CRM
                 txtSatisTutar.Text = dataGridView1.CurrentRow.Cells[11].Value.ToString();
                 cbParaBirim.Text = dataGridView1.CurrentRow.Cells[12].Value.ToString();
                 dtSatisTarih.Value = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[13].Value.ToString());
+                txtAciklama.Text = dataGridView1.CurrentRow.Cells[14].Value.ToString();
             }
             catch (Exception)
             {
