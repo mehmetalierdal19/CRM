@@ -71,6 +71,7 @@ namespace CRM
             this.label2 = new System.Windows.Forms.Label();
             this.linkLabel2 = new System.Windows.Forms.LinkLabel();
             this.txtArama = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dbCRMDataSet5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tBLURUNLERBindingSource)).BeginInit();
@@ -437,12 +438,23 @@ namespace CRM
             this.txtArama.TabIndex = 26;
             this.txtArama.TextChanged += new System.EventHandler(this.txtArama_TextChanged);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(1104, 313);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(300, 17);
+            this.label1.TabIndex = 27;
+            this.label1.Text = "*Ürünün kodunu, adını veya kategorisini giriniz";
+            // 
             // Ürünler
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.SteelBlue;
             this.ClientSize = new System.Drawing.Size(1532, 677);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.txtArama);
             this.Controls.Add(this.txtUrunKodu);
             this.Controls.Add(this.label2);
@@ -529,5 +541,6 @@ namespace CRM
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.LinkLabel linkLabel2;
         private System.Windows.Forms.TextBox txtArama;
+        private System.Windows.Forms.Label label1;
     }
 }
